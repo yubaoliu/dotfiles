@@ -1,0 +1,8 @@
+;; Download evil from:  https://github.com/emacs-evil/evil
+(add-to-list 'load-path "~/.emacs.d/packages/evil")
+(require 'evil)
+(evil-mode t)
+(global-evil-tabs-mode t)
+
+(provide 'init-evil)
+
