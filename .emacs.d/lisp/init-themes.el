@@ -5,4 +5,12 @@
 
 (global-linum-mode t)
 
-(provide 'init-themes)
+(tool-bar-mode -1)
+
+;;full screen
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
+
+(setq-default cursor-type 'bar)
+
+
+(provide 'init-ui)

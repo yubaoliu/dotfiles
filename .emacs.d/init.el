@@ -19,7 +19,8 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-packages)
 (require 'init-evil)
-(require 'init-themes)
+(require 'init-ui)
+(require 'init-default)
 
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 
