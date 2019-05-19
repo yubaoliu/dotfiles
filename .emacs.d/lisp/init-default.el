@@ -1,6 +1,8 @@
 (setq-default auto-save-timeout 60) ; 15秒无动作,自动保存
 (setq-default auto-save-interval 100) ; 100个字符间隔, 自动保存
 
+(setq tab-width 4)
+
 
 (setq
     backup-by-copying t ; 自动备份
