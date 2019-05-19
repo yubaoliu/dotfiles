@@ -38,7 +38,6 @@
                          swiper
                          hungry-delete
                          monokai-theme
-                         solarized-theme
                          company
                          common-lisp-snippets
                          company-dict
@@ -47,7 +46,6 @@
                          company-shell
                          company-web
                          ctags-update
-                         solarized-theme
                          web-mode
                          iedit
                          google-translate
@@ -58,6 +56,7 @@
                          ecb
 			 evil-tabs
 			 evil-search-highlight-persist
+			 color-theme
 			 window-number
                          )
   "Default packages")

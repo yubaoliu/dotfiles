@@ -21,6 +21,7 @@
 (require 'init-evil)
 (require 'init-ui)
 (require 'init-default)
+(require 'init-keybinding)
 
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 

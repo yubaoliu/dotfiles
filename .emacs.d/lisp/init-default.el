@@ -13,6 +13,9 @@
    kept-old-versions 1 ; 保留最早的1个备份文件
    version-control t) ; 多次备份
 
+;;abbrev mode
+(abbrev-mode t)
+
 
 ;;add delete selection mode
 (delete-selection-mode t)

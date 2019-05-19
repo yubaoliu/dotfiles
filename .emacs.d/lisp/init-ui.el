@@ -1,8 +1,14 @@
 ;;load theme
-;(load-theme 'monokai t)
+(load-theme 'monokai t)
+
+;;solarized
+;(add-to-list 'custom-theme-load-path "~/.emacs.d/packages/solarized")
+(add-to-list 'load-path "~/.emacs.d/packages/solarized")
+;(require 'color-theme-solarized)
+;(load-theme 'solarized t)
+
 
 (global-hl-line-mode)
-
 (global-linum-mode t)
 
 (require 'window-number)
