@@ -18,7 +18,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-packages)
-(require 'init-evil)
+;(require 'init-evil)
 (require 'init-ui)
 (require 'init-default)
 (require 'init-keybinding)

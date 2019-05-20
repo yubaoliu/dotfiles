@@ -1,6 +1,7 @@
 
 
 (global-set-key (kbd "C-e") 'move-end-of-line)
+(global-set-key (kbd "C-m") 'set-mark-command)
 ;(global-set-key (kbd "C-n") 'next-line)
 ;(global-set-key (kbd "C-p") 'previous-line)
 
