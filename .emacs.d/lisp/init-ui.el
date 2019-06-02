@@ -7,6 +7,7 @@
 ;(require 'color-theme-solarized)
 ;(load-theme 'solarized t)
 
+(global-visual-line-mode 1)
 
 (global-hl-line-mode)
 (global-linum-mode t)

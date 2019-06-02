@@ -1,4 +1,4 @@
-(setq-default auto-save-timeout 60) ; 15秒无动作,自动保存
+(setq-default auto-save-timeout 15) ; 15秒无动作,自动保存
 (setq-default auto-save-interval 100) ; 100个字符间隔, 自动保存
 
 (fset 'yes-or-no-p'y-or-n-p)
@@ -7,6 +7,7 @@
 
 
 (setq
+ auto-save-file-name-transorms '("." . "/tmp/emacs_autosave" ) ;#.. files
     backup-by-copying t ; 自动备份
     backup-directory-alist
     '(("." . "/tmp/emacs_backup")) ; 自动备份在目录"~/.em_backup"下

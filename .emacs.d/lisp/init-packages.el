@@ -58,6 +58,19 @@
 			 evil-search-highlight-persist
 			 color-theme
 			 window-number
+			 org-ref
+			 org-preview-html
+			 org2blog
+			 org2web
+			 latex-math-preview
+			 latex-preview-pane
+			 auctex
+			 org-review
+			 auto-compile
+			 auctex-lua
+			 auctex-latexmk
+			 org-plus-contrib
+			 org-pdfview
                          )
   "Default packages")
 (setq package-selected-packages  yubao/packages) ;let package-autoremove know my customized packages, ohterwise package-autoremove will delete my customized packages
@@ -86,5 +99,11 @@
     (package-install package)))
 
 
+(defun yubao/install-package(pkg)
+  (interactive "pkg")
+  (unless (package-installed-p pkg)
+    (package-install pkg)
+    )
+  )
 
 (provide 'init-packages)

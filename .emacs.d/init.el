@@ -22,7 +22,7 @@
 (require 'init-ui)
 (require 'init-default)
 (require 'init-keybinding)
-
+(require 'init-org)
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 
 

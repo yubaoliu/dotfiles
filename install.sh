@@ -14,6 +14,15 @@ ln -s -f  ~/dotfiles/.vim ~/.vim
 ln -s -f ~/dotfiles/.tmux.conf ~/.tmux.conf 
 ln -s -f ~/dotfiles/.tmux ~/.tmux 
 
-# GIT
+echo "GIT"
 ln -s -f ~/dotfiles/.gitconfig ~/.gitconfig
+
+echo "ROS"
+ln -s -f ~/dotfiles/.ros_setup ~/.ros_setup
+ln -s -f ~/dotfiles/.ros ~/.ros
+
+echo "rviz"
+ln -s -f  ~/dotfiles/.rviz ~/.rviz
+
+
 

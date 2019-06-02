@@ -1,3 +1,6 @@
 [submodule "tpm"]
 	path = .tmux/plugins/tpm 
 	url = https://github.com/tmux/tmux.git
+[submodule "spacemacs"]
+	path = spacemacs
+	url = https://github.com/syl20bnr/spacemacs.git

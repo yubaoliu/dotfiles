@@ -1,0 +1,12 @@
+export ROS_PACKAGE_PATH=/home/yubao/data/share/RepoCollection/catkin_ws/src:$ROS_PACKAGE_PATH
+export ROS_LOG_DIR=/tmp/ros
+export ROS_TEST_RESULTS_DIR=/tmp/ros
+
+source /opt/ros/kinetic/setup.sh --extend
+
+source /home/yubao/data/share/RepoCollection/catkin_ws/devel/setup.sh --extend
+
+source /home/yubao/data/catkin_ws/devel/setup.sh --extend
+
+
+
