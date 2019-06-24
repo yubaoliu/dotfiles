@@ -1,28 +1,30 @@
 
-cd ~/dotfiles
+
+
+cd ~
 
 # bashrc
-ln -s -f ~/dotfiles/.bashrc ~/.bashrc 
-ln -s -f ~/dotfiles/.dir_colors ~/.dir_colors
+ln -s -f ~/dotfiles/.bashrc 
+ln -s -f ~/dotfiles/.dir_colors 
 
 
 # vim
-ln -s -f  ~/dotfiles/.vimrc ~/.vimrc
-ln -s -f  ~/dotfiles/.vim ~/.vim
+ln -s -f  ~/dotfiles/.vimrc 
+ln -s -f  ~/dotfiles/.vim 
 
 # TMUX
-ln -s -f ~/dotfiles/.tmux.conf ~/.tmux.conf 
-ln -s -f ~/dotfiles/.tmux ~/.tmux 
+ln -s -f ~/dotfiles/.tmux.conf 
+ln -s -f ~/dotfiles/.tmux 
 
-echo "GIT"
-ln -s -f ~/dotfiles/.gitconfig ~/.gitconfig
 
 echo "ROS"
-ln -s -f ~/dotfiles/.ros_setup ~/.ros_setup
-ln -s -f ~/dotfiles/.ros ~/.ros
+ln -s -f ~/dotfiles/.ros_setup
+ln -s -f ~/dotfiles/.ros
 
 echo "rviz"
-ln -s -f  ~/dotfiles/.rviz ~/.rviz
+ln -s -f  ~/dotfiles/.rviz 
 
+echo "Dropbox"
+ln -s -f ~/dotfiles/.dropbox-dist 
 
 

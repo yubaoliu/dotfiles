@@ -8,6 +8,7 @@
 ;(load-theme 'solarized t)
 
 (global-visual-line-mode 1)
+(setq word-wrap t)
 
 (global-hl-line-mode)
 (global-linum-mode t)

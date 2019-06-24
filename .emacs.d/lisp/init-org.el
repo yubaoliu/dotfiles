@@ -1,21 +1,22 @@
 (require 'org)
-(require 'org-ref)
 (require 'org-tempo)
+
+(setq org-startup-with-inline-images t)
+(auto-image-file-mode t)
+(setq org-startup-indented t)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
-   (sh . t)
    (python . t)
    (ruby . t)
-   (ditaa . t)
    (dot . t)
    (octave . t)
    (sqlite . t)
    (perl . t)
    (C . t)
+   (latex . t)
    ))
-;(require 'tempo)
 
 (set 'org-startup-with-inline-images t)
 

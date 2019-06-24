@@ -4,7 +4,7 @@
 ;(global-set-key (kbd "C-c C-,") 'org-insert-structure-template)
 
 ;;http://zhangley.com/article/emacs-ret/, donot band C-m to set-mark-command, because C-m is linked with <RET> key
-(global-set-key (kbd "C-M-@") 'set-mark-command)
+;(global-set-key (kbd "C-M-@") 'set-mark-command)
 
 ;(global-set-key (kbd "C-n") 'next-line)
 ;(global-set-key (kbd "C-p") 'previous-line)

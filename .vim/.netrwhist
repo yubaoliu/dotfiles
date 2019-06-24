@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/yubao/data/virtualMachine/docker/enet/templates'
+let g:netrw_dirhist_2='/media/yubao/data/RepoCollection/catkin_ws/src/semantic_slam-floatlazer/ORB_SLAM2/build'
+let g:netrw_dirhist_3='/media/yubao/data/SpacialAI/ORB_SLAM2/build'
+let g:netrw_dirhist_4='/media/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_cloud'

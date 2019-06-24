@@ -58,19 +58,39 @@
 			 evil-search-highlight-persist
 			 color-theme
 			 window-number
-			 org-ref
-			 org-preview-html
-			 org2blog
-			 org2web
-			 latex-math-preview
+ 			 latex-math-preview
 			 latex-preview-pane
 			 auctex
+			 latex-extra
+			 ac-math
+			 org-preview-html
+			 org-download
+			 org2blog
+			 org2web
+			 ox-reveal
 			 org-review
+			 org
+			 org-ac
+			 org-brain
+			 org-dropbox
+			 org-mime
+			 org-notebook
+			 org-ref
+			 org-seek
+			 org-wc
+			 org-sync
+			 org-web-tools
+			 org-edit-latex
+			 org2ctex
 			 auto-compile
 			 auctex-lua
 			 auctex-latexmk
 			 org-plus-contrib
 			 org-pdfview
+			 ox-ioslide
+			 image-dired
+					; CPP
+			 google-c-style
                          )
   "Default packages")
 (setq package-selected-packages  yubao/packages) ;let package-autoremove know my customized packages, ohterwise package-autoremove will delete my customized packages

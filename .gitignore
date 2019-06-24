@@ -4,6 +4,7 @@ recentf
 .emacs.d/url
 eshell
 .ros
+.dropbox-dist
 
 
 # Created by https://www.gitignore.io/api/emacs

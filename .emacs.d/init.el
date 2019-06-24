@@ -23,10 +23,13 @@
 (require 'init-default)
 (require 'init-keybinding)
 (require 'init-org)
+(require 'init-academic)
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
+(load-file custom-file)
 
 
 
 
 
 
+(put 'downcase-region 'disabled nil)

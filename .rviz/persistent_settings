@@ -1,13 +1,12 @@
-Last Config Dir: /home/yubao/.rviz
+Last Config Dir: ""
 Last Image Dir: ""
 Recent Configs:
-  - /home/yubao/.rviz/laser.rviz
+  - hdl_localization.rviz
   - /home/yubao/.rviz/default.rviz
-  - /home/yubao/data/share/RepoCollection/catkin_ws/src/semantic_slam-floatlazer/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/data/share/RepoCollection/src/semantic_slam-floatlazer/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/data/catkin_ws/src/skimap_ros/rviz/skimap_live.rviz
-  - /home/yubao/.rviz/SemanticMap.rviz
+  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/kinect_semantic_mapping.rviz
+  - /home/yubao/.rviz/TUM.rviz
+  - /home/yubao/.rviz/semantic_cloud.rviz
+  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
+  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_mapping.rviz
   - /home/yubao/.rviz/kinetic2.rviz
-  - /home/yubao/data/Project/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/data/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
+  - /home/yubao/data/RepoCollection/catkin_ws/src/semantic_slam-floatlazer/semantic_slam/semantic_mapping.rviz
