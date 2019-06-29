@@ -1,16 +1,20 @@
 export ROS_HOME=~/.ros
-export ROS_LOG_DIR=/tmp/ros
-export ROS_TEST_RESULTS_DIR=/tmp/ros
+#export ROS_LOG_DIR=/tmp/ros
+#export ROS_TEST_RESULTS_DIR=/tmp/ros
 
-source /opt/ros/kinetic/setup.sh --extend
-source /home/yubao/data/RepoCollection/catkin_ws/devel/setup.sh --extend
-source /home/yubao/data/catkin_ws/devel/setup.sh --extend
-source /home/yubao/data/3rdPartyLibs/catkin_ws/devel/setup.sh --extend
-source /home/yubao/data/SpacialAI/catkin_ws/devel/setup.sh --extend
+#source $HOME/data/Project/RepoCollection/catkin_ws/devel/setup.sh --extend
+#source $HOME/data/catkin_ws/devel/setup.sh --extend
+#source /home/yubao/data/3rdPartyLibs/catkin_ws/devel/setup.sh --extend
+#source $HOME/data/SpacialAI/catkin_ws/devel/setup.sh --extend
+#source $HOME/data/SpacialAI/YB_ORB_SLAM/Examples/ROS/YB_ORB_SLAM/build/devel/setup.sh --extend
 
-export ROS_PACKAGE_PATH=/home/yubao/data/RepoCollection/catkin_ws/src:$ROS_PACKAGE_PATH 
-export ROS_PACKAGE_PATH=/home/yubao/data/SpacialAI/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM:$ROS_PACKAGE_PATH
+#export ROS_PACKAGE_PATH="$HOME/data/Project/RepoCollection/catkin_ws/src:$ROS_PACKAGE_PATH"
+#export ROS_PACKAGE_PATH="$HOME/data/SpacialAI/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM:$ROS_PACKAGE_PATH"
 
 #export ROS_PACKAGE_PATH=/home/yubao/data/Project/SLAM/semantic_slam-zssjh/Examples/ROS/ORB_SLAM2:$ROS_PACKAGE_PATH
 
 
+#export ROS_PACKAGE_PATH="$HOME/data/SpacialAI/ORB_SLAM2/Examples/ROS:${ROS_PACKAGE_PATH}"
+
+source /opt/ros/kinetic/setup.bash
+echo "Source Ros config"

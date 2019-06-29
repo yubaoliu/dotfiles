@@ -1,10 +1,11 @@
-Last Config Dir: ""
+Last Config Dir: /home/yubao/.rviz
 Last Image Dir: ""
 Recent Configs:
-  - hdl_localization.rviz
   - /home/yubao/.rviz/default.rviz
-  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/kinect_semantic_mapping.rviz
+  - /opt/ros/kinetic/share/turtlebot_rviz_launchers/rviz/robot.rviz
   - /home/yubao/.rviz/TUM.rviz
+  - hdl_localization.rviz
+  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/kinect_semantic_mapping.rviz
   - /home/yubao/.rviz/semantic_cloud.rviz
   - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
   - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_mapping.rviz

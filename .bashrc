@@ -9,7 +9,7 @@ alias e='emacs -nw'
 #source ~/dotfiles/solarized.sh
 
 #ROS
-source ~/.ros_setup
+source $HOME/.ros_setup.sh
 
 # TMUX
 export PATH="$HOME/software/tmux/bin:$PATH"
@@ -35,7 +35,7 @@ export g2o_DIR=$HOME/software/g2o/lib/cmake/g2o
 export DBoW2_DIR=$HOME/software/DBoW2/lib/cmake/DBoW2
 
 # Eigen
-export  Eigen3_DIR=$HOME/software/Eigen/share/eigen3/cmake
+export  Eigen3_DIR="$HOME/software/Eigen/share/eigen3/cmake"
 
 #GTSAM
 export GTSAM_DIR="$HOME/software/gtsam/lib/cmake"
@@ -52,3 +52,9 @@ export LD_LIBRARY_PATH="$HOME/software/lib:${LD_LIBRARY_PATH}"
 
 #PCL
 export PCLConfig_DIR="$HOME/software/share/pcl-1.8"
+
+
+
+# Commond
+alias cdSpaceAI='cd ~/data/SpacialAI/'
+alias cdRepo='cd ~/data/Project/RepoCollection'

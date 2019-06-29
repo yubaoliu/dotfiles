@@ -17,6 +17,9 @@
 (setq user-mail-address "yubaoliu89@gmail.com")
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/packages/org-mode/lisp")
+(add-to-list 'load-path "~/.emacs.d/packages/org-mode/contrib/lisp")
+
 (require 'init-packages)
 ;(require 'init-evil)
 (require 'init-ui)

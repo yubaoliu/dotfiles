@@ -14,7 +14,10 @@
      (C . t)
      (latex . t)
      (matlab . t)
-     (emacs-lisp . t)))))
+     (emacs-lisp . t)
+     (R . t)
+     (shell . t)
+     (lisp . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

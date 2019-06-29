@@ -15,7 +15,7 @@ else
     set background=dark
 endif
 let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
 
 "UI Config
 set number              " show line numbers
