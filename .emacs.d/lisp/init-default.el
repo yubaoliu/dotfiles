@@ -28,6 +28,8 @@
 (recentf-mode t)
 (setq recentf-max-menu-items 25)
 
+;; only workinf for gui mode
+(setq x-select-enable-clipboard t)
 
 (require 'dired-x)
 (setq dired-dwim-target t)

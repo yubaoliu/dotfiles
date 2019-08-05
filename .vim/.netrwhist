@@ -1,6 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/yubao/data/virtualMachine/docker/enet/templates'
 let g:netrw_dirhist_2='/media/yubao/data/RepoCollection/catkin_ws/src/semantic_slam-floatlazer/ORB_SLAM2/build'
 let g:netrw_dirhist_3='/media/yubao/data/SpacialAI/ORB_SLAM2/build'
 let g:netrw_dirhist_4='/media/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_cloud'
+let g:netrw_dirhist_5='/home/yubao/data/Project/semseg/SegNet-Tutorial-alexgkendall/CamVid/test'
+let g:netrw_dirhist_6='/home/yubao/data/Project/semseg/SegNet-Tutorial-alexgkendall/CamVid/train'
+let g:netrw_dirhist_7='/home/yubao/data/SpacialAI/catkin_ws/src/darknet_ros/darknet/data/VOCdevkit/VOC2007/labels'

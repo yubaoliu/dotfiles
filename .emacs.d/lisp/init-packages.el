@@ -74,6 +74,29 @@
 			 matlab-mode
 			 ros
 			 shell-command
+			 image+
+			 image-dired+
+			 org-download
+			 uimage
+			 ox-clip
+			 live-preview
+			 org-preview-html
+			 quick-preview
+			 quick-peek
+			 erc-youtube
+			 helm-youtube
+			 ivy-youtube
+			 gscholar-bibtex
+			 ivy-bibtex
+			 ox-bibtex-chinese
+			 bibclean-format
+			 biblio
+			 biblio-core
+			 biblio-bibsonomy
+			 bibretrieve
+			 bibtex-utils
+			 bongo
+			 citeproc
                          )
   "Default packages")
 (setq package-selected-packages  yubao/packages) ;let package-autoremove know my customized packages, ohterwise package-autoremove will delete my customized packages

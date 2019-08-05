@@ -28,4 +28,19 @@
 (global-set-key "\C-cb" 'org-switchb)
 
 
+(setq org-image-actual-width 320)
+
+;;org-download--------------------------
+(require 'org-download)
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+(setq-default org-download-image-dir "~/Pictures/Emacs")
+
+
+;;-------uimage---------------------------------
+;https://github.com/lujun9972/uimage
+;;use C-c C-c to refresh the images
+(require 'uimage)
+(uimage-mode t)
+
 (provide 'init-org)

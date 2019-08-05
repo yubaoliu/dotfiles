@@ -1,13 +1,13 @@
-Last Config Dir: /home/yubao/.rviz
+Last Config Dir: /home/yubao/data/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM/rviz
 Last Image Dir: ""
 Recent Configs:
+  - /home/yubao/data/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM/rviz/ds_slam.rviz
+  - /home/yubao/data/catkin_ws/src/DS-SLAM/rviz/ds_slam2.rviz
+  - /home/yubao/data/catkin_ws/src/DS-SLAM/rviz/ds_slam.rviz
+  - /home/yubao/data/catkin_ws/src/DS-SLAM/ds_slam.rviz
   - /home/yubao/.rviz/default.rviz
-  - /opt/ros/kinetic/share/turtlebot_rviz_launchers/rviz/robot.rviz
-  - /home/yubao/.rviz/TUM.rviz
-  - hdl_localization.rviz
-  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/kinect_semantic_mapping.rviz
-  - /home/yubao/.rviz/semantic_cloud.rviz
-  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/data/SpacialAI/catkin_ws/src/semantic_slam/semantic_mapping.rviz
-  - /home/yubao/.rviz/kinetic2.rviz
-  - /home/yubao/data/RepoCollection/catkin_ws/src/semantic_slam-floatlazer/semantic_slam/semantic_mapping.rviz
+  - /opt/ros/kinetic/share/hsrb_common_launch/config/hsrb_display_full_hsrb.rviz
+  - /opt/ros/kinetic/share/hsrb_rviz_simulator/params/display_config.rviz
+  - /home/yubao/data/SpacialAI/catkin_ws/src/yb_rviz_launchers/rviz/navigation.rviz
+  - /opt/ros/kinetic/share/hsrb_common_launch/config/hsrb_display_full_hsrc.rviz
+  - /home/yubao/data/catkin_ws/src/mastering_ros_robot_description_pkg/urdf.rviz
