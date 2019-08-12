@@ -1,4 +1,3 @@
-  
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("org" . "http://orgmode.org/elpa/")
                          ("melpa" . "http://melpa.org/packages/")))
@@ -8,6 +7,8 @@
 
 ;add whatever package you want here
 (defvar yubao/packages '(
+			 o-blog
+			 ox-hugo
                          markdown-mode
                          magit
                          sr-speedbar
@@ -97,6 +98,8 @@
 			 bibtex-utils
 			 bongo
 			 citeproc
+			 xml-rpc
+			 org2blog
                          )
   "Default packages")
 (setq package-selected-packages  yubao/packages) ;let package-autoremove know my customized packages, ohterwise package-autoremove will delete my customized packages

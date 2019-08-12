@@ -28,8 +28,9 @@
  '(org-download-method (quote directory))
  '(org-latex-image-default-height "240")
  '(org-latex-image-default-scale "0.5")
- '(org-latex-image-default-width ".8\\linewidth"))
-(custom-set-faces
+ '(org-latex-image-default-width ".8\\linewidth")
+)
+ (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.

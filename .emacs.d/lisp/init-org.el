@@ -1,7 +1,7 @@
-;https://orgmode.org/orgguide.pdf
+;;https://orgmode.org/orgguide.pdf
 ;(require 'org)
 (require 'org-tempo)
-
+(require 'xml-rpc)
 (setq org-startup-with-inline-images t)
 (auto-image-file-mode t)
 (setq org-startup-indented t)
@@ -42,5 +42,22 @@
 ;;use C-c C-c to refresh the images
 (require 'uimage)
 (uimage-mode t)
+
+;;blog
+(require 'org2blog)
+(require 'org2blog-autoloads)
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3") ; fix "Error during request: 400"
+
+(setq org2blog/wp-blog-alist
+      `(("wordpress"
+         :url "http://yubaoliu.wordpress.com/xmlrpc.php"
+         :username "yubaoliu"
+         :password "wordpress@1234"
+         :keep-new-lines t
+         :confirm t
+         :wp-code nil
+         :tags-as-categories nil)
+        ))
+
 
 (provide 'init-org)
