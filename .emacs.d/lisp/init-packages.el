@@ -7,6 +7,8 @@
 
 ;add whatever package you want here
 (defvar yubao/packages '(
+			 org-page
+			 org2jekyll
 			 o-blog
 			 ox-hugo
                          markdown-mode
