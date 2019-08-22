@@ -30,9 +30,3 @@
 (setq custom-file (expand-file-name "lisp/init-custom.el" user-emacs-directory))
 (load-file custom-file)
 
-
-
-
-
-
-(put 'downcase-region 'disabled nil)

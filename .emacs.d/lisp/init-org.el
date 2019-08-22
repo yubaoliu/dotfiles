@@ -15,10 +15,14 @@
    (octave . t)
    (sqlite . t)
    (perl . t)
+   (sh . t)
+   (matlab . t)
    (C . t)
    (latex . t)
    ))
 
+(setq org-confirm-babel-evaluate nil)
+(setq org-src-fontify-natively t)
 (set 'org-startup-with-inline-images t)
 
 ;; The following lines are always needed. Choose your own keys.
@@ -52,21 +56,23 @@
       `(("wordpress"
          :url "http://yubaoliu.wordpress.com/xmlrpc.php"
          :username "yubaoliu"
-         :password "wordpress@1234"
          :keep-new-lines t
          :confirm t
          :wp-code nil
          :tags-as-categories nil)
         ))
 
+
 (require 'org2jekyll)
 
 (custom-set-variables '(org2jekyll-blog-author "Yubao Liu")
-                      '(org2jekyll-source-directory (expand-file-name "~/Projects/blog/"))
-                      '(org2jekyll-jekyll-directory (expand-file-name "~/Projects/yubaoliu.github.io/"))
-                      '(org2jekyll-jekyll-drafts-dir "")
+                      '(org2jekyll-source-directory (expand-file-name "~/data/Projects/yubaoliu.github.io/"))
+                      '(org2jekyll-jekyll-directory (expand-file-name "~/data/Projects/yubaoliu.github.io/"))
+                      '(org2jekyll-jekyll-drafts-dir "_drafts/")
                       '(org2jekyll-jekyll-posts-dir "_posts/")
-                      '(org-publish-project-alist
+		      )
+
+(setq org-publish-project-alist
                         `(("default"
 			   :with-latex t
                            :base-directory ,(org2jekyll-input-directory)
@@ -74,7 +80,7 @@
                            :publishing-directory ,(org2jekyll-output-directory)
                            :publishing-function org-html-publish-to-html
                            :headline-levels 4
-                           :section-numbers nil
+                           :section-numbers t
                            :with-toc t
                            :html-head "<link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\"/>"
                            :html-preamble t
@@ -114,9 +120,22 @@
                            :publishing-directory ,(org2jekyll-output-directory "css")
                            :publishing-function org-publish-attachment
                            :recursive t)
-                          ("web" :components ("images" "js" "css")))
-			))
+                          ("web" :components ("images" "js" "css"))
+			  )
 
+
+(defun yubao/insert-jekyll-template()
+  (interactive)
+  (insert "#+STARTUP: showall indent
+#+STARTUP: hidestars
+#+BEGIN_HTML
+---
+layout: post
+title:
+---
+#+END_HTML\n")
+ )
+			
 (require 'org-page)
 (setq op/repository-directory "/Users/yubaoliu/Projects/homepage")
 (setq op/site-domain "https://github.com/yubaoliu/homepage")
