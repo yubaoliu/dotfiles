@@ -11,18 +11,14 @@
  '(
    (python . t)
    (ruby . t)
-   (dot . t)
    (octave . t)
    (sqlite . t)
    (perl . t)
-   (sh . t)
-   (matlab . t)
    (C . t)
    (latex . t)
    ))
 
 (setq org-confirm-babel-evaluate nil)
-(setq org-src-fontify-natively t)
 (set 'org-startup-with-inline-images t)
 
 ;; The following lines are always needed. Choose your own keys.
@@ -66,8 +62,8 @@
 (require 'org2jekyll)
 
 (custom-set-variables '(org2jekyll-blog-author "Yubao Liu")
-                      '(org2jekyll-source-directory (expand-file-name "~/data/Projects/yubaoliu.github.io/"))
-                      '(org2jekyll-jekyll-directory (expand-file-name "~/data/Projects/yubaoliu.github.io/"))
+                      '(org2jekyll-source-directory (expand-file-name "~/data/Projects/yubaoliu.github.io"))
+                      '(org2jekyll-jekyll-directory (expand-file-name "~/data/Projects/yubaoliu.github.io"))
                       '(org2jekyll-jekyll-drafts-dir "_drafts/")
                       '(org2jekyll-jekyll-posts-dir "_posts/")
 		      )
@@ -121,11 +117,11 @@
                            :publishing-function org-publish-attachment
                            :recursive t)
                           ("web" :components ("images" "js" "css"))
-			  )
+			  ))
 
 
 (defun yubao/insert-jekyll-template()
-  (interactive)
+ (interactive)
   (insert "#+STARTUP: showall indent
 #+STARTUP: hidestars
 #+BEGIN_HTML

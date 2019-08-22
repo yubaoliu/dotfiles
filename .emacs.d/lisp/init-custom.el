@@ -6,7 +6,6 @@
  '(org-download-image-html-width 320)
  '(org-download-image-latex-width 320)
  '(org-download-image-org-width 320)
- '(org-download-method (quote directory))
  '(org-latex-image-default-height "240")
  '(org-latex-image-default-scale "0.5")
  '(org-latex-image-default-width ".8\\linewidth")
