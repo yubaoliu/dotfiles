@@ -1,4 +1,6 @@
 
+export LD_LIBRARY_PATH="/usr/locla/lib:$LD_LIBRARY_PATH"
+
 #ubuntu
 alias ll='ls -l'
 
@@ -10,6 +12,9 @@ alias e='emacs -nw'
 
 #ROS
 source $HOME/.ros_setup.sh
+
+#Octomap
+export OCTOMAP_DIR="/software/install/octomap/share/octomap"
 
 # TMUX
 export PATH="$HOME/software/tmux/bin:$PATH"
@@ -29,7 +34,7 @@ export PATH="/usr/local/cuda/bin:${PATH}"
 export Pangolin_DIR=$HOME/software/Pangolin/lib/cmake/Pangolin
 
 # g2o
-export g2o_DIR="$HOME/software/g2o/lib/cmake/g2o"
+#export g2o_DIR="$HOME/software/g2o/lib/cmake/g2o"
 
 # DBoW2
 export DBoW2_DIR=$HOME/software/DBoW2/lib/cmake/DBoW2
@@ -47,7 +52,7 @@ export PATH="$HOME/software/node-v10.16.0-linux-x64/bin:${PATH}"
 export PATH="$HOME/software/bin:${PATH}"
 
 # LIB
-export LD_LIBRARY_PATH="$HOME/software/lib:${LD_LIBRARY_PATH}"
+#export LD_LIBRARY_PATH="$HOME/software/lib:${LD_LIBRARY_PATH}"
 
 #PCL
 #export PCLConfig_DIR="$HOME/software/install/share/pcl-1.8"
@@ -69,5 +74,10 @@ alias cdSpaceAI='cd ~/data/SpacialAI/catkin_ws/src'
 alias cdRepo='cd ~/data/Project/RepoCollection/'
 
 
+# kobuki
+alias sourcekobuki='source ~/dotfiles/scripts/kobuki.sh'
+alias sshkobuki='source ~/dotfiles/scripts/ssh-kobuki.sh'
 
+# docker
+alias cddocker='cd ~/data/Project/docker'
 

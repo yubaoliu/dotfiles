@@ -1,10 +1,11 @@
-export ROS_HOME=~/.ros
+#export ROS_HOME=~/.ros
 #export ROS_LOG_DIR=/tmp/ros
 #export ROS_TEST_RESULTS_DIR=/tmp/ros
 
 source $HOME/data/SpacialAI/catkin_ws/devel/setup.sh --extend
-
 source $HOME/data/catkin_ws/devel/setup.sh --extend
+source /opt/ros/kinetic/setup.bash --extend
+
 
 #source $HOME/data/Project/RepoCollection/catkin_ws/devel/setup.sh --extend
 #source /home/yubao/data/3rdPartyLibs/catkin_ws/devel/setup.sh --extend
@@ -18,6 +19,11 @@ source $HOME/data/catkin_ws/devel/setup.sh --extend
 
 #export ROS_PACKAGE_PATH="$HOME/data/SpacialAI/ORB_SLAM2/Examples/ROS:${ROS_PACKAGE_PATH}"
 
-source /opt/ros/kinetic/setup.bash --extend
-echo "Source Ros config"
-#export ROS_MASTER_URI=http://localhost:11311
+export ROS_MASTER_URI=http://localhost:11311
+#export ROS_MASTER_URI=http://kobuki:11311
+export ROS_HOSTNAME=133.15.23.26
+export ROS_IP=133.15.23.26
+
+echo "ROS MASTER_URI & ROS_HOSTNAME"
+echo $ROS_MASTER_URI
+echo $ROS_HOSTNAME
