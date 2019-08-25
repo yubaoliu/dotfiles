@@ -123,14 +123,15 @@
 (defun yubao/insert-jekyll-template()
  (interactive)
   (insert "#+STARTUP: showall indent
-#+STARTUP: hidestars
-#+BEGIN_HTML
----
-layout: post
-title:
----
-#+END_HTML\n")
- )
+#+STARTUP: hidestar
+#+OPTIONS: H:3 num:t tags:t toc:t timestamps:t
+#+LAYOUT: post
+#+CATEGORIES: blog
+#+DATE: 2019-08-
+#+TITLE:
+#+DESCRIPTION:
+#+TAGS:"
+))
 			
 (require 'org-page)
 (setq op/repository-directory "/Users/yubaoliu/Projects/homepage")
