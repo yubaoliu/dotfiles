@@ -81,3 +81,10 @@ alias sshkobuki='source ~/dotfiles/scripts/ssh-kobuki.sh'
 # docker
 alias cddocker='cd ~/data/Project/docker'
 
+#jekyll
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+
+

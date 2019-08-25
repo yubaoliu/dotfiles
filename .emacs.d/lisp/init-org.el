@@ -62,8 +62,8 @@
 (require 'org2jekyll)
 
 (custom-set-variables '(org2jekyll-blog-author "Yubao Liu")
-                      '(org2jekyll-source-directory (expand-file-name "~/data/Projects/yubaoliu.github.io"))
-                      '(org2jekyll-jekyll-directory (expand-file-name "~/data/Projects/yubaoliu.github.io"))
+                      '(org2jekyll-source-directory (expand-file-name "~/data/Project/yubaoliu.github.io"))
+                      '(org2jekyll-jekyll-directory (expand-file-name "~/data/Project/yubaoliu.github.io"))
                       '(org2jekyll-jekyll-drafts-dir "_drafts/")
                       '(org2jekyll-jekyll-posts-dir "_posts/")
 		      )

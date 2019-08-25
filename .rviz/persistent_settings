@@ -1,13 +1,13 @@
-Last Config Dir: /opt/ros/kinetic/share/turtlebot_rviz_launchers/rviz
+Last Config Dir: /home/yubao/.rviz
 Last Image Dir: ""
 Recent Configs:
+  - /home/yubao/.rviz/default.rviz
+  - nav_obstacles.rviz
   - /opt/ros/kinetic/share/turtlebot_rviz_launchers/rviz/navigation.rviz
   - /opt/ros/kinetic/share/turtlebot_rviz_launchers/rviz/robot.rviz
   - hdl_graph_slam.rviz
-  - /home/yubao/.rviz/default.rviz
   - /home/yubao/data/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM/rviz/ds_slam.rviz
   - /home/yubao/data/catkin_ws/src/DS-SLAM/rviz/ds_slam.rviz
   - /home/yubao/data/catkin_ws/src/DS-SLAM/rviz/ds_slam2.rviz
   - /home/yubao/data/catkin_ws/src/DS-SLAM/Examples/ROS/ORB_SLAM2_PointMap_SegNetM/rviz/ds_slam2.rviz
   - /home/yubao/data/catkin_ws/src/DS-SLAM/ds_slam.rviz
-  - /opt/ros/kinetic/share/hsrb_common_launch/config/hsrb_display_full_hsrb.rviz
