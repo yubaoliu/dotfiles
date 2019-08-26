@@ -16,6 +16,17 @@
    (perl . t)
    (C . t)
    (latex . t)
+   (java . t)
+   (awk . t)
+   (emacs-lisp . t)
+   (js . t)
+   (R . t)
+   (sql . t)
+   (org . t)
+   (lisp . t)
+   (matlab . t)
+   (shell . t)
+   (octave . t)
    ))
 
 (setq org-confirm-babel-evaluate nil)
@@ -70,7 +81,7 @@
 
 (setq org-publish-project-alist
                         `(("default"
-			   :with-latex t
+						   :with-latex t
                            :base-directory ,(org2jekyll-input-directory)
                            :base-extension "org"
                            :publishing-directory ,(org2jekyll-output-directory)
@@ -85,19 +96,21 @@
                            :html-extension "html"
                            :body-only t)
 			              ("post"
-                           :base-directory ,(org2jekyll-input-directory)
+                           :base-directory ,(org2jekyll-input-directory  org2jekyll-jekyll-drafts-dir)
                            :base-extension "org"
                            :publishing-directory ,(org2jekyll-output-directory org2jekyll-jekyll-posts-dir)
                            :publishing-function org-html-publish-to-html
                            :headline-levels 4
-                           :section-numbers nil
+                           :section-numbers t
                            :with-toc nil
                            :html-head "<link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\"/>"
                            :html-preamble t
                            :recursive t
                            :make-index t
                            :html-extension "html"
-                           :body-only t)
+                           :body-only t
+						   :with-date t
+						   :with-title t)
                           ("images"
                            :base-directory ,(org2jekyll-input-directory "img")
                            :base-extension "jpg\\|gif\\|png"
@@ -116,7 +129,7 @@
                            :publishing-directory ,(org2jekyll-output-directory "css")
                            :publishing-function org-publish-attachment
                            :recursive t)
-                          ("web" :components ("images" "js" "css"))
+                          ("web" :components ( "images" "js" "css"))
 			  ))
 
 
@@ -132,6 +145,12 @@
 #+DESCRIPTION:
 #+TAGS:"
 ))
+
+(defun yubao/insert-publish-template()
+ (interactive)
+  (insert "#+EXPORT_FILE_NAME:
+#+TITLE:
+"))
 			
 (require 'org-page)
 (setq op/repository-directory "/Users/yubaoliu/Projects/homepage")
