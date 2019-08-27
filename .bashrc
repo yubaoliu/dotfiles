@@ -69,6 +69,9 @@ export PYCAFFE_ROOT="$CAFFE_ROOT/python"
 export PYTHONPATH="$PYCAFFE_ROOT:$PYTHONPATH"
 export LD_LIBRARY_PATH="$CAFFE_ROOT/lib:$LD_LIBRARY_PATH"
 
+# dlib
+export DLIB_ROOT="~/data/Project/3rdPartyLibs/dlib/"
+
 # Commond
 alias cdSpaceAI='cd ~/data/SpacialAI/catkin_ws/src'
 alias cdRepo='cd ~/data/Project/RepoCollection/'

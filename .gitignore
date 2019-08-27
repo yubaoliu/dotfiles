@@ -5,6 +5,8 @@ recentf
 eshell
 .ros
 .dropbox-dist
+.rize
+srecode-map.el
 
 
 # Created by https://www.gitignore.io/api/emacs

@@ -9,6 +9,7 @@
  '(org-latex-image-default-height "240")
  '(org-latex-image-default-scale "0.5")
  '(org-latex-image-default-width ".8\\linewidth")
+ '(org-publish-use-timestamps-flag t)
  '(tab-width 4))
  
 (custom-set-faces

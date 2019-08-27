@@ -1,5 +1,6 @@
 ;;https://orgmode.org/orgguide.pdf
 ;(require 'org)
+(require 'ox-publish)
 (require 'org-tempo)
 (require 'xml-rpc)
 (setq org-startup-with-inline-images t)
@@ -82,9 +83,9 @@
 (setq org-publish-project-alist
                         `(("default"
 						   :with-latex t
-                           :base-directory ,(org2jekyll-input-directory)
+                           :base-directory "~/data/Project/yubaoliu.github.io/_drafts"
                            :base-extension "org"
-                           :publishing-directory ,(org2jekyll-output-directory)
+                           :publishing-directory "~/data/Project/yubaoliu.github.io/_posts"
                            :publishing-function org-html-publish-to-html
                            :headline-levels 4
                            :section-numbers t
@@ -102,7 +103,7 @@
                            :publishing-function org-html-publish-to-html
                            :headline-levels 4
                            :section-numbers t
-                           :with-toc nil
+                           :with-toc t
                            :html-head "<link rel=\"stylesheet\" href=\"./css/style.css\" type=\"text/css\"/>"
                            :html-preamble t
                            :recursive t
@@ -110,6 +111,11 @@
                            :html-extension "html"
                            :body-only t
 						   :with-date t
+						   :auto-preamble t
+						   :auto-sitemap t
+						   :sitemap-filename "sitemap.org"
+						   :sitemap-title "sitemap"
+						   :sitemap-sort-folders "last"
 						   :with-title t)
                           ("images"
                            :base-directory ,(org2jekyll-input-directory "img")
@@ -129,7 +135,7 @@
                            :publishing-directory ,(org2jekyll-output-directory "css")
                            :publishing-function org-publish-attachment
                            :recursive t)
-                          ("web" :components ( "images" "js" "css"))
+                          ("web" :components ("post" "images" "js" "css"))
 			  ))
 
 
@@ -143,13 +149,17 @@
 #+DATE: 2019-08-
 #+TITLE:
 #+DESCRIPTION:
-#+TAGS:"
+#+TAGS:
+#+OPTIONS: body-only:t"
 ))
 
 (defun yubao/insert-publish-template()
  (interactive)
-  (insert "#+EXPORT_FILE_NAME:
-#+TITLE:
+  (insert "#+EXPORT_FILE_NAME: 
+#+TITLE: 
+#+KEYWORDS: 
+#+OPTIONS: body-only:t
+#+subtitle: 
 "))
 			
 (require 'org-page)
