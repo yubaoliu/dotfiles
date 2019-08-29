@@ -7,3 +7,6 @@
 [submodule ".emacs.d/packages/org2blog"]
 	path = .emacs.d/packages/org2blog
 	url = https://github.com/org2blog/org2blog.git
+[submodule "emacs"]
+	path = emacs
+	url = git@github.com:yubaoliu/emacs.git
