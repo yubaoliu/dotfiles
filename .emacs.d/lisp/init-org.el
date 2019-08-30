@@ -112,10 +112,6 @@
                            :body-only t
 						   :with-date t
 						   :auto-preamble t
-						   :auto-sitemap t
-						   :sitemap-filename "sitemap.org"
-						   :sitemap-title "sitemap"
-						   :sitemap-sort-folders "last"
 						   :with-title t)
                           ("images"
                            :base-directory ,(org2jekyll-input-directory "img")

@@ -81,6 +81,10 @@ alias cdRepo='cd ~/data/Project/RepoCollection/'
 alias sourcekobuki='source ~/dotfiles/scripts/kobuki.sh'
 alias sshkobuki='source ~/dotfiles/scripts/ssh-kobuki.sh'
 
+# nvidia-jetson
+alias sourcexavier='source ~/dotfiles/scripts/xavier.sh'
+alias sshxavier='source ~/dotfiles/scripts/ssh-xavier.sh'
+
 # docker
 alias cddocker='cd ~/data/Project/docker'
 
@@ -88,6 +92,4 @@ alias cddocker='cd ~/data/Project/docker'
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
-
-
 
