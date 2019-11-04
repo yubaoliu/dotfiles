@@ -1,5 +1,5 @@
 export ROS_MASTER_URI=http://133.15.23.206:11311
-export ROS_HOSTNAME=133.15.23.26
+export ROS_HOSTNAME=localhost
  
 echo "ROS_MASTER_URI"
 echo $ROS_MASTER_URI

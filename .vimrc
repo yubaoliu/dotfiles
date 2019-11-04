@@ -1,5 +1,8 @@
 " https://dougblack.io/words/a-good-vimrc.html
 
+"clipboard
+set clipboard=unnamed,autoselect
+
 "Spaces & Tabs
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
