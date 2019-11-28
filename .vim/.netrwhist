@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/yubao/dotfiles/scripts'
-let g:netrw_dirhist_2='/home/yubao/data/blog/SLAM'
-let g:netrw_dirhist_3='/home/yubao/data/Project/semantic_slam_yolo_orbslam2/build'
-let g:netrw_dirhist_4='/home/yubao/data/Project/KinectFusionApp/build/KinectFusionApp/CMakeFiles'
-let g:netrw_dirhist_5='/home/yubao/data/Project/KinectFusionApp/build/KinectFusionLib/CMakeFiles'
-let g:netrw_dirhist_6='/home/yubao/data/catkin_ws/src/chefbot_navig_cpp'
-let g:netrw_dirhist_7='/home/yubao/data/Project/AISLAM/mastering_ros/chapter_9_codes/chefbot/chefbot'
-let g:netrw_dirhist_8='/home/yubao/data/Project/AISLAM/mastering_ros/chapter_9_codes/chefbot/chefbot_bringup'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/yubao/data/catkin_ws/src/semantic-slam'
+let g:netrw_dirhist_2='/home/yubao/data/catkin_ws/src'
+let g:netrw_dirhist_3='/home/yubao/data/catkin_ws/src/YB_ORB_SLAM'
+let g:netrw_dirhist_4='/home/yubao/data/catkin_ws/src/YB_ORB_SLAM/src'
+let g:netrw_dirhist_5='/home/yubao/data/catkin_ws/src/DS-SLAM/aaddToPackagePath.sh'

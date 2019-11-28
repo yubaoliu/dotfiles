@@ -1,1 +1,13 @@
-# dotfile
+* Dotfile
+This is my awsome config file
+
+* TMUX
+- prefix: C-SPC 
+
+* Emacs
+- mark: C-c C-SPC
+
+* VIM
+- set paste
+* Reference
+- spacemacs

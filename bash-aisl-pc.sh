@@ -42,7 +42,7 @@ export g2o_DIR="$HOME/data/software/g2o/lib/cmake/g2o"
 export DBoW2_DIR=$HOME/software/DBoW2/lib/cmake/DBoW2
 
 # Eigen
-export  Eigen3_DIR="$HOME/software/Eigen/share/eigen3/cmake"
+#export  Eigen3_DIR="$HOME/data/software/Eigen/share/eigen3/cmake"
 
 #GTSAM
 export GTSAM_DIR="$HOME/software/gtsam/lib/cmake"
@@ -66,13 +66,17 @@ export gflags_DIR="~/data/software/gflags/lib/cmake/gflags"
 export OpenPose_DIR="$HOME/data/software/openpose/lib/OpenPose"
 
 # glog
-export glog_DIR="~/data/software/glog"
+#export glog_DIR="$HOME/data/software/glog"
+
+#gtest
+export GTest_DIR="$HOME/data/software/gtest/lib/cmake/GTest"
+
 
 # Caffe
-export CAFFE_ROOT="~/software/caffe"
-export PYCAFFE_ROOT="$CAFFE_ROOT/python"
-export PYTHONPATH="$PYCAFFE_ROOT:$PYTHONPATH"
-export LD_LIBRARY_PATH="$CAFFE_ROOT/lib:$LD_LIBRARY_PATH"
+#export CAFFE_ROOT="~/software/caffe"
+#export PYCAFFE_ROOT="$CAFFE_ROOT/python"
+#export PYTHONPATH="$PYCAFFE_ROOT:$PYTHONPATH"
+#export LD_LIBRARY_PATH="$CAFFE_ROOT/lib:$LD_LIBRARY_PATH"
 
 # Realsense
 export realsense2_DIR="$HOME/data/software/librealsense/lib/cmake/realsense2"
@@ -93,6 +97,9 @@ alias sshxavier='source ~/dotfiles/scripts/ssh-xavier.sh'
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+# Rtamb SLAM
+export RTABMap_DIR="$HOME/data/software/rtabmap/lib/rtabmap-0.19"
+
 # common used
 alias cddocker='cd ~/data/Project/docker'
 alias cdproject='cd ~/data/Project'
@@ -100,4 +107,8 @@ alias cdSpaceAI='cd ~/data/SpacialAI/catkin_ws/src'
 alias cdRepo='cd ~/data/Project/RepoCollection/'
 alias qshell="~/data/software/qshell-linux-x64-v2.4.0"
 
-
+alias run-docer-rtabmap="docker run -it --rm \
+         --env ROS_MASTER_URI=http://172.17.0.1:11311 --env ROS_IP=172.17.0.1 \
+          -v ~/.ros:/root  \
+           ros:rtabmap \
+            roslaunch rtabmap_ros rtabmap.launch rtabmapviz:=false database_path:=/root/rtabmap.db rtabmap_args:=\"--delete_db_on_start\""

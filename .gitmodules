@@ -1,9 +1,6 @@
 [submodule "tpm"]
 	path = .tmux/plugins/tpm 
 	url = https://github.com/tmux/tmux.git
-[submodule "spacemacs"]
-	path = spacemacs
-	url = https://github.com/syl20bnr/spacemacs.git
 [submodule ".emacs.d/packages/org2blog"]
 	path = .emacs.d/packages/org2blog
 	url = https://github.com/org2blog/org2blog.git
