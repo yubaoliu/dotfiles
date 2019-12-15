@@ -1,1 +1,0 @@
-/home/yubao/dotfiles/.vim
