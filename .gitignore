@@ -7,6 +7,9 @@ eshell
 .dropbox-dist
 .rize
 srecode-map.el
+.vim/autoload/
+.vim/plugged/
+
 
 
 # Created by https://www.gitignore.io/api/emacs

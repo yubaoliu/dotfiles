@@ -69,7 +69,7 @@ export OpenPose_DIR="$HOME/data/software/openpose/lib/OpenPose"
 #export glog_DIR="$HOME/data/software/glog"
 
 #gtest
-export GTest_DIR="$HOME/data/software/gtest/lib/cmake/GTest"
+#export GTest_DIR="$HOME/data/software/gtest/lib/cmake/GTest"
 
 
 # Caffe
