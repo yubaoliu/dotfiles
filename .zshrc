@@ -99,14 +99,49 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=$PATH:$HOME/data/software/install/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/$HOME/data/software/install/lib
+#Thunderbird
+#export THUNDERBIRD_PATH=/home/yubao/data/software/thunderbird
+export PATH=$PATH:$HOME/data/software/install/bin:$HOME/.gem/ruby/2.6.0/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
 
+#Add TUM Benchmark
+export PATH=$PATH:$HOME/data/software/rgbd_benchmark_tools/scripts
 
 #ROS
 source /opt/ros/kinetic/setup.zsh
 source ~/data/catkin_ws/devel/setup.zsh
 
+# CUDA
+export CUDA_ROOT=/usr/local/cuda
+export PATH=$PATH:$CUDA_ROOT/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_ROOT/lib64
+
+
+#export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws/rgbd_benchmark_tools
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws
+
+setopt no_nomatch
+#export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
+#export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
+
+export OpenCV_DIR=$HOME/data/software/install/share/OpenCV
+#export OpenCV_DIR=$HOME/data/software/OpenCV3.3.1/share/OpenCV
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:/home/yubao/data/software/install/lib/pkgconfig
+
+export caffe_DIR=/home/yubao/data/software/install/caffe-segnet/share/Caffe
+export OpenPose_DIR=$HOME/data/software/openpose/lib/OpenPose
+
+# Kinect2
+export freenect2_DIR=/home/yubao/data/software/install/freenect2/lib/cmake/freenect2
+
+
+# rm to trash
+alias rm='rmtrash'
+alias rmdir='rmdirtrash'
+alias sudo='sudo '
+
+# conda
+alias source-conda='source ~/dotfiles/anaconda.sh'
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
