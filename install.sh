@@ -1,30 +1,17 @@
-
-
-
 cd ~
 
-# bashrc
-ln -s -f ~/dotfiles/.bashrc 
-ln -s -f ~/dotfiles/.dir_colors 
+echo "Install dependencies"
+sudo apt intstall -y trash-cli \
+libevent-dev \
+libncurses5-dev \
+libncursesw5-dev \
+bison \
+byacc \
+autotools-dev \
+automake \
+zsh
 
-
-# vim
-ln -s -f  ~/dotfiles/.vimrc 
-ln -s -f  ~/dotfiles/.vim 
-
-# TMUX
-ln -s -f ~/dotfiles/.tmux.conf 
-ln -s -f ~/dotfiles/.tmux 
-
-
-echo "ROS"
-ln -s -f ~/dotfiles/.ros_setup
-ln -s -f ~/dotfiles/.ros
-
-echo "rviz"
-ln -s -f  ~/dotfiles/.rviz 
-
-echo "Dropbox"
-ln -s -f ~/dotfiles/.dropbox-dist 
-
+echo "Install ruby"
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt install ruby2.6 ruby2.6-dev
 

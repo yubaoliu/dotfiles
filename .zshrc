@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/yubao/.oh-my-zsh"
@@ -68,7 +68,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+    bundler
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,8 +111,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
 export PATH=$PATH:$HOME/data/software/rgbd_benchmark_tools/scripts
 
 #ROS
-source /opt/ros/kinetic/setup.zsh
-source ~/data/catkin_ws/devel/setup.zsh
+source ~/dotfiles/ros.sh
 
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
@@ -136,12 +138,25 @@ export freenect2_DIR=/home/yubao/data/software/install/freenect2/lib/cmake/freen
 
 
 # rm to trash
-alias rm='rmtrash'
-alias rmdir='rmdirtrash'
+alias rm='~/dotfiles/rmtrash/rmtrash'
+alias rmdir='~/dotfiles/rmtrash/rmdirtrash'
 alias sudo='sudo '
 
 # conda
 alias source-conda='source ~/dotfiles/anaconda.sh'
 
+# Gem
+#GEM_HOME="$HOME/gems"
+#PATH="$HOME/gems/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# history
+unsetopt share_history
+setopt no_share_history
+
+
+
