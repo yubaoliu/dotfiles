@@ -40,7 +40,13 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
     setopt no_share_history
     ```
 
-    
+- mkcd
+
+  ```sh
+  echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
+  ```
+
+  
 
 # Software
 
