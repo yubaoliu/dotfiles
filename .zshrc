@@ -168,4 +168,3 @@ setopt EXTENDED_HISTORY
 setopt hist_expand
 
 
-function mkcd(){mkdir -p $1 && cd $1}
