@@ -17,6 +17,12 @@ call plug#begin('~/.vim/plugged')
  Plug 'plasticboy/vim-markdown'
  Plug 'previm/previm'
  Plug 'regedarek/ZoomWin'
+ Plug 'preservim/nerdcommenter'
+ Plug 'liuchengxu/vim-which-key'
+ Plug 'chiel92/vim-autoformat'
+ " On-demand lazy load
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
+ 
  " Plug 'justmao945/vim-clang'
  " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
 
@@ -52,7 +58,8 @@ set fileformats=unix,dos,mac
 " " バッファが編集中でもその他のファイルを開けるように
  set hidden
 " " 入力中のコマンドをステータスに表示する
- set showcmd
+" Show (partial) command in status line.
+ set showcmd  
 "
 "
 " " 見た目系
@@ -106,7 +113,6 @@ set fileformats=unix,dos,mac
 
  " ["+y]でクリップボードにコピー
  set clipboard=unnamed,autoselect
-
 
  " *** Plugin settings *** 
  
@@ -202,3 +208,19 @@ augroup END
 " let g:clang_format_style = 'Google'
 " let g:clang_check_syntax_auto = 1
 
+" nerdcommenter
+" Refer: https://qiita.com/pepo/items/09bacf98a36f6a7285ac
+" ファイルタイプを参照するので
+
+filetype plugin on
+" NERD Commenterでコメント挿入した時、コメント記号の後にスペースを挿入してくれるようになる。
+" コメントが見やすく見やすくなるのでオススメ
+let g:NERDDefaultAlign='left' 
+let g:NERDSpaceDelims=1
+
+
+" vim-autoformat
+nnoremap <F3> :Autoformat<CR>
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
