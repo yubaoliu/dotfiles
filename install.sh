@@ -9,7 +9,8 @@ bison \
 byacc \
 autotools-dev \
 automake \
-zsh
+zsh \
+vim-gtk  #vim clipboard
 
 echo "Install ruby"
 sudo apt-add-repository ppa:brightbox/ruby-ng
