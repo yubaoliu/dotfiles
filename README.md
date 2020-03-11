@@ -55,11 +55,6 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 ```sh
 sudo apt intall htop
 ```
-
-
-
-
-
 ## TMUX
 
 ```sh
@@ -108,7 +103,18 @@ wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/t
 tmuxinator new demo
 ```
 
-- 
+```sh
+source 'https://rubygems.org'
+group :development do
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+end
+```
+
+Then run bundle install again.
+
+
+- [Setting Up Terminator (Terminal ++)](https://coderwall.com/p/1pivpa/setting-up-terminator-terminal)
 
 ## Rupy
 
@@ -123,6 +129,9 @@ sudo apt autoremove ruby2.3*
 ```sh
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt install ruby2.6 ruby2.6-dev
+
+$ sudo gem install bundler
+$ gem install bundler --user-install
 ```
 
 
