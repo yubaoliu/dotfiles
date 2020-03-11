@@ -15,8 +15,6 @@ ln -s dotfiles/.vim
 export EDITOR='vim'
 ```
 
-
-
 ## on-my-zsh
 
 ## Installation
@@ -45,9 +43,6 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
   ```sh
   echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
   ```
-
-  
-
 # Software
 
 ## Useful tools
@@ -268,24 +263,15 @@ Issue
 重启 Vim 或执行 :source ~/.vimrc 让 Vim 加载插件
 ```
 
-
-
 ## vim commands
-
-
   -   set paste
-
 ## Plugin
-
 ###  Install plugin
-
 ```sh
 \# plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-   
 ```
-
 Reload .vimrc and `:PlugInstall` to install plugins.
 
  **vim plugin commands**
@@ -370,6 +356,7 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 
   Uncomments the selected line(s).
 
+
 ### [vim-which-key](https://github.com/liuchengxu/vim-which-key)
 
 - astyle
@@ -395,67 +382,56 @@ sudo apt-get install clang-format
 ```
 
 - autopep8
-
   ```sh
   pip install autopep8
   yum -y install clang
   
   ```
-
 - autopep8 (**Python**)
 
   ```sh
   sudo apt-get install python-autopep8 
   ```
-
 - yapf (**Python**)
 
-  ​	
-
   ```sh
-  sudo pip install yapf or pip install --user yapf
+  sudo pip install yapf 
+  or
+  pip install --user yapf
   let g:formatter_yapf_style = 'pep8'
-  pep8 is the default value, or you can choose: google, facebook, chromium.
   ```
+  pep8 is the default value, or you can choose: google, facebook, chromium.
 
 - `black` for **Python**
 
   ```sh
-  sudo pip install black or pip install --user
+  sudo pip install black
+   or 
+  pip install --user
   ```
-
 - `remark` for **Markdown**
-
+    ```sh
+    sudo apt install remark
+    ```
 - `fixjson` for JSON
 
   ```sh
   npm install -g remark-cli
   ```
-
-  
-
-Emacs
-=====
-
+# Emacs
 -   mark: C-c C-SPC
-
     Mehtod 1:
-
-    ``` {.example}
+    ```sh
     sudo add-apt-repository ppa:kelleyk/emacs
     sudo apt install emacs26
     ```
-
     Method 2:
-
+    ```sh
         sudo add-apt-repository ppa:ubuntu-elisp/ppa
         sudo apt-get update
         sudo apt-get install emacs-snapshot
-
-
-
-Reference
-=========
-
+    ```
+# Reference
 -   spacemacs
+
 
