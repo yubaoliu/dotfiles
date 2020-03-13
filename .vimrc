@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'preservim/nerdcommenter'
  Plug 'liuchengxu/vim-which-key'
  Plug 'chiel92/vim-autoformat'
+Plug 'tyru/caw.vim'
  " On-demand lazy load
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
  
@@ -224,3 +225,12 @@ nnoremap <F3> :Autoformat<CR>
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+
+"" tyru/caw.vim config
+" 行の最初の文字の前にコメント文字をトグル
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
+" 行頭にコメントをトグル
+nmap <Leader>, <Plug>(caw:zeropos:toggle)
+vmap <Leader>, <Plug>(caw:zeropos:toggle)
+

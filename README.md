@@ -251,6 +251,7 @@ Issue
 
 # VIM
 
+
 - Help docs
   - [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
 - Refresh config
@@ -363,36 +364,35 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 
 ### [vim-which-key](https://github.com/liuchengxu/vim-which-key)
 
-- astyle
-
-```sh
-sudo apt-get install astyle
-```
-
 ### vim-autoformat
 
 - [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
 - <F3>: auto format
 
-- clang-format
+- clang-format  for **C**, **C++**, **Objective-C**, **Protobuf** (
 
   既然有了clang-format，为什么还需要vim-autoformat呢？其实这里vim-autoformat是相当于将原本独立的clang-format集成到了vim中，没有它，也就只能单独运行clang-format来格式化代码
 
   在ubuntu下安装clang-format也非常的方便，只需运
 
-```sh
-sudo apt-get install clang-format
-```
+    ```sh
+    sudo apt-get install clang-format
+    ```
 
-- autopep8
+- astyle for **C#**, **C++**, **C** and **Java**.
+
+    ```sh
+    sudo apt-get install astyle
+    ```
+
+- autopep8 for **Python** (supports formatting ranges)
 
   ```sh
   pip install autopep8
   yum -y install clang
-  
   ```
-
+  
 - autopep8 (**Python**)
 
   ```sh
@@ -401,14 +401,13 @@ sudo apt-get install clang-format
 
 - yapf (**Python**)
 
-  ​	
-
   ```sh
-  sudo pip install yapf or pip install --user yapf
+sudo pip install yapf or pip install --user yapf
   let g:formatter_yapf_style = 'pep8'
-  pep8 is the default value, or you can choose: google, facebook, chromium.
   ```
-
+  
+  pep8 is the default value, or you can choose: google, facebook, chromium.
+  
 - `black` for **Python**
 
   ```sh
