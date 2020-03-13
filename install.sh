@@ -16,3 +16,15 @@ echo "Install ruby"
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt install ruby2.6 ruby2.6-dev
 
+# VIm plugin
+sudo apt-get install astyle
+sudo apt-get install clang-format
+pip install autopep8
+sudo apt-get install python-autopep8 
+
+sudo pip install yapf 
+sudo apt install remark # markdown
+
+sudo apt install npm
+npm install -g remark-cli
+

@@ -89,7 +89,7 @@ set fileformats=unix,dos,mac
 "
 " " Tab系
 " " 不可視文字を可視化(タブが「▸-」と表示される)
-"set list listchars=tab:\▸\-
+set list listchars=tab:\▸\-
 " " Tab文字を半角スペースにする
  set expandtab
 " " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -234,3 +234,5 @@ vmap <Leader>c <Plug>(caw:hatpos:toggle)
 nmap <Leader>, <Plug>(caw:zeropos:toggle)
 vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
+"  plasticboy/vim-markdown 
+let g:vim_markdown_folding_disabled = 1

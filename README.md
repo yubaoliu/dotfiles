@@ -15,8 +15,6 @@ ln -s dotfiles/.vim
 export EDITOR='vim'
 ```
 
-
-
 ## on-my-zsh
 
 ## Installation
@@ -45,9 +43,6 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
   ```sh
   echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
   ```
-
-  
-
 # Software
 
 ## Useful tools
@@ -55,11 +50,6 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 ```sh
 sudo apt intall htop
 ```
-
-
-
-
-
 ## TMUX
 
 ```sh
@@ -108,7 +98,18 @@ wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/t
 tmuxinator new demo
 ```
 
-- 
+```sh
+source 'https://rubygems.org'
+group :development do
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+end
+```
+
+Then run bundle install again.
+
+
+- [Setting Up Terminator (Terminal ++)](https://coderwall.com/p/1pivpa/setting-up-terminator-terminal)
 
 ## Rupy
 
@@ -123,6 +124,9 @@ sudo apt autoremove ruby2.3*
 ```sh
 sudo apt-add-repository ppa:brightbox/ruby-ng
 sudo apt install ruby2.6 ruby2.6-dev
+
+$ sudo gem install bundler
+$ gem install bundler --user-install
 ```
 
 
@@ -260,24 +264,15 @@ Issue
 重启 Vim 或执行 :source ~/.vimrc 让 Vim 加载插件
 ```
 
-
-
 ## vim commands
-
-
   -   set paste
-
 ## Plugin
-
 ###  Install plugin
-
 ```sh
 \# plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-   
 ```
-
 Reload .vimrc and `:PlugInstall` to install plugins.
 
  **vim plugin commands**
@@ -362,6 +357,7 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 
   Uncomments the selected line(s).
 
+
 ### [vim-which-key](https://github.com/liuchengxu/vim-which-key)
 
 ### vim-autoformat
@@ -392,60 +388,67 @@ Reload .vimrc and `:PlugInstall` to install plugins.
   pip install autopep8
   yum -y install clang
   ```
-  
 - autopep8 (**Python**)
 
   ```sh
   sudo apt-get install python-autopep8 
   ```
-
 - yapf (**Python**)
 
   ```sh
-sudo pip install yapf or pip install --user yapf
-  let g:formatter_yapf_style = 'pep8'
+    sudo pip install yapf or pip install --user yapf
+    let g:formatter_yapf_style = 'pep8'
   ```
-  
   pep8 is the default value, or you can choose: google, facebook, chromium.
-  
+  pep8 is the default value, or you can choose: google, facebook, chromium.
+
 - `black` for **Python**
 
   ```sh
-  sudo pip install black or pip install --user
+  sudo pip install black
+   or 
+  pip install --user
   ```
-
 - `remark` for **Markdown**
-
+    ```sh
+    sudo apt install remark
+    ```
 - `fixjson` for JSON
 
   ```sh
   npm install -g remark-cli
   ```
+## caw.vim
+  - https://github.com/tyru/caw.vim
+- バックスラッシュ+c (\c) で行頭(インデントあり)にコメントのトグル
+- バックスラッシュ+カンマ (\,) で行頭(インデント関係なく行頭)にコメントのトグル
+を設定するために.vimrcは以下のようにした
 
-  
+Refer from; https://yoheikoga.github.io/2017/04/12/caw-vim-comment-out-toggle-shortcut/ 
+  ```sh
+.vimrc
+" 行の最初の文字の前にコメント文字をトグル
+nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>c <Plug>(caw:hatpos:toggle)
+" 行頭にコメントをトグル
+nmap <Leader>, <Plug>(caw:zeropos:toggle)
+vmap <Leader>, <Plug>(caw:zeropos:toggle)
+  ```
 
-Emacs
-=====
-
+# Emacs
 -   mark: C-c C-SPC
-
     Mehtod 1:
-
-    ``` {.example}
+    ```sh
     sudo add-apt-repository ppa:kelleyk/emacs
     sudo apt install emacs26
     ```
-
     Method 2:
-
+    ```sh
         sudo add-apt-repository ppa:ubuntu-elisp/ppa
         sudo apt-get update
         sudo apt-get install emacs-snapshot
-
-
-
-Reference
-=========
-
+    ```
+# Reference
 -   spacemacs
+
 
