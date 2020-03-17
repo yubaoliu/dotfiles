@@ -111,7 +111,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
 export PATH=$PATH:$HOME/data/software/rgbd_benchmark_tools/scripts
 
 #ROS
-source ~/dotfiles/ros.sh
+source ~/ros.sh
 
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
@@ -120,7 +120,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_ROOT/lib64
 
 
 #export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws/rgbd_benchmark_tools
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws
+#export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws
 
 setopt no_nomatch
 #export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include

@@ -2,6 +2,15 @@
 
 This is my awesome configure file
 
+# on-my-zsh
+```sh
+sudo apt install zsh
+
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+rm ~/.zshrc
+```
+
 # Config
 
 ```sh
@@ -10,22 +19,10 @@ git clone git@github.com:yubaoliu/dotfiles.git ~/dotfiles
 cd ~
 ln -s dotfiles/.zshrc
 ln -s dotfiles/.vimrc
-ln -s dotfiles/.vim
-
-export EDITOR='vim'
 ```
 
-## on-my-zsh
 
-## Installation
-
-```sh
-sudo apt install zsh
-
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-## Commands
+# Commands
 
 - Command history
 
