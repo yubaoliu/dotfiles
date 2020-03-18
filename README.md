@@ -252,6 +252,58 @@ Issue
 
 # VIM
 
+- Mode
+```sh
+标记 模式
+<space>　常规模式，可视化模式，运算符模式
+n　　　　　常规模式
+v　　　　　可视化模式
+o　　　　　运算符模式
+!　　　　　插入模式，命令行模式
+i　　　　　插入模式
+c　　　　　命令模式
+
+nore
+表示非递归，见下面的介绍
+
+n
+表示在普通模式下生效
+
+v
+表示在可视模式下生效
+
+i
+表示在插入模式下生效
+
+c
+表示在命令行模式下生效
+
+map
+表示递归的映射
+
+unmap
+表示删除某个映射
+
+mapclear
+表示清楚映射
+
+! 插入和命令行 
+i 插入 
+l 插入、命令行和 Lang-Arg 模式的 ":lmap" 映射 
+
+  コマンド                    モード
+  :map   :noremap  :unmap     ノーマル、ビジュアル、選択、オペレータ待機
+  :nmap  :nnoremap :nunmap    ノーマル
+  :vmap  :vnoremap :vunmap    ビジュアル、選択
+  :smap  :snoremap :sunmap    選択
+  :xmap  :xnoremap :xunmap    ビジュアル
+  :omap  :onoremap :ounmap    オペレータ待機
+  :map!  :noremap! :unmap!    挿入、コマンドライン
+  :imap  :inoremap :iunmap    挿入
+  :lmap  :lnoremap :lunmap    挿入、コマンドライン、Lang-Arg
+  :cmap  :cnoremap :cunmap    コマンドライン
+  :tmap  :tnoremap :tunmap    端末ジョブ
+```
 
 - Help docs
   - [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
@@ -293,6 +345,20 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 
 ```sh
 :help NERDCommenter命令查看帮助
+```
+
+- map
+```sh
+:map
+```
+
+   使用:map!命令，则只列出插入和命令行模式的映射。而:imap，:vmap，:omap，:nmap命令则只是列出相应模式下的映射。
+- umap
+```sh
+:unmap <F10>
+
+取消所有映射
+:mapclear
 ```
 
 - Leader key: ``\``
@@ -447,5 +513,8 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
     ```
 # Reference
 -   spacemacs
+- [emacs派のためのvimrc](https://qiita.com/jimpei/items/c97e2bc06cabf1ffc07f)
+
+
 
 

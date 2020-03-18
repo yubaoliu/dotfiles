@@ -32,10 +32,6 @@ Plug 'tyru/caw.vim'
 filetype plugin indent on
 syntax enable
 
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
-
 "文字コード変更
 set encoding=utf-8
 set fileencodings=utf-8
@@ -84,8 +80,44 @@ set fileformats=unix,dos,mac
 " " コマンドラインの補完
  set wildmode=list:longest
 " " 折り返し時に表示行単位での移動できるようにする
+
+" ---------------map -----------
+ let mapleader = "\<Space>"  
+
  nnoremap j gj
  nnoremap k gk
+
+ noremap E <END>a
+ noremap A <HOME>i
+ 
+ " compatible with emacs
+ noremap <C-x> <Esc>
+
+ noremap <C-p> <Up>
+ noremap <C-n> <Down>
+ noremap <C-b> <Left>
+ noremap <C-f> <Right>
+ noremap <C-e> <END>
+ noremap <C-d> <Del>
+ noremap <C-k> <Esc>D
+ noremap <C-a> <HOME>
+
+ noremap! <C-p> <Up>
+ noremap! <C-n> <Down>
+ noremap! <C-b> <Left>
+ noremap! <C-f> <Right>
+ noremap! <C-a> <HOME>
+ noremap! <C-e> <END>
+ noremap! <C-d> <Del>
+ noremap! <C-k> <Esc>D
+
+
+ imap <tab> <Esc>V>
+ imap <s-tab> <Esc>V<
+
+ "menu
+ nmap <C-m> <Esc>:tabnew<CR>
+
 "
 "
 " " Tab系
@@ -130,7 +162,7 @@ set list listchars=tab:\▸\-
  " NERDTreeでルートを変更したらchdirする
  let g:NERDTreeChDirMode = 2
  " Type <C-e> to launch
- nnoremap <silent><C-e> :NERDTreeToggle<CR>
+ nnoremap <silent><F5> :NERDTreeToggle<CR>
 
 " caw.vim settings
 nmap <C-K> <Plug>(caw:hatpos:toggle)
