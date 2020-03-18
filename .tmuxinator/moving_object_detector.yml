@@ -41,12 +41,12 @@ root: ~/data/aisl/moving_object_detector
 
 windows:
   - home:
-      layout: even-vertical
+      layout: main-horizontal
       panes:
-        - ls 
+        - 
         -
-        -
-        -
+        - cd docker
+        - cd docker
   - editor:
       layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.

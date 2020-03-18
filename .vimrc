@@ -29,7 +29,7 @@ Plug 'tyru/caw.vim'
 
  call plug#end()
 
-filetype plugin indent off
+filetype plugin indent on
 syntax enable
 
 imap { {}<LEFT>
