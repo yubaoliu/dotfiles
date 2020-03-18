@@ -110,9 +110,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
 #Add TUM Benchmark
 export PATH=$PATH:$HOME/data/software/rgbd_benchmark_tools/scripts
 
-#ROS
-source ~/ros.sh
-
 # CUDA
 export CUDA_ROOT=/usr/local/cuda
 export PATH=$PATH:$CUDA_ROOT/bin
@@ -169,4 +166,11 @@ setopt hist_expand
 
 # tmuxinator
 source $HOME/dotfiles/.tmuxinator/.tmuxinator.zsh
+
+#ROS
+source ~/ros.sh
+
+# Local host config
+source $HOME/local_config.sh
+
 

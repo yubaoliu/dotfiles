@@ -47,7 +47,8 @@ set fileformats=unix,dos,mac
  hi Pmenu ctermbg=black ctermfg=white guifg=#000000 guibg=#999999
  hi PmenuSel ctermbg=blue ctermfg=white
  hi PmenuSbar ctermbg=0 ctermfg=9
- hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFF))
+ "hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFF))
+ hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 " "文字コードをUFT-8に設定
  set fenc=utf-8
 " " バックアップファイルを作らない
