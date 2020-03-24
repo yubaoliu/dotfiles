@@ -188,7 +188,7 @@ let g:tmuxline_preset = {
 let g:tmuxline_theme = 'papercolor'
 
 " undotree settings
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <F4> :UndotreeToggle<cr>
 
 " vim-gitgutter settings
 set updatetime=100
