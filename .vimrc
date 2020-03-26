@@ -91,7 +91,7 @@ set fileformats=unix,dos,mac
  noremap A <HOME>i
  
  " compatible with emacs
- noremap <C-x> <Esc>
+ noremap <M-x> <Esc>
 
  noremap <C-p> <Up>
  noremap <C-n> <Down>
@@ -118,6 +118,9 @@ set fileformats=unix,dos,mac
  "menu
  nmap <C-m> <Esc>:tabnew<CR>
 
+ " map <Leader>w to save
+ nmap <Leader>w :w<cr>
+ " imap <C-x>w <esc>:w<cr>a
 "
 "
 " " Tab系
@@ -269,3 +272,6 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
 "  plasticboy/vim-markdown 
 let g:vim_markdown_folding_disabled = 1
+
+" auto save
+autocmd TextChanged,TextChangedI <buffer> silent write

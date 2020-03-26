@@ -174,4 +174,3 @@ source ~/ros.sh
 # Local host config
 source $HOME/local_config.sh
 
-
