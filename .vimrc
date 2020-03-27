@@ -134,7 +134,7 @@ set list listchars=tab:\▸\-
  set shiftwidth=4
 "
 "
-" " 検索系
+" " 検索系 search
 " " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
  set ignorecase
 " " 検索文字列に大文字が含まれている場合は区別して検索する
@@ -144,9 +144,13 @@ set list listchars=tab:\▸\-
 " " 検索時に最後まで行ったら最初に戻る
  set wrapscan
 " " 検索語をハイライト表示
+" https://stackoverflow.com/questions/7103173/vim-how-to-change-the-highlight-color-for-search-hits-and-quickfix-selection
  set hlsearch
+ hi Search ctermbg=LightYellow
+ hi Search ctermfg=Red
 " " ESC連打でハイライト解除
  nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 
  " ["+y]でクリップボードにコピー
  set clipboard=unnamed,autoselect
