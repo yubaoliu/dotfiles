@@ -28,6 +28,8 @@ Plug 'tyru/caw.vim'
 " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
 call plug#end()
 
+" cheat sheet: https://vim.rtorr.com/
+
 " ---------------map -----------
 let mapleader = "\<Space>"  
 
@@ -105,9 +107,6 @@ set history=1000
 nnoremap j gj
 nnoremap k gk
 
-noremap E <END>a
-noremap A <HOME>i
-
 " compatible with emacs
 noremap <M-x> <Esc>
 
@@ -130,8 +129,8 @@ noremap! <C-d> <Del>
 noremap! <C-k> <Esc>D
 
 
-imap <tab> <Esc>V>
-imap <s-tab> <Esc>V<
+noremap <tab> <Esc>V>
+noremap <s-tab> <Esc>V<
 
 "menu
 " save and exit
@@ -141,31 +140,228 @@ noremap <Leader>w! <Esc>:w!<CR>
 noremap <Leader>q! <Esc>:q!<CR>
 noremap <Leader>qall <Esc>:qall!<CR>
 
-" tabedit
-" create
-noremap <Leader>tc <Esc>:tabnew<CR>
-" delete,td or tx: exit ?
-noremap <Leader>tx <Esc>:tabclose<CR> 
-" gT: go the preious tab
-noremap <Leader>tp <Esc>:tabprevious<CR>    
-" gt: go to next tab
-noremap <Leader>tn <Esc>:tabnext<CR>   
+" Global
+" :help keyword - open help for keyword
+noremap <Leader>help  <Esc>:help<CR>
+" :saveas file - save file as
+" :close - close current pane!
+noremap <Leader>close <Esc>:close<CR>
+" K - open man page for word under the cursor
+noremap <Leader>K <Esc>K<CR>
+
+" Cursor movement
+" h - move cursor left
+" j - move cursor down
+" k - move cursor up
+" l - move cursor right
+" H - move to top of screen
+" M - move to middle of screen
+" L - move to bottom of screen
+" w - jump forwards to the start of a word
+" W - jump forwards to the start of a word (words can contain punctuation)
+" e - jump forwards to the end of a word
+" E - jump forwards to the end of a word (words can contain punctuation)
+noremap E <END>a
+" b - jump backwards to the start of a word
+" B - jump backwards to the start of a word (words can contain punctuation)
+" % - move to matching character (default supported pairs: '()', '{}', '[]' -
+" use :h matchpairs in vim for more info)
+" 0 - jump to the start of the line
+" ^ - jump to the first non-blank character of the line
+" $ - jump to the end of the line
+" g_ - jump to the last non-blank character of the line
+" gg - go to the first line of the document
+" G - go to the last line of the document
+" 5G - go to line 5
+" fx - jump to next occurrence of character x
+" tx - jump to before next occurrence of character x
+" Fx - jump to previous occurence of character x
+" Tx - jump to after previous occurence of character x
+" ; - repeat previous f, t, F or T movement
+" , - repeat previous f, t, F or T movement, backwards
+" } - jump to next paragraph (or function/block, when editing code)
+" { - jump to previous paragraph (or function/block, when editing code)
+" zz - center cursor on screen
+" Ctrl + e - move screen down one line (without moving cursor)
+" Ctrl + y - move screen up one line (without moving cursor)
+" Ctrl + b - move back one full screen
+" Ctrl + f - move forward one full screen
+" Ctrl + d - move forward 1/2 a screen
+" Ctrl + u - move back 1/2 a screen
+
+"Editing
+"r - replace a single character
+"J - join line below to the current one with one space in between
+"gJ - join line below to the current one without space in between
+"gwip - reflow paragraph
+"cc - change (replace) entire line
+"C - change (replace) to the end of the line
+"c$ - change (replace) to the end of the line
+"ciw - change (replace) entire word
+"cw - change (replace) to the end of the word
+"s - delete character and substitute text
+"S - delete line and substitute text (same as cc)
+"xp - transpose two letters (delete and paste)
+"u - undo
+"Ctrl + r - redo
+". - repeat last command
+
+" Marking text (visual mode)
+" v - start visual mode, mark lines, then do a command (like y-yank)
+" V - start linewise visual mode
+" o - move to other end of marked area
+" Ctrl + v - start visual block mode
+" O - move to other corner of block
+" aw - mark a word
+" ab - a block with ()
+" aB - a block with {}
+" ib - inner block with ()
+" iB - inner block with {}
+" Esc - exit visual mode
+
+
+" Visual commands
+" > - shift text right
+" < - shift text left
+" y - yank (copy) marked text
+" d - delete marked text
+" ~ - switch case
+
+" Registers
+" :reg - show registers content
+" "xy - yank into register x
+" "xp - paste contents of register x
+" Tip Registers are being stored in ~/.viminfo, and will be loaded again on next
+" restart of vim.
+" Tip Register 0 contains always the value of the last yank command.
+
+" Insert mode - inserting/appending text
+" i - insert before the cursor
+" I - insert at the beginning of the line
+" a - insert (append) after the cursor
+" A - insert (append) at the end of the line
+" o - append (open) a new line below the current line
+" O - append (open) a new line above the current line
+" ea - insert (append) at the end of the word
+" Esc - exit insert mode
+
+"Cut and paste
+"yy - yank (copy) a line
+"2yy - yank (copy) 2 lines
+"yw - yank (copy) the characters of the word from the cursor position to the start of the next word
+"y$ - yank (copy) to end of line
+"p - put (paste) the clipboard after cursor
+"P - put (paste) before cursor
+"dd - delete (cut) a line
+"2dd - delete (cut) 2 lines
+"dw - delete (cut) the characters of the word from the cursor position to the start of the next word
+"D - delete (cut) to the end of the line
+"d$ - delete (cut) to the end of the line
+"x - delete (cut) character
+
+"Exiting
+":w - write (save) the file, but don't exit
+":w !sudo tee % - write out the current file using sudo
+":wq or :x or ZZ - write (save) and quit
+":q - quit (fails if there are unsaved changes)
+":q! or ZQ - quit and throw away unsaved changes
+":wqa - write (save) and quit on all tabs
+
+"Search and replace
+"/pattern - search for pattern
+"?pattern - search backward for pattern
+"\vpattern - 'very magic' pattern: non-alphanumeric characters are interpreted
+"as special regex symbols (no escaping needed)
+"n - repeat search in same direction
+"N - repeat search in opposite direction
+":%s/old/new/g - replace all old with new throughout file
+":%s/old/new/gc - replace all old with new throughout file with confirmations
+":noh - remove highlighting of search matches
+
+"Search in multiple files
+":vimgrep /pattern/ {`{file}`} - search for pattern in multiple files
+"e.g. :vimgrep /foo/ **/*
+":cn - jump to the next match
+":cp - jump to the previous match
+":copen - open a window containing the list of matches
+
+" Macros
+" qa - record macro a
+" q - stop recording macro
+" @a - run macro a
+" @@ - rerun last run macro
+
+" Marks
+" :marks - list of marks
+noremap <Leader>mks <Esc>:marks<CR>
+" ma - set current position for mark A
+noremap <Leader>ma <Esc>ma<CR>
+" `a - jump to position of mark A
+noremap <Leader>ja <Esc>`a<CR>
+" y`a - yank text to position of mark A
+noremap <Leader>ya <Esc>y`a<CR>
+
+
+" Working with multiple files
+" :e file - edit a file in a new buffer
+" Buffer
+" go to the next buffer
+noremap <Leader>bn  <Esc>:bn<CR>
+" go to the previous buffer
+noremap <Leader>bp  <Esc>:bp<CR>
+" delete a buffer (close a file)
+noremap <Leader>bd  <Esc>:bd<CR>
+" list all open buffers
+noremap <Leader>ls  <Esc>:ls<CR>
 
 " split window
+" Ctrl + wv - split window vertically
 noremap <Leader>\| <Esc>:vsplit<CR>   
+" Ctrl + ws - split window
 noremap <Leader>- <Esc>:split<CR>   
-noremap <Leader>wx <Esc><C-w>c<CR>   
-noremap <Leader>ww <Esc><C-w>w<CR>   
+" Ctrl + wq - quit a window
+noremap <Leader>wd <Esc><C-w>c<CR>   
 
 " Switch window
+" Ctrl + ww - switch windows
+noremap <Leader>ww <Esc><C-w>w<CR>   
+" Ctrl + wh - move cursor to the left window (vertical split)
+noremap <Leader>wh <Esc><C-w>h<CR>   
+" Ctrl + wl - move cursor to the right window (vertical split)
+noremap <Leader>wl <Esc><C-w>l<CR>   
+" Ctrl + wj - move cursor to the window below (horizontal split)
+noremap <Leader>wj <Esc><C-w>j<CR>   
+" Ctrl + wk - move cursor to the window above (horizontal split)
+noremap <Leader>wk <Esc><C-w>k<CR>   
+
 noremap <Leader>wL <Esc><C-w>L<CR>   
 noremap <Leader>wH <Esc><C-w>H<CR>   
 noremap <Leader>wJ <Esc><C-w>J<CR>   
 noremap <Leader>wK <Esc><C-w>K<CR>   
 
-" imap <C-x>w <esc>:w<cr>a
-"
-"
+
+" :sp file - open a file in a new buffer and split window
+" :vsp file - open a file in a new buffer and vertically split window
+
+
+" Tabs 
+" :tabnew or :tabnew {page.words.file} - open a file in a new tab
+" Ctrl + wT - move the current split window into its own tab
+noremap <Leader>wT <Esc><C-w>T<CR>
+" create
+noremap <Leader>tc <Esc>:tabnew<CR>
+" :tabclose or :tabc - close the current tab and all its windows
+noremap <Leader>td <Esc>:tabclose<CR> 
+" gT or :tabprev or :tabp - move to the previous tab
+noremap <Leader>tp <Esc>:tabprevious<CR>    
+" gt or :tabnext or :tabn - move to the next tab
+noremap <Leader>tn <Esc>:tabnext<CR>   
+" #gt - move to tab number #
+" :tabmove # - move current tab to the #th position (indexed from 0)
+" :tabonly or :tabo - close all tabs except for the current one
+" :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+
+
 " " Tab系
 " " 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-    " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
