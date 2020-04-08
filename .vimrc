@@ -92,7 +92,7 @@ set wildmode=list:longest,full
 " 设置行宽，即一行显示多少个字符。
 set textwidth=80
 " 自动折行，即太长的行分成几行显示 
-set wrap
+" set wrap
 
 " 出错时，不要发出响声。
 set noerrorbells
