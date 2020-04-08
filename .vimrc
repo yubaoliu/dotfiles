@@ -1,32 +1,35 @@
 call plug#begin('~/.vim/plugged')
- Plug 'scrooloose/nerdtree'
- Plug 'tyru/caw.vim'
- Plug 'tpope/vim-fugitive'
- Plug 'vim-airline/vim-airline'
- Plug 'vim-airline/vim-airline-themes'
- Plug 'edkolev/tmuxline.vim'
- Plug 'tpope/vim-surround'
- Plug 'mbbill/undotree'
- Plug 'airblade/vim-gitgutter'
- Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
- Plug 'junegunn/fzf.vim'
- Plug 'Shougo/neocomplcache'
- Plug 'Xuyuanp/nerdtree-git-plugin'    " doesn't work (2019/4/14)
- Plug 'godlygeek/tabular'
- Plug 'plasticboy/vim-markdown'
- Plug 'previm/previm'
- Plug 'regedarek/ZoomWin'
- Plug 'preservim/nerdcommenter'
- Plug 'liuchengxu/vim-which-key'
- Plug 'chiel92/vim-autoformat'
- Plug 'tyru/caw.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tyru/caw.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-surround'
+Plug 'mbbill/undotree'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'Shougo/neocomplcache'
+Plug 'Xuyuanp/nerdtree-git-plugin'    " doesn't work (2019/4/14)
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'previm/previm'
+Plug 'regedarek/ZoomWin'
+Plug 'preservim/nerdcommenter'
+Plug 'liuchengxu/vim-which-key'
+Plug 'chiel92/vim-autoformat'
+Plug 'tyru/caw.vim'
 
- " On-demand lazy load
+" On-demand lazy load
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
- 
- " Plug 'justmao945/vim-clang'
- " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
- call plug#end()
+
+" Plug 'justmao945/vim-clang'
+" Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
+call plug#end()
+
+" ---------------map -----------
+let mapleader = "\<Space>"  
 
 filetype plugin indent on     " 时打开基于文件类型的插件和缩进
 syntax enable
@@ -38,53 +41,53 @@ set fileformats=unix,dos,mac
 
 " setting
 " 自動補完の色設定
- set pumheight=10
- hi Pmenu ctermbg=black ctermfg=white guifg=#000000 guibg=#999999
- hi PmenuSel ctermbg=blue ctermfg=white
- hi PmenuSbar ctermbg=0 ctermfg=9
- "hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFF))
- hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
+set pumheight=10
+hi Pmenu ctermbg=black ctermfg=white guifg=#000000 guibg=#999999
+hi PmenuSel ctermbg=blue ctermfg=white
+hi PmenuSbar ctermbg=0 ctermfg=9
+"hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFF))
+hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
 " "文字コードをUFT-8に設定
- set fenc=utf-8
+set fenc=utf-8
 
 " Refer https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 " " バックアップファイルを作らない
- " set nobackup
- set backupdir=/tmp/  
- " undo directory
- " set noundofile
- set undodir=/tmp/ 
- " 结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名
+" set nobackup
+set backupdir=/tmp/  
+" undo directory
+" set noundofile
+set undodir=/tmp/ 
+" 结尾的//表示生成的文件名带有绝对路径，路径中用%替换目录分隔符，这样可以防止文件重名
 " " スワップファイルを作らない
- " set noswapfile
- set directory=/tmp//
+" set noswapfile
+set directory=/tmp//
 " " 編集中のファイルが変更されたら自動で読み直す
- set autoread    " 打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
+set autoread    " 打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
 " " バッファが編集中でもその他のファイルを開けるように
- set hidden
+set hidden
 " " 入力中のコマンドをステータスに表示する
 " Show (partial) command in status line.
- set showcmd  
- " 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。该配置可以将工作目录自动切换到，正在编辑的文件的目录。
- set autochdir
+set showcmd  
+" 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。该配置可以将工作目录自动切换到，正在编辑的文件的目录。
+set autochdir
 
 " " 見た目系
 " " 行番号を表示
- set number
+set number
 " " 現在の行を強調表示
- set cursorline
+set cursorline
 " " 現在の行を強調表示（縦）
- " set cursorcolumn
+" set cursorcolumn
 " " 行末の1文字先までカーソルを移動できるように
- set virtualedit=onemore
+set virtualedit=onemore
 " " インデントはスマートインデント
- set smartindent
+set smartindent
 " " ステータスラインを常に表示
 " " 是否显示状态栏。0 表示不显示，1 表示只在多窗口时显示，2 表示显示
- set laststatus=2
- " コマンドラインの補完
- set wildmode=list:longest,full
+set laststatus=2
+" コマンドラインの補完
+set wildmode=list:longest,full
 " " 折り返し時に表示行単位での移動できるようにする
 " 设置行宽，即一行显示多少个字符。
 set textwidth=80
@@ -94,47 +97,43 @@ set wrap
 " 出错时，不要发出响声。
 set noerrorbells
 " " ビープ音を可視化
- set visualbell
+set visualbell
 
 "  Vim 需要记住多少次历史操作
 set history=1000
 
-" ---------------map -----------
- let mapleader = "\<Space>"  
+nnoremap j gj
+nnoremap k gk
 
- nnoremap j gj
- nnoremap k gk
+noremap E <END>a
+noremap A <HOME>i
 
- noremap E <END>a
- noremap A <HOME>i
- 
- " compatible with emacs
- noremap <M-x> <Esc>
+" compatible with emacs
+noremap <M-x> <Esc>
 
- noremap <C-p> <Up>
- noremap <C-n> <Down>
- noremap <C-b> <Left>
- noremap <C-f> <Right>
- noremap <C-e> <END>
- noremap <C-d> <Del>
- noremap <C-k> <Esc>D
- noremap <C-a> <HOME>
+noremap <C-p> <Up>
+noremap <C-n> <Down>
+noremap <C-b> <Left>
+noremap <C-f> <Right>
+noremap <C-e> <END>
+noremap <C-d> <Del>
+noremap <C-k> <Esc>D
+noremap <C-a> <HOME>
 
- noremap! <C-p> <Up>
- noremap! <C-n> <Down>
- noremap! <C-b> <Left>
- noremap! <C-f> <Right>
- noremap! <C-a> <HOME>
- noremap! <C-e> <END>
- noremap! <C-d> <Del>
- noremap! <C-k> <Esc>D
+noremap! <C-p> <Up>
+noremap! <C-n> <Down>
+noremap! <C-b> <Left>
+noremap! <C-f> <Right>
+noremap! <C-a> <HOME>
+noremap! <C-e> <END>
+noremap! <C-d> <Del>
+noremap! <C-k> <Esc>D
 
 
- imap <tab> <Esc>V>
- imap <s-tab> <Esc>V<
+imap <tab> <Esc>V>
+imap <s-tab> <Esc>V<
 
- "menu
- nmap <C-m> <Esc>:tabnew<CR>
+"menu
 " save and exit
 noremap <Leader>wq <Esc>:wq<CR>
 noremap <Leader>w <Esc>:w<CR>
