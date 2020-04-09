@@ -18,17 +18,17 @@ Plug 'previm/previm'
 Plug 'regedarek/ZoomWin'
 Plug 'preservim/nerdcommenter'
 Plug 'liuchengxu/vim-which-key'
-Plug 'chiel92/vim-autoformat'
-Plug 'tyru/caw.vim'
-
-" On-demand lazy load
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
-
+Plug 'chiel92/vim-autoformat'
+" On-demand lazy load
 " Plug 'justmao945/vim-clang'
 " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
 call plug#end()
 
+" Help wesites
 " cheat sheet: https://vim.rtorr.com/
+" plugin: https://vimawesome.com/
+" https://github.com/yangyangwithgnu/use_vim_as_ide
 
 " ---------------map -----------
 let mapleader = "\<Space>"  
@@ -52,7 +52,6 @@ hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
 " "文字コードをUFT-8に設定
 set fenc=utf-8
-
 " Refer https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 " " バックアップファイルを作らない
 " set nobackup
@@ -93,6 +92,7 @@ set wildmode=list:longest,full
 " " 折り返し時に表示行単位での移動できるようにする
 " 设置行宽，即一行显示多少个字符。
 set textwidth=80
+set colorcolumn=90
 " 自动折行，即太长的行分成几行显示 
 " set wrap
 
@@ -100,54 +100,54 @@ set textwidth=80
 set noerrorbells
 " " ビープ音を可視化
 set visualbell
-
 "  Vim 需要记住多少次历史操作
 set history=1000
 
-nnoremap j gj
-nnoremap k gk
-
-" compatible with emacs
-noremap <M-x> <Esc>
-
-noremap <C-p> <Up>
-noremap <C-n> <Down>
-noremap <C-b> <Left>
-noremap <C-f> <Right>
-noremap <C-e> <END>
-noremap <C-d> <Del>
-noremap <C-k> <Esc>D
-noremap <C-a> <HOME>
-
-noremap! <C-p> <Up>
-noremap! <C-n> <Down>
-noremap! <C-b> <Left>
-noremap! <C-f> <Right>
-noremap! <C-a> <HOME>
-noremap! <C-e> <END>
-noremap! <C-d> <Del>
-noremap! <C-k> <Esc>D
-
+" nnoremap j gj
+" nnoremap k gk
+"" Emacs style
+" noremap <C-p> <Up>
+" noremap <C-n> <Down>
+" noremap <C-b> <Left>
+" noremap <C-f> <Right>
+" noremap <C-e> <END>
+" noremap <C-d> <Del>
+" noremap <C-k> <Esc>D
+" noremap <C-a> <HOME>
+"
+" noremap! <C-p> <Up>
+" noremap! <C-n> <Down>
+" noremap! <C-b> <Left>
+" noremap! <C-f> <Right>
+" noremap! <C-a> <HOME>
+" noremap! <C-e> <END>
+" noremap! <C-d> <Del>
+" noremap! <C-k> <Esc>D
 
 noremap <tab> <Esc>V>
 noremap <s-tab> <Esc>V<
 
-"menu
-" save and exit
-noremap <Leader>wq <Esc>:wq<CR>
-noremap <Leader>w <Esc>:w<CR>
-noremap <Leader>w! <Esc>:w!<CR>
-noremap <Leader>q! <Esc>:q!<CR>
-noremap <Leader>qall <Esc>:qall!<CR>
+"" help
+"scroll-cursor
+":help changelist
+":help keyword - open help for keyword
+"K - open man page for word under the cursor
+":map-commands
+":help colorcolumn
+
+" change list
+" g; - Go to [count] older position in change list.
+" g, Go to [count] newer cursor position in change list. Just like |g;| but in the opposite direction.
 
 " Global
-" :help keyword - open help for keyword
 noremap <Leader>help  <Esc>:help<CR>
 " :saveas file - save file as
 " :close - close current pane!
 noremap <Leader>close <Esc>:close<CR>
-" K - open man page for word under the cursor
 noremap <Leader>K <Esc>K<CR>
+
+" compatible with emacs
+noremap <M-x> <Esc>
 
 " Cursor movement
 " h - move cursor left
@@ -261,13 +261,19 @@ noremap E <END>a
 
 "Exiting
 ":w - write (save) the file, but don't exit
+noremap <Leader>w <Esc>:w<CR>
 ":w !sudo tee % - write out the current file using sudo
+noremap <Leader>w! <Esc>:w!<CR>
 ":wq or :x or ZZ - write (save) and quit
+noremap <Leader>wq <Esc>:wq<CR>
 ":q - quit (fails if there are unsaved changes)
+noremap <Leader>q <Esc>:q<CR>
 ":q! or ZQ - quit and throw away unsaved changes
+noremap <Leader>q! <Esc>:q!<CR>
 ":wqa - write (save) and quit on all tabs
+noremap <Leader>qall <Esc>:qall!<CR>
 
-"Search and replace
+"" Search and replace
 "/pattern - search for pattern
 "?pattern - search backward for pattern
 "\vpattern - 'very magic' pattern: non-alphanumeric characters are interpreted
