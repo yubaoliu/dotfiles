@@ -20,38 +20,262 @@ Plug 'preservim/nerdcommenter'
 Plug 'liuchengxu/vim-which-key'
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
 Plug 'chiel92/vim-autoformat'
+" visually displaying indent levels 
+Plug 'nathanaelkane/vim-indent-guides'
+"switching between companion source files (e.g. .h and .cpp)
+Plug 'derekwyatt/vim-fswitch'    
 " On-demand lazy load
 " Plug 'justmao945/vim-clang'
 " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
 call plug#end()
 
+""===============REFERENCE=============""
 " Help wesites
 " cheat sheet: https://vim.rtorr.com/
 " plugin: https://vimawesome.com/
 " https://github.com/yangyangwithgnu/use_vim_as_ide
+" https://www.yiibai.com/vim/vim_markers.html
 
-" ---------------map -----------
+""============== SYMBALS ===========""
+" ` - 后退引号 
+
+"" ============= GLOBAL ==============""
 let mapleader = "\<Space>"  
+" compatible with emacs
+noremap <M-x> <Esc>
 
-" filetype plugin indent on     时打开基于文件类型的插件和缩进
-syntax enable
 
+"" ============= HELP  ==============""
+"scroll-cursor
+":help changelist
+":help keyword - open help for keyword
+"K - open man page for word under the cursor
+noremap <Leader>K <Esc>K<CR>
+":map-commands
+":help colorcolumn
+" :help indent-guides
+noremap <Leader>help  <Esc>:help<CR>
+
+""=============== FONT ===============""
 "文字コード変更
 set encoding=utf-8
 set fileencodings=utf-8
 set fileformats=unix,dos,mac
+" "文字コードをUFT-8に設定
+set fenc=utf-8
 
-" setting
+"" ============= COLOR  ==============""
 " 自動補完の色設定
 set pumheight=10
 hi Pmenu ctermbg=black ctermfg=white guifg=#000000 guibg=#999999
 hi PmenuSel ctermbg=blue ctermfg=white
 hi PmenuSbar ctermbg=0 ctermfg=9
-"hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFF))
 hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
-" "文字コードをUFT-8に設定
-set fenc=utf-8
+""============= INDENT ================""
+noremap <tab> <Esc>V>
+noremap <s-tab> <Esc>V<
+
+" 自适应不同语言的智能缩进
+filetype plugin indent on    " 时打开基于文件类型的插件和缩进
+syntax enable
+
+"" ================  Code Flolding ==============""
+"" 基于缩进或语法进行代码折叠
+" vim 自身支持多种折叠：手动建立折叠（manual）、
+" 基于缩进进行折叠（indent）、基于语法进行折叠（syntax）、
+" 未更改文本构成折叠（diff
+" "set foldmethod=indent
+set foldmethod=syntax
+" " 启动 vim 时关闭折叠代码
+set nofoldenable
+" 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
+noremap <Leader>zt <Esc>za<CR>
+noremap <Leader>zc <Esc>zM<CR>
+noremap <Leader>zo <Esc>zR<CR>
+
+""=========== MARKS ===============""
+" m{bookmark-name}
+" `{bookmark-name} - 移动到书签的确切位置 
+" ‘{bookmark-name} - 跳到书签行的开头
+" :marks
+" :delmarks {bookmark-name}
+" :marks - list of marks
+noremap <Leader>mks <Esc>:marks<CR>
+" ma - set current position for mark A
+noremap <Leader>ma <Esc>ma<CR>
+" `a - jump to position of mark A
+noremap <Leader>ja <Esc>`a<CR>
+" y`a - yank text to position of mark A
+noremap <Leader>ya <Esc>y`a<CR>
+" `. – 跳转到最后一次执行改变的精确位置（行和列）
+" ‘. – 跳转到最后一次执行改变的行起始位置
+
+
+
+"" ==========OPEN CLOSE EXIT SAVE ================""
+" :saveas file - save file as
+" :close - close current pane!
+noremap <Leader>close <Esc>:close<CR>
+
+"" ======== Cursor movement =============""
+" h - move cursor left
+" j - move cursor down
+" k - move cursor up
+" l - move cursor right
+" H - move to top of screen
+" M - move to middle of screen
+" L - move to bottom of screen
+" w - jump forwards to the start of a word
+" W - jump forwards to the start of a word (words can contain punctuation)
+" e - jump forwards to the end of a word
+" E - jump forwards to the end of a word (words can contain punctuation)
+noremap E <END>a
+" b - jump backwards to the start of a word
+" B - jump backwards to the start of a word (words can contain punctuation)
+" % - move to matching character (default supported pairs: '()', '{}', '[]' -
+" use :h matchpairs in vim for more info)
+" 0 - jump to the start of the line
+" ^ - jump to the first non-blank character of the line
+" $ - jump to the end of the line
+" g_ - jump to the last non-blank character of the line
+" gg - go to the first line of the document
+" G - go to the last line of the document
+" 5G - go to line 5
+" fx - jump to next occurrence of character x
+" tx - jump to before next occurrence of character x
+" Fx - jump to previous occurence of character x
+" Tx - jump to after previous occurence of character x
+" ; - repeat previous f, t, F or T movement
+" , - repeat previous f, t, F or T movement, backwards
+" } - jump to next paragraph (or function/block, when editing code)
+" { - jump to previous paragraph (or function/block, when editing code)
+" zz - center cursor on screen
+" Ctrl + e - move screen down one line (without moving cursor)
+" Ctrl + y - move screen up one line (without moving cursor)
+" C-b: Ctrl + b - move back one full screen 向上滚动整个页面
+" C-f: Ctrl + f - move forward one full screen 向下滚动整个页面
+" C-d: Ctrl + d - move forward 1/2 a screen
+" C-u: Ctrl + u - move back 1/2 a screen
+
+"=============== BUFFERS ==========""
+" Working with multiple files
+" :e file - edit a file in a new buffer
+" Buffer
+" go to the next buffer
+noremap <Leader>bn  <Esc>:bn<CR>
+" go to the previous buffer
+noremap <Leader>bp  <Esc>:bp<CR>
+" delete a buffer (close a file)
+noremap <Leader>bd  <Esc>:bd<CR>
+" list all open buffers
+noremap <Leader>ls  <Esc>:ls<CR>
+
+
+""============ TAB PAGE ==========""
+" Tabpage 
+" :tabnew or :tabnew {page.words.file} - open a file in a new tab
+" Ctrl + wT - move the current split window into its own tab
+noremap <Leader>wT <Esc><C-w>T<CR>
+" create
+noremap <Leader>tc <Esc>:tabnew<CR>
+" :tabclose or :tabc - close the current tab and all its windows
+noremap <Leader>td <Esc>:tabclose<CR> 
+" gT or :tabprev or :tabp - move to the previous tab
+noremap <Leader>tp <Esc>:tabprevious<CR>    
+" gt or :tabnext or :tabn - move to the next tab
+noremap <Leader>tn <Esc>:tabnext<CR>   
+noremap <Leader>tl <Esc>:tablast<CR>   
+noremap <Leader>tf <Esc>:tabfirst<CR>   
+" #gt - move to tab number #
+" :tabmove # - move current tab to the #th position (indexed from 0)
+" :tabonly or :tabo - close all tabs except for the current one
+" :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+
+"" ============= WINDOWS ==============""
+" :new <file> 在新窗口中打开文件 
+" split window
+" Ctrl + wv - split window vertically
+noremap <Leader>\| <Esc>:vsplit<CR>   
+" Ctrl + ws - split window
+noremap <Leader>- <Esc>:split<CR>   
+" Ctrl + wq - quit a window
+noremap <Leader>wd <Esc><C-w>c<CR>   
+
+" Switch window
+" Ctrl + ww - switch windows
+noremap <Leader>ww <Esc><C-w>w<CR>   
+" Ctrl + wh - move cursor to the left window (vertical split)
+noremap <Leader>wh <Esc><C-w>h<CR>   
+" Ctrl + wl - move cursor to the right window (vertical split)
+noremap <Leader>wl <Esc><C-w>l<CR>   
+" Ctrl + wj - move cursor to the window below (horizontal split)
+noremap <Leader>wj <Esc><C-w>j<CR>   
+" Ctrl + wk - move cursor to the window above (horizontal split)
+noremap <Leader>wk <Esc><C-w>k<CR>   
+
+noremap <Leader>wL <Esc><C-w>L<CR>   
+noremap <Leader>wH <Esc><C-w>H<CR>   
+noremap <Leader>wJ <Esc><C-w>J<CR>   
+noremap <Leader>wK <Esc><C-w>K<CR>   
+
+
+" :sp file - open a file in a new buffer and split window
+" :vsp file - open a file in a new buffer and vertically split window
+
+
+""============ REGISTERS =============""
+" Registers
+" :reg - show registers content
+" "xy - yank into register x
+" "xp - paste contents of register x
+" Tip Registers are being stored in ~/.viminfo, and will be loaded again on next
+" restart of vim.
+" Tip Register 0 contains always the value of the last yank command.
+
+"" ================= VISUAL MODE ==========""
+" Marking text (visual mode)
+" v - start visual mode, mark lines, then do a command (like y-yank)
+" V - start linewise visual mode
+" o - move to other end of marked area
+" Ctrl + v - start visual block mode
+" O - move to other corner of block
+" aw - mark a word
+" ab - a block with ()
+" aB - a block with {}
+" ib - inner block with ()
+" iB - inner block with {}
+" Esc - exit visual mode
+
+
+" Visual commands
+" > - shift text right
+" < - shift text left
+" y - yank (copy) marked text
+" d - delete marked text
+" ~ - switch case
+"
+
+
+"" ============== Plugin [vim-fswitch] ===============""
+" " *.cpp 和 *.h 间切换
+noremap <silent> <Leader>sw :FSHere<cr>
+
+""=================[Plug] vim-indent-guides ============""
+":IndentGuidesEnable
+" :IndentGuidesDisable
+" :IndentGuidesToggle 
+" 随 vim 自启动
+let g:indent_guides_enable_on_vim_startup = 1
+" 从第二层开始可视化显示缩进
+let g:indent_guides_start_level=2
+" 色块宽度
+let g:indent_guides_guide_size=1
+" 快捷键 i 开/关缩进可视化
+:nmap <silent> <Leader>it <Plug>IndentGuidesToggle
+
+
+
 " Refer https://medium.com/@Aenon/vim-swap-backup-undo-git-2bf353caa02f
 " " バックアップファイルを作らない
 " set nobackup
@@ -94,7 +318,7 @@ set wildmode=list:longest,full
 " 设置行宽，即一行显示多少个字符。
 " set textwidth=80 Important, do not set this value, please mannually control the length
 " Because it will influence the indent when use auto format, the return
-" carrage carage maybe removed automatically
+
 set colorcolumn=120
 " 自动折行，即太长的行分成几行显示 
 set wrap
@@ -112,7 +336,6 @@ set history=1000
 " noremap <C-p> <Up>
 " noremap <C-n> <Down>
 " noremap <C-b> <Left>
-" noremap <C-f> <Right>
 " noremap <C-e> <END>
 " noremap <C-d> <Del>
 " noremap <C-k> <Esc>D
@@ -121,77 +344,16 @@ set history=1000
 " noremap! <C-p> <Up>
 " noremap! <C-n> <Down>
 " noremap! <C-b> <Left>
-" noremap! <C-f> <Right>
 " noremap! <C-a> <HOME>
 " noremap! <C-e> <END>
 " noremap! <C-d> <Del>
 " noremap! <C-k> <Esc>D
 
-noremap <tab> <Esc>V>
-noremap <s-tab> <Esc>V<
-
-"" help
-"scroll-cursor
-":help changelist
-":help keyword - open help for keyword
-"K - open man page for word under the cursor
-":map-commands
-":help colorcolumn
 
 " change list
 " g; - Go to [count] older position in change list.
 " g, Go to [count] newer cursor position in change list. Just like |g;| but in the opposite direction.
-
-" Global
-noremap <Leader>help  <Esc>:help<CR>
-" :saveas file - save file as
-" :close - close current pane!
-noremap <Leader>close <Esc>:close<CR>
-noremap <Leader>K <Esc>K<CR>
-
-" compatible with emacs
-noremap <M-x> <Esc>
-
-" Cursor movement
-" h - move cursor left
-" j - move cursor down
-" k - move cursor up
-" l - move cursor right
-" H - move to top of screen
-" M - move to middle of screen
-" L - move to bottom of screen
-" w - jump forwards to the start of a word
-" W - jump forwards to the start of a word (words can contain punctuation)
-" e - jump forwards to the end of a word
-" E - jump forwards to the end of a word (words can contain punctuation)
-noremap E <END>a
-" b - jump backwards to the start of a word
-" B - jump backwards to the start of a word (words can contain punctuation)
-" % - move to matching character (default supported pairs: '()', '{}', '[]' -
-" use :h matchpairs in vim for more info)
-" 0 - jump to the start of the line
-" ^ - jump to the first non-blank character of the line
-" $ - jump to the end of the line
-" g_ - jump to the last non-blank character of the line
-" gg - go to the first line of the document
-" G - go to the last line of the document
-" 5G - go to line 5
-" fx - jump to next occurrence of character x
-" tx - jump to before next occurrence of character x
-" Fx - jump to previous occurence of character x
-" Tx - jump to after previous occurence of character x
-" ; - repeat previous f, t, F or T movement
-" , - repeat previous f, t, F or T movement, backwards
-" } - jump to next paragraph (or function/block, when editing code)
-" { - jump to previous paragraph (or function/block, when editing code)
-" zz - center cursor on screen
-" Ctrl + e - move screen down one line (without moving cursor)
-" Ctrl + y - move screen up one line (without moving cursor)
-" Ctrl + b - move back one full screen
-" Ctrl + f - move forward one full screen
-" Ctrl + d - move forward 1/2 a screen
-" Ctrl + u - move back 1/2 a screen
-
+"
 "Editing
 "r - replace a single character
 "J - join line below to the current one with one space in between
@@ -208,35 +370,6 @@ noremap E <END>a
 "u - undo
 "Ctrl + r - redo
 ". - repeat last command
-
-" Marking text (visual mode)
-" v - start visual mode, mark lines, then do a command (like y-yank)
-" V - start linewise visual mode
-" o - move to other end of marked area
-" Ctrl + v - start visual block mode
-" O - move to other corner of block
-" aw - mark a word
-" ab - a block with ()
-" aB - a block with {}
-" ib - inner block with ()
-" iB - inner block with {}
-" Esc - exit visual mode
-
-
-" Visual commands
-" > - shift text right
-" < - shift text left
-" y - yank (copy) marked text
-" d - delete marked text
-" ~ - switch case
-
-" Registers
-" :reg - show registers content
-" "xy - yank into register x
-" "xp - paste contents of register x
-" Tip Registers are being stored in ~/.viminfo, and will be loaded again on next
-" restart of vim.
-" Tip Register 0 contains always the value of the last yank command.
 
 " Insert mode - inserting/appending text
 " i - insert before the cursor
@@ -300,89 +433,29 @@ noremap <Leader>qall <Esc>:qall!<CR>
 " @a - run macro a
 " @@ - rerun last run macro
 
-" Marks
-" :marks - list of marks
-noremap <Leader>mks <Esc>:marks<CR>
-" ma - set current position for mark A
-noremap <Leader>ma <Esc>ma<CR>
-" `a - jump to position of mark A
-noremap <Leader>ja <Esc>`a<CR>
-" y`a - yank text to position of mark A
-noremap <Leader>ya <Esc>y`a<CR>
-
-
-" Working with multiple files
-" :e file - edit a file in a new buffer
-" Buffer
-" go to the next buffer
-noremap <Leader>bn  <Esc>:bn<CR>
-" go to the previous buffer
-noremap <Leader>bp  <Esc>:bp<CR>
-" delete a buffer (close a file)
-noremap <Leader>bd  <Esc>:bd<CR>
-" list all open buffers
-noremap <Leader>ls  <Esc>:ls<CR>
-
-" split window
-" Ctrl + wv - split window vertically
-noremap <Leader>\| <Esc>:vsplit<CR>   
-" Ctrl + ws - split window
-noremap <Leader>- <Esc>:split<CR>   
-" Ctrl + wq - quit a window
-noremap <Leader>wd <Esc><C-w>c<CR>   
-
-" Switch window
-" Ctrl + ww - switch windows
-noremap <Leader>ww <Esc><C-w>w<CR>   
-" Ctrl + wh - move cursor to the left window (vertical split)
-noremap <Leader>wh <Esc><C-w>h<CR>   
-" Ctrl + wl - move cursor to the right window (vertical split)
-noremap <Leader>wl <Esc><C-w>l<CR>   
-" Ctrl + wj - move cursor to the window below (horizontal split)
-noremap <Leader>wj <Esc><C-w>j<CR>   
-" Ctrl + wk - move cursor to the window above (horizontal split)
-noremap <Leader>wk <Esc><C-w>k<CR>   
-
-noremap <Leader>wL <Esc><C-w>L<CR>   
-noremap <Leader>wH <Esc><C-w>H<CR>   
-noremap <Leader>wJ <Esc><C-w>J<CR>   
-noremap <Leader>wK <Esc><C-w>K<CR>   
-
-
-" :sp file - open a file in a new buffer and split window
-" :vsp file - open a file in a new buffer and vertically split window
-
-
-" Tabs 
-" :tabnew or :tabnew {page.words.file} - open a file in a new tab
-" Ctrl + wT - move the current split window into its own tab
-noremap <Leader>wT <Esc><C-w>T<CR>
-" create
-noremap <Leader>tc <Esc>:tabnew<CR>
-" :tabclose or :tabc - close the current tab and all its windows
-noremap <Leader>td <Esc>:tabclose<CR> 
-" gT or :tabprev or :tabp - move to the previous tab
-noremap <Leader>tp <Esc>:tabprevious<CR>    
-" gt or :tabnext or :tabn - move to the next tab
-noremap <Leader>tn <Esc>:tabnext<CR>   
-" #gt - move to tab number #
-" :tabmove # - move current tab to the #th position (indexed from 0)
-" :tabonly or :tabo - close all tabs except for the current one
-" :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
 
 
 " " Tab系
 " " 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-    " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块
 " " Tab文字を半角スペースにする
-set expandtab    " 该设置自动将 Tab 转为空格
+" 把制表符转换为多个空格，具体空格数量参考 tabstop 和 shiftwidth 变量
+" 该设置自动将 Tab 转为空格
+set expandtab   
 " " 行頭以外のTab文字の表示幅（スペースいくつ分）
+" 设置编辑时制表符占用空格数
+" tabstop 指定我们在插入模式下输入一个制表符占据的空格数量
  set tabstop=4    " 按下 Tab 键时，Vim 显示的空格数。
 " " 行頭でのTab文字の表示幅
 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数
+" 设置格式化时制表符占用空格数 " 缩进格式
  set shiftwidth=4
-"
-"
+ " 让 vim 把连续数量的空格视为一个制表符
+ "  expandtab "  已经把制表符转换为空格，当你要删除制表符时你得连续删除多个空格，
+ "  该设置就是告诉 vim 把连续数量的空格视为一个制表符，即，只删一个字符即可
+ set softtabstop=4
+" retab 命令，让 vim 按上述规则重新处理制表符与空格关系。
+
 " " 検索系 search
 " " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
  set ignorecase
@@ -405,6 +478,7 @@ set expandtab    " 该设置自动将 Tab 转为空格
 
  " ["+y]でクリップボードにコピー
  set clipboard=unnamed,autoselect
+
 
  " *** Plugin settings *** 
  
@@ -495,18 +569,9 @@ augroup PrevimSettings
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
-" " vim-clang settings
-" let g:clang_c_options = '-std=c11'
-" let g:clang_cpp_options = '-std=c++11 --pedantic-errors'
-" let g:clang_format_auto = 1
-" let g:clang_format_style = 'Google'
-" let g:clang_check_syntax_auto = 1
-
 " nerdcommenter
 " Refer: https://qiita.com/pepo/items/09bacf98a36f6a7285ac
 " ファイルタイプを参照するので
-
-filetype plugin on
 " NERD Commenterでコメント挿入した時、コメント記号の後にスペースを挿入してくれるようになる。
 " コメントが見やすく見やすくなるのでオススメ
 let g:NERDDefaultAlign='left' 
@@ -534,9 +599,21 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 "  plasticboy/vim-markdown 
 let g:vim_markdown_folding_disabled = 1
 
-" auto save, this function not yet test
-" autocmd TextChanged,TextChangedI <buffer> silent write
+""================== IDE setting for programming =============""
+
+"" ============ OTHERW ===================""
+" " vim-clang settings
+" let g:clang_c_options = '-std=c11'
+" let g:clang_cpp_options = '-std=c++11 --pedantic-errors'
+" let g:clang_format_auto = 1
+" let g:clang_format_style = 'Google'
+" let g:clang_check_syntax_auto = 1
 
 " Spell check
 " set spell spelllang=en_us    " 打开英语单词的拼写检查
+
+" auto save, this function not yet test
+" autocmd TextChanged,TextChangedI <buffer> silent write
+
+
 
