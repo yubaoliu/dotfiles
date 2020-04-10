@@ -33,7 +33,7 @@ call plug#end()
 " ---------------map -----------
 let mapleader = "\<Space>"  
 
-filetype plugin indent on     " 时打开基于文件类型的插件和缩进
+" filetype plugin indent on     时打开基于文件类型的插件和缩进
 syntax enable
 
 "文字コード変更
@@ -70,7 +70,8 @@ set hidden
 " " 入力中のコマンドをステータスに表示する
 " Show (partial) command in status line.
 set showcmd  
-" 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。该配置可以将工作目录自动切换到，正在编辑的文件的目录。
+" 自动切换工作目录。这主要用在一个 Vim 会话之中打开多个文件的情况，默认的工作目录是打开的第一个文件的目录。
+" 该配置可以将工作目录自动切换到，正在编辑的文件的目录。
 set autochdir
 
 " " 見た目系
@@ -91,10 +92,12 @@ set laststatus=2
 set wildmode=list:longest,full
 " " 折り返し時に表示行単位での移動できるようにする
 " 设置行宽，即一行显示多少个字符。
-set textwidth=80
-set colorcolumn=90
+" set textwidth=80 Important, do not set this value, please mannually control the length
+" Because it will influence the indent when use auto format, the return
+" carrage carage maybe removed automatically
+set colorcolumn=120
 " 自动折行，即太长的行分成几行显示 
-" set wrap
+set wrap
 
 " 出错时，不要发出响声。
 set noerrorbells
@@ -515,6 +518,9 @@ nnoremap <F3> :Autoformat<CR>
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
+let g:autoformat_verbosemode=0
+" autocmd FileType c,cpp setlocal equalprg=clang-format
+" autocmd FileType vim,tex let b:autoformat_autoindent=0
 
 "" tyru/caw.vim config
 " 行の最初の文字の前にコメント文字をトグル
