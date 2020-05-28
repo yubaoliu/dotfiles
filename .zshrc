@@ -101,10 +101,8 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias xclip="xclip -sel clip <"
+#alias xclip="xclip -sel clip <"
 
-#Thunderbird
-#export THUNDERBIRD_PATH=/home/yubao/data/software/thunderbird
 export PATH=$PATH:$HOME/data/software/install/bin:$HOME/.gem/ruby/2.6.0/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
 
@@ -151,6 +149,7 @@ eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# export XMODIFIERS=”@im=fcitx”
 
 # history
 unsetopt share_history
@@ -172,5 +171,5 @@ source $HOME/dotfiles/.tmuxinator/.tmuxinator.zsh
 source ~/ros.sh
 
 # Local host config
-source $HOME/local_config.sh
+# source $HOME/local_config.sh
 

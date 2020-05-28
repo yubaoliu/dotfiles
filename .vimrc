@@ -266,7 +266,7 @@ noremap <silent> <Leader>sw :FSHere<cr>
 " :IndentGuidesDisable
 " :IndentGuidesToggle 
 " 随 vim 自启动
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 " 从第二层开始可视化显示缩进
 let g:indent_guides_start_level=2
 " 色块宽度
@@ -586,6 +586,8 @@ let g:autoformat_remove_trailing_spaces = 0
 let g:autoformat_verbosemode=0
 " autocmd FileType c,cpp setlocal equalprg=clang-format
 " autocmd FileType vim,tex let b:autoformat_autoindent=0
+"" Python format
+" pip install --upgrade autopep8
 
 "" tyru/caw.vim config
 " 行の最初の文字の前にコメント文字をトグル
