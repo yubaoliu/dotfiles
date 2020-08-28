@@ -160,5 +160,5 @@ source ~/ros.sh
 source $ROOT/cuda.sh
 
 # Local host config
-source $ROOT/local_gp65.sh
+source $HOME/local_config.sh
 

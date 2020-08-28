@@ -22,6 +22,8 @@ export glad_DIR=/home/yubao/data/software/glad/lib/cmake/glad
 
 export Eigen3_DIR=/home/yubao/data/software/eigen/share/eigen3/cmake
 
+# SegNet-Caffe
+export Caffe_DIR="/home/yubao/data/software/install/caffe-segnet/share/Caffe/"
 
 if [ $commands[qshell] ]; then
       source <(qshell completion zsh)
