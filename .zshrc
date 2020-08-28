@@ -1,8 +1,10 @@
+export ROOT="$HOME/dotfiles"
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/yubao/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -103,17 +105,7 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #alias xclip="xclip -sel clip <"
 
-export PATH=$PATH:$HOME/data/software/install/bin:$HOME/.gem/ruby/2.6.0/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
-
-#Add TUM Benchmark
-export PATH=$PATH:$HOME/data/software/rgbd_benchmark_tools/scripts
-
-# CUDA
-export CUDA_ROOT=/usr/local/cuda
-export PATH=$PATH:$CUDA_ROOT/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_ROOT/lib64
-
+export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
 #export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws/rgbd_benchmark_tools
 #export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws
@@ -122,16 +114,7 @@ setopt no_nomatch
 #export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
 #export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
 
-export OpenCV_DIR=$HOME/data/software/install/share/OpenCV
-#export OpenCV_DIR=$HOME/data/software/OpenCV3.3.1/share/OpenCV
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:/home/yubao/data/software/install/lib/pkgconfig
-
-export caffe_DIR=/home/yubao/data/software/install/caffe-segnet/share/Caffe
-export OpenPose_DIR=$HOME/data/software/openpose/lib/OpenPose
-
-# Kinect2
-export freenect2_DIR=/home/yubao/data/software/install/freenect2/lib/cmake/freenect2
-
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:$HOME/data/software/install/lib/pkgconfig
 
 # rm to trash
 alias rm='~/dotfiles/rmtrash/rmtrash'
@@ -139,7 +122,7 @@ alias rmdir='~/dotfiles/rmtrash/rmdirtrash'
 alias sudo='sudo '
 
 # conda
-alias source-conda='source ~/dotfiles/anaconda.sh'
+alias source-conda='source $ROOT/anaconda.sh'
 
 # Gem
 #GEM_HOME="$HOME/gems"
@@ -165,11 +148,17 @@ setopt EXTENDED_HISTORY
 setopt hist_expand
 
 # tmuxinator
-source $HOME/dotfiles/.tmuxinator/.tmuxinator.zsh
+source $ROOT/.tmuxinator/.tmuxinator.zsh
+
+# Docker GUI compatible
+echo "Run gui in docker"
+xhost +local:root
 
 #ROS
 source ~/ros.sh
 
+source $ROOT/cuda.sh
+
 # Local host config
-# source $HOME/local_config.sh
+source $ROOT/local_gp65.sh
 
