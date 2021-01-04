@@ -1,3 +1,5 @@
+sudo apt update
+
 echo "Install dependencies"
 sudo apt intstall -y trash-cli \
 libevent-dev \
@@ -11,20 +13,14 @@ zsh \
 vim-gtk  #vim clipboard
 
 echo "Install ruby"
-sudo apt-add-repository ppa:brightbox/ruby-ng
-sudo apt install ruby2.6 ruby2.6-dev
+sudo apt-add-repository ppa:brightbox/ruby-ng && sudo apt-get -y update
+sudo apt install -y ruby2.6 ruby2.6-dev
 
 # VIm plugin
-sudo apt-get install astyle
-sudo apt-get install clang-format
+sudo apt-get install -y astyle clang-format python-autopep8  remark 
+sudo apt install -y npm && npm install -g remark-cli
 pip install autopep8
-sudo apt-get install python-autopep8 
-
-sudo pip install yapf 
-sudo apt install remark # markdown
-
-sudo apt install npm
-npm install -g remark-cli
+pip install yapf 
 
 echo "clean old files"
 rm  -f  ~/.vimrc ~/.tmux.conf ~/.Xresources
