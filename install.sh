@@ -1,5 +1,3 @@
-cd ~
-
 echo "Install dependencies"
 sudo apt intstall -y trash-cli \
 libevent-dev \
@@ -27,4 +25,12 @@ sudo apt install remark # markdown
 
 sudo apt install npm
 npm install -g remark-cli
+
+echo "clean old files"
+rm  -f  ~/.vimrc ~/.tmux.conf ~/.Xresources
+
+echo "create new lindks"
+ln -s $PWD/.vimrc ~/.vimrc
+ln -s $PWD/.tmux.conf  ~/.tmux.conf
+ln -s $PWD/.Xresources ~/.Xresources
 

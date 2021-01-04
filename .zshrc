@@ -122,17 +122,6 @@ setopt no_nomatch
 #export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
 #export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
 
-export OpenCV_DIR=$HOME/data/software/install/share/OpenCV
-#export OpenCV_DIR=$HOME/data/software/OpenCV3.3.1/share/OpenCV
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:/home/yubao/data/software/install/lib/pkgconfig
-
-export caffe_DIR=/home/yubao/data/software/install/caffe-segnet/share/Caffe
-export OpenPose_DIR=$HOME/data/software/openpose/lib/OpenPose
-
-# Kinect2
-export freenect2_DIR=/home/yubao/data/software/install/freenect2/lib/cmake/freenect2
-
-
 # rm to trash
 alias rm='~/dotfiles/rmtrash/rmtrash'
 alias rmdir='~/dotfiles/rmtrash/rmdirtrash'
@@ -170,6 +159,8 @@ source $HOME/dotfiles/.tmuxinator/.tmuxinator.zsh
 #ROS
 source ~/ros.sh
 
-# Local host config
-# source $HOME/local_config.sh
+# Docker
+xhost +local:root
 
+# Local host config
+source $HOME/local_config.sh
