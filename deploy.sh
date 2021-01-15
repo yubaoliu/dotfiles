@@ -1,5 +1,9 @@
 ROOT=`pwd`
 cd $HOME
+
+echo "clean old files"
+rm  -f  ~/.vimrc ~/.tmux.conf ~/.Xresources
+
 ln -s $ROOT/.vimrc
 ln -s $ROOT/.tmux.conf
 ln -s $ROOT/.Xresources

@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Shougo/neocomplcache'
+" Plug 'Shougo/neocomplete'
 Plug 'Xuyuanp/nerdtree-git-plugin'    " doesn't work (2019/4/14)
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -522,27 +523,27 @@ let g:tmuxline_preset = {
 let g:tmuxline_theme = 'papercolor'
 
 " undotree settings
-nnoremap <F4> :UndotreeToggle<cr>
+nnoremap <F8> :UndotreeToggle<cr>
 
 " vim-gitgutter settings
 set updatetime=100
 
 " neocomplcache settings
 " Disable AutoComplPop.
-" let g:acp_enableAtStartup = 0
+let g:acp_enableAtStartup = 0
 " Use neocomplcache.
-" let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_at_startup = 1
 " Use smartcase.
-" let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_smart_case = 1
 " Set minimum syntax keyword length.
-" let g:neocomplcache_min_syntax_length = 3
-" let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
-" let g:neocomplcache_dictionary_filetype_lists = {
-"          \ 'default' : ''
-"          \ }
-" 
+let g:neocomplcache_dictionary_filetype_lists = {
+         \ 'default' : ''
+         \ }
+ 
 " Plugin key-mappings.
 " inoremap <expr><C-g>     neocomplcache#undo_completion()
 " inoremap <expr><C-l>     neocomplcache#complete_common_string()
@@ -554,7 +555,7 @@ set updatetime=100
 "     return neocomplcache#smart_close_popup() . "\<CR>"
 " endfunction
 " <TAB>: completion.
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 " inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 " inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
@@ -588,6 +589,9 @@ let g:autoformat_verbosemode=0
 " autocmd FileType vim,tex let b:autoformat_autoindent=0
 "" Python format
 " pip install --upgrade autopep8
+
+"" yapf
+let g:formatter_yapf_style = 'pep8'
 
 "" tyru/caw.vim config
 " 行の最初の文字の前にコメント文字をトグル
