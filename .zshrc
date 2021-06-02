@@ -95,17 +95,7 @@ export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias xclip="xclip -sel clip <"
-
-export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/bin
 
 #export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws/rgbd_benchmark_tools
 #export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$HOME/data/rosbuild_ws
@@ -115,14 +105,6 @@ setopt no_nomatch
 #export C_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/data/software/install/include
 
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:$HOME/data/software/install/lib/pkgconfig
-
-# rm to trash
-alias rm='~/dotfiles/rmtrash/rmtrash'
-alias rmdir='~/dotfiles/rmtrash/rmdirtrash'
-alias sudo='sudo '
-
-# conda
-alias source-conda='source $ROOT/anaconda.sh'
 
 # Gem
 #GEM_HOME="$HOME/gems"
@@ -150,14 +132,20 @@ setopt hist_expand
 # tmuxinator
 source $ROOT/.tmuxinator/.tmuxinator.zsh
 
+# Disable bell alert
+bind 'set bell-style none'
+
 # Docker GUI compatible
 echo "Run gui in docker"
 xhost +local:root
 
 #ROS
-source ~/ros.sh
+# source ~/ros.sh
 
 source $ROOT/cuda.sh
 
+source $ROOT/alias.sh
 # Local host config
 source $HOME/local_config.sh
+
+function mkcd(){mkdir -p $1 && cd $1}
