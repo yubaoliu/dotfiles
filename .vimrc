@@ -91,9 +91,9 @@ set foldmethod=syntax
 " " 启动 vim 时关闭折叠代码
 set nofoldenable
 " 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
-noremap <Leader>zt <Esc>za<CR>
-noremap <Leader>zc <Esc>zM<CR>
-noremap <Leader>zo <Esc>zR<CR>
+noremap <Leader>fa <Esc>za<CR>
+noremap <Leader>fc <Esc>zM<CR>
+noremap <Leader>fo <Esc>zR<CR>
 
 ""=========== MARKS ===============""
 " m{bookmark-name}
@@ -192,6 +192,7 @@ noremap <Leader>tf <Esc>:tabfirst<CR>
 " :tabmove # - move current tab to the #th position (indexed from 0)
 " :tabonly or :tabo - close all tabs except for the current one
 " :tabdo command - run the command on all tabs (e.g. :tabdo q - closes all opened tabs)
+" #gt: move tab, for example: 1gt
 
 "" ============= WINDOWS ==============""
 " :new <file> 在新窗口中打开文件 
@@ -202,6 +203,8 @@ noremap <Leader>\| <Esc>:vsplit<CR>
 noremap <Leader>- <Esc>:split<CR>   
 " Ctrl + wq - quit a window
 noremap <Leader>wd <Esc><C-w>c<CR>   
+" Ctrl + wo - quit all other windows
+noremap <Leader>wx <Esc><C-w>o<CR>   
 
 " Switch window
 " Ctrl + ww - switch windows

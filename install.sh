@@ -1,4 +1,5 @@
 sudo apt update
+sudo apt-get install -y software-properties-common
 
 echo "Install dependencies"
 sudo apt install -y trash-cli \
