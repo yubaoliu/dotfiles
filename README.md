@@ -141,6 +141,7 @@ https://stackoverflow.com/questions/37720892/you-dont-have-write-permissions-for
     ```
 
 1. Next, run the following curl command to install both rbenv and ruby-build:
+
     ```sh
     curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -
     ```
