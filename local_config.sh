@@ -1,4 +1,5 @@
-
+export GOPATH="/home/yubao/data/software/go"
+export PATH=$PATH:/home/yubao/data/software/go/bin
 
 export PATH=$PATH:$HOME/data/software/install/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/data/software/install/lib
@@ -33,3 +34,6 @@ export NVM_DIR="/home/yubao/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias ssh-powerpc='ssh yubao@133.15.23.109'
+export PATH="/home/yubao/data/software/context-linux-64":$PATH
+
+export TURTLEBOT3_MODEL=burger
