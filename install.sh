@@ -18,14 +18,15 @@ zsh \
 vim-gtk  #vim clipboard
 
 echo "Install ruby"
-sudo apt-add-repository ppa:brightbox/ruby-ng && sudo apt-get -y update
+sudo apt-add-repository -y ppa:brightbox/ruby-ng 
+sudo apt-get -y update
 sudo apt install -y ruby ruby-dev
 
 # VIm plugin
 sudo apt-get install -y astyle clang-format python-autopep8  remark 
 sudo apt install -y npm && npm install -g remark-cli
 
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 pip install autopep8
 pip install yapf 
 
