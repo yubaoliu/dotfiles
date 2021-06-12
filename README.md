@@ -1,8 +1,27 @@
 # Introduction
 
-This is my awesome configure file
+This is my awesome configure file for Ubuntu.
 
-# on-my-zsh
+# Funcions or modules will be installed and configured
+- on-my-zsh
+- vim
+- tmux
+
+# How to use
+- Install the requirements
+```sh
+./install.sh
+```
+- Deploy the configurations, this will delete the old configure in ~
+
+```sh
+./deploy.sh
+```
+
+- Put your manually config to ~/local_config.sh
+
+# Reference
+## on-my-zsh
 ```sh
 sudo apt install zsh
 
@@ -10,6 +29,9 @@ sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools
 
 rm ~/.zshrc
 ```
+
+----------------
+
 
 # Config
 
@@ -20,7 +42,6 @@ cd ~
 ln -s dotfiles/.zshrc
 ln -s dotfiles/.vimrc
 ```
-
 
 # Commands
 
