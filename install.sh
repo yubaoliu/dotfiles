@@ -1,12 +1,8 @@
 sudo apt update
-sudo apt-get install -y software-properties-common
-
-echo "Install ohmyzsh"
-echo "https://ohmyz.sh/#install"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Install dependencies"
-sudo apt install -y trash-cli \
+sudo apt install -y software-properties-common git curl \
+trash-cli \
 libevent-dev \
 libncurses5-dev \
 libncursesw5-dev \
@@ -34,6 +30,12 @@ pip install yapf
 #  Un-share the history among terminals
 unsetopt share_history
 setopt no_share_history
+
+echo "Install ohmyzsh"
+echo "https://ohmyz.sh/#install"
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
 
 # mkdir
 echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
