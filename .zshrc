@@ -133,7 +133,7 @@ setopt hist_expand
 source $ROOT/.tmuxinator/.tmuxinator.zsh
 
 # Disable bell alert
-bind 'set bell-style none'
+# bind 'set bell-style none'
 
 # Docker GUI compatible
 echo "Run gui in docker"
