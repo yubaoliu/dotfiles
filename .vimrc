@@ -22,7 +22,8 @@ call plug#begin('~/.vim/plugged')
  Plug 'regedarek/ZoomWin'
  " Plug 'justmao945/vim-clang'
  " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
-
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
  call plug#end()
 
 filetype plugin indent on
