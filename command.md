@@ -1,4 +1,12 @@
 
+# locate 
+
+Check the package path
+
+```sh
+dpkg -L libpcl-dev
+```
+
 # docer
 ## container
 
