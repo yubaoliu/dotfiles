@@ -37,15 +37,19 @@ setopt no_share_history
 
 echo "Install ohmyzsh"
 echo "https://ohmyz.sh/#install"
-#sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-./tools/ohmyzsh-install.sh
+sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# use the downloaded version if failed downloading
+# ./tools/ohmyzsh-install.sh
 
 # rben
 git clone https://ghproxy.com/https://github.com/sstephenson/rbenv.git ~/.rbenv
 
 # vim plug
-# curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# use the downloaded version if failed downloading
+# mkdir $HOME/.vim/autoload
+# cp tools/plug.vim $HOME/.vim/autoload
 
 # mkdir
 echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
