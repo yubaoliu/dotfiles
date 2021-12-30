@@ -4,11 +4,48 @@ This is my awesome configure file for Ubuntu.
 
 # Funcions or modules will be installed and configured
 - on-my-zsh
+```sh
+sudo apt install zsh
+
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+rm ~/.zshrc
+```
 - vim
 - tmux
 
-# How to use
+# VIM shortcuts
+
+<Leader> +
+
+## Function keys
+- F3: autoformat
+- F5: file folder
+- F8: undo tree
+- F7: markdown preview
+- F9: stop markdown preview
+
+## Basic
+- ww: write changes
+- w!: write without modification
+- wq: write and quit
+- q!: quit without write
+- qall: quit all the windows
+
+## Window related
+-  C:  close the window
+-  wd:  close the window
+-  wo:  close all other windows
+-  |:   vertical window
+-  -:   horizental window
+
+## Mouse movement
+- 0: move to the head of a line
+-
+-
+# Installation
 - Install the requirements
+
 ```sh
 ./install.sh
 ```
@@ -20,17 +57,21 @@ This is my awesome configure file for Ubuntu.
 
 - Put your manually config to ~/local_config.sh
 
+# Vim Tutorials
+
+VIM 常用的有四个模式，：
+
+常模式 (Normal-mode)
+插入模式 (Insert-mode)
+命令模式 (Command-mode)
+可视模式 (Visual-mode)
+
+
 # Reference
-## on-my-zsh
-```sh
-sudo apt install zsh
+- [VimForCpp](https://gitee.com/HGtz2222/VimForCpp#%E6%94%AF%E6%8C%81%E7%8E%AF%E5%A2%83)
+- [SpaceVim](https://spacevim.org/use-vim-as-a-c-cpp-ide/)
 
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-rm ~/.zshrc
-```
-
-----------------
+------------------------- OLD -----------------------------------
 
 
 # Config
@@ -536,7 +577,5 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 # Reference
 -   spacemacs
 - [emacs派のためのvimrc](https://qiita.com/jimpei/items/c97e2bc06cabf1ffc07f)
-
-
 
 

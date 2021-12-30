@@ -29,6 +29,9 @@ Plug 'vim-scripts/DoxygenToolkit.vim'
 " On-demand lazy load
 " Plug 'justmao945/vim-clang'
 " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
+Plug 'ludovicchabant/vim-gutentags' 
 call plug#end()
 
 ""===============REFERENCE=============""
@@ -46,6 +49,14 @@ let mapleader = "\<Space>"
 " compatible with emacs
 noremap <M-x> <Esc>
 
+" 开启实时搜索功能
+set incsearch
+" 搜索时大小写不敏感
+" set ignorecase
+" 关闭兼容模式
+" set nocompatible
+" vim 自身命令行模式智能补全
+set wildmenu
 
 "" ============= HELP  ==============""
 "scroll-cursor
@@ -65,6 +76,7 @@ set fileencodings=utf-8
 set fileformats=unix,dos,mac
 " "文字コードをUFT-8に設定
 set fenc=utf-8
+
 
 "" ============= COLOR  ==============""
 " 自動補完の色設定
@@ -112,13 +124,6 @@ noremap <Leader>ja <Esc>`a<CR>
 noremap <Leader>ya <Esc>y`a<CR>
 " `. – 跳转到最后一次执行改变的精确位置（行和列）
 " ‘. – 跳转到最后一次执行改变的行起始位置
-
-
-
-"" ==========OPEN CLOSE EXIT SAVE ================""
-" :saveas file - save file as
-" :close - close current pane!
-noremap <Leader>close <Esc>:close<CR>
 
 "" ======== Cursor movement =============""
 " h - move cursor left
@@ -196,16 +201,21 @@ noremap <Leader>tf <Esc>:tabfirst<CR>
 " #gt: move tab, for example: 1gt
 
 "" ============= WINDOWS ==============""
+" :saveas file - save file as
 " :new <file> 在新窗口中打开文件 
 " split window
 " Ctrl + wv - split window vertically
 noremap <Leader>\| <Esc>:vsplit<CR>   
 " Ctrl + ws - split window
 noremap <Leader>- <Esc>:split<CR>   
+
+"" quit the windows
+" :close - close current pane!
+noremap <Leader>C <Esc>:close<CR>
 " Ctrl + wq - quit a window
 noremap <Leader>wd <Esc><C-w>c<CR>   
 " Ctrl + wo - quit all other windows
-noremap <Leader>wx <Esc><C-w>o<CR>   
+noremap <Leader>wo <Esc><C-w>o<CR>   
 
 " Switch window
 " Ctrl + ww - switch windows
@@ -402,7 +412,7 @@ set history=1000
 
 "Exiting
 ":w - write (save) the file, but don't exit
-noremap <Leader>w <Esc>:w<CR>
+noremap <Leader>ww <Esc>:w<CR>
 ":w !sudo tee % - write out the current file using sudo
 noremap <Leader>w! <Esc>:w!<CR>
 ":wq or :x or ZZ - write (save) and quit
@@ -606,15 +616,21 @@ vmap <Leader>c <Plug>(caw:hatpos:toggle)
 nmap <Leader>, <Plug>(caw:zeropos:toggle)
 vmap <Leader>, <Plug>(caw:zeropos:toggle)
 
+"" markdown
 "  plasticboy/vim-markdown 
 let g:vim_markdown_folding_disabled = 1
 
+" Markdown preview
+nmap <silent> <F7> <Plug>MarkdownPreview
+imap <silent> <F7> <Plug>MarkdownPreview
+nmap <silent> <F9> <Plug>StopMarkdownPreview
+imap <silent> <F9> <Plug>StopMarkdownPreview
 
 ""================== IDE setting for programming =============""
 
 ""=================== doxygentoolkit ============""
-" let g:DoxygenToolKit_startCommentBlock = "/// "
-" let g:DoxygenToolKit_interCommentBlock = "/// "
+" let g:DoxygenToolKit_startCommentBlock = "// "
+" let g:DoxygenToolKit_interCommentBlock = "// "
 
 let g:DoxygenToolkit_briefTag_funcName = "yes"
 
@@ -639,17 +655,36 @@ let g:DoxygenToolkit_licenseTag="\<enter> This file is part of RDS-SLAM \<enter>
 
 "" ============ OTHERW ===================""
 " " vim-clang settings
-" let g:clang_c_options = '-std=c11'
-" let g:clang_cpp_options = '-std=c++11 --pedantic-errors'
-" let g:clang_format_auto = 1
-" let g:clang_format_style = 'Google'
-" let g:clang_check_syntax_auto = 1
+let g:clang_c_options = '-std=c11'
+let g:clang_cpp_options = '-std=c++11 --pedantic-errors'
+let g:clang_format_auto = 1
+let g:clang_format_style = 'Google'
+let g:clang_check_syntax_auto = 1
 
+""gutentags
+" gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+
+" 所生成的数据文件的名称 "
+let g:gutentags_ctags_tagfile = '.tags'
+
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录 "
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" 检测 ~/.cache/tags 不存在就新建 "
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+
+" 配置 ctags 的参数 "
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " Spell check
 " set spell spelllang=en_us    " 打开英语单词的拼写检查
 
 " auto save, this function not yet test
 " autocmd TextChanged,TextChangedI <buffer> silent write
 
-
-
+" 让配置变更立即生效
+autocmd BufWritePost $MYVIMRC source $MYVIMRC

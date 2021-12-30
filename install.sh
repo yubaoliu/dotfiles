@@ -11,6 +11,10 @@ byacc \
 autotools-dev \
 automake \
 zsh \
+global \
+exuberant-ctags \
+python-pygments \
+ctags \
 vim-gtk  #vim clipboard
 
 echo "Install ruby"
@@ -33,11 +37,15 @@ setopt no_share_history
 
 echo "Install ohmyzsh"
 echo "https://ohmyz.sh/#install"
-#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+#sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+./tools/ohmyzsh-install.sh
 
 # rben
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://ghproxy.com/https://github.com/sstephenson/rbenv.git ~/.rbenv
+
+# vim plug
+# curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # mkdir
 echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
