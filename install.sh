@@ -40,7 +40,7 @@ echo "https://ohmyz.sh/#install"
 
 sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # use the downloaded version if failed downloading
-# ./tools/ohmyzsh-install.sh
+# ./library/ohmyzsh-install.sh
 
 # rben
 git clone https://ghproxy.com/https://github.com/sstephenson/rbenv.git ~/.rbenv
