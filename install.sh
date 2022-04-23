@@ -22,8 +22,10 @@ sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get -y update
 sudo apt install -y ruby ruby-dev
 
+# Langue support
+sudo apt-get install -y astyle clang  clang-format python-autopep8  remark 
+
 # VIm plugin
-sudo apt-get install -y astyle clang-format python-autopep8  remark 
 sudo apt install -y npm && npm install -g remark-cli
 
 sudo apt install -y python3-pip
