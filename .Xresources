@@ -1,5 +1,5 @@
 
-XTerm*bellIsUrgent: true
+XTerm*bellIsUrgent: False
 
 !! sixel fun
 XTerm*decTerminalID: 340
@@ -79,3 +79,10 @@ XTerm*VT100*translations:       #override \
         Ctrl Shift <Key>c: copy-selection(CLIPBOARD,PRIMARY) \n\
         Ctrl Shift <Key>v: insert-selection(CLIPBOARD) \n\
         Ctrl Shift <Key>n: spawn-new-terminal()
+
+! XTerm*cursorBlink:    on
+! XTerm*cursorOnTime:   400
+! XTerm*cursorOffTime:  250
+! XTerm*cursorColor:    White
+
+

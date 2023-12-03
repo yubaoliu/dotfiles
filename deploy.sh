@@ -12,6 +12,7 @@ ln -s $ROOT/.vimrc
 ln -s $ROOT/.tmux.conf
 ln -s $ROOT/.Xresources
 ln -s $ROOT/.zshrc
+ln -s $ROOT/.ctags
 
 
 # enable zsh for all terminals

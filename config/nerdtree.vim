@@ -21,10 +21,10 @@
 " autocmd vimenter * NERDTree 
 
 " -- 设定nerdtree的窗口大小
-"  let g:NERDTreeWinSize = 25
+ " let g:NERDTreeWinSize = 25
 
 " -- 打开nvim时若没有任何文件，则自动打开nerdtree
-autocmd vimenter * if !argc()|NERDTree|endif
+"autocmd vimenter * if !argc()|NERDTree|endif
 
 " -- 当nerdtree为唯一视窗时，自动关闭
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

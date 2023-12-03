@@ -74,14 +74,14 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_max_diagnostics_to_display = 30
 
 " 设置用于选择补全列表中的第一个选项以及进入补全列表后向下选择的快捷键，默认为tab键和方向下键
-let g:ycm_key_list_select_completion=['<c-n>']
+" let g:ycm_key_list_select_completion=['<c-n>']
 " let g:ycm_key_list_select_completion = ['<TAB>', '<Down>']
-" let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']  " 没有这个会拦截掉tab, 导致其他插件的tab不能用.
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']  " 没有这个会拦截掉tab, 导致其他插件的tab不能用.
 
 " 设置用于向上选择补全列表中的选项的快捷键，默认为shift+tab，和方向上键
-let g:ycm_key_list_previous_completion=['<c-p>']
+" let g:ycm_key_list_previous_completion=['<c-p>']
 " let g:ycm_key_list_previous_completion = ['<S-TAB>', '<Up>']
-" let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
+let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 
 " 设置用于关闭补全列表的快捷键，默认为ctrl+y
 " let g:ycm_key_list_stop_completion = ['<C-y>']
@@ -169,8 +169,7 @@ let g:ycm_filetype_blacklist = {
     \ 'vimwiki' : 1,
     \ 'pandoc' : 1,
     \ 'infolog' : 1,
-    \ 'mail' : 1,
-    \ 'vimrc': 1,
+    \ 'mail' : 1
     \}
 
 " 对特定文件类型禁用文件路径补全
@@ -236,8 +235,7 @@ let g:ycm_filetype_blacklist = {
     \ 'vimwiki' : 1,
     \ 'pandoc' : 1,
     \ 'infolog' : 1,
-    \ 'mail' : 1,
-    \ 'vimrc': 1,
+    \ 'mail' : 1
     \}
 
 " 对特定文件类型禁用文件路径补全
@@ -255,8 +253,6 @@ let g:ycm_filetype_whitelist = {
   \ 'zsh': 1,
   \ 'hpp' : 1,
   \ 'h' : 1,
-  \ 'md' : 1,
-  \ 'markdown' : 1,
   \ 'txt' : 1,
 \ }
 

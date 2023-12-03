@@ -1,55 +1,79 @@
-# Introduction
+# Synopsys
 
-This is my awesome configure file for Ubuntu.
+This is my awesome configure file for Ubuntu, Windows and Mac.
 
-# Funcions or modules will be installed and configured
+# Shortcut
 
-*   on-my-zsh
+##  Windows
 
-```sh
-sudo apt install zsh
+|                   | Default Key      | Key             | Note                                                         |
+| ----------------- | ---------------- | --------------- | ------------------------------------------------------------ |
+| **搜狗输入法**    |                  |                 | 前缀 Ctrl+ Shift                                             |
+| 搜狗截屏          | Ctrl + Alt +  Q  | Ctrl + Alt +  s |                                                              |
+| 输入法切换        |                  | Alt  + Shift    | Sogou五笔                                                    |
+|                   |                  |                 |                                                              |
+| **Windows 系统**  |                  |                 |                                                              |
+| 分屏              |                  | Win +  Arrows   | 鼠标拖拽分屏. 用鼠标左键按住一个窗口的顶端处，接着拖拽到桌面的边上 |
+| 多桌面            |                  | Win + Tab       |                                                              |
+|                   |                  |                 |                                                              |
+| 系统列表          |                  | Win + x         |                                                              |
+| 关闭TAB           |                  | Alt + F4        |                                                              |
+| Toggle Fullscreen |                  | F11             |                                                              |
+| Find              | Ctrl + shitf + F | Alt + shift +F  |                                                              |
+|                   |                  |                 |                                                              |
+| **Power Shell**   |                  |                 | 配置文件: $ PROFILE                                          |
+| **Pane**          |                  |                 |                                                              |
+| split down        |                  | Alt + Shift + - |                                                              |
+| split right       |                  | Alt + Shift +   |                                                              |
+| Move focus        |                  | Alt + Arrow     |                                                              |
+| Close pane        |                  | Alt + Shit + c  |                                                              |
+| **Tab**           |                  |                 |                                                              |
+| New  tab          |                  | Alt + Shit + t  |                                                              |
+| Next tab          |                  | Alt + Shift + n |                                                              |
+| Previous tab      |                  | Alt + shift + p |                                                              |
+|                   |                  |                 |                                                              |
+|                   |                  |                 |                                                              |
+|                   |                  |                 |                                                              |
 
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+- Windows输入法
 
-rm ~/.zshrc
-```
+![image-20231203172943765](assets/README/image-20231203172943765.png)
 
-*   vim
-*   tmux
+- 搜狗输入法
 
-# VIM shortcuts
+![image-20231203172614325](assets/README/image-20231203172614325.png)
 
-<Leader> +
+## VIM
 
-## Function keys
+| **NERDTree**               | Old Key         | Key                           |      |
+| -------------------------- | --------------- | ----------------------------- | ---- |
+| 打开目录树                 | :NERDTree       | F5                            |      |
+| 关闭目录树                 | :NERDTreeClose  |                               |      |
+| 打开/关闭目录树            | :NERDTreeToggle |                               |      |
+| 打开目录树并定位到当前文件 | :NERDTreeFind   |                               |      |
+|                            |                 |                               |      |
+| **Function keys**          |                 |                               |      |
+| undo tree                  |                 | F8                            |      |
+| autoformat                 |                 | F3                            |      |
+| markdown preview           |                 | F7                            |      |
+| stop markdown preview      |                 | F9                            |      |
+|                            |                 |                               |      |
+| **Window**                 |                 |                               |      |
+| new  window                | c               |                               |      |
+| close all other windows    | wo              |                               |      |
+| vertical window            | \|              |                               |      |
+| vertical window            | -               |                               |      |
+|                            |                 |                               |      |
+| **Jump**                   |                 |                               |      |
+| Jump to a subject          |                 | Ctrl - ]                      |      |
+| Jump back                  |                 | g<RightMouse>, <C-RightMouse> |      |
+| Repeat to go back          |                 | Ctrl-O                        |      |
+|                            |                 |                               |      |
+|                            |                 |                               |      |
+|                            |                 |                               |      |
+|                            |                 |                               |      |
 
-*   F3: autoformat
-*   F5: file folder
-*   F8: undo tree
-*   F7: markdown preview
-*   F9: stop markdown preview
 
-## Basic
-
-*   ww: write changes
-*   w!: write without modification
-*   wq: write and quit
-*   q!: quit without write
-*   qall: quit all the windows
-
-## Window related
-
-*   C:  close the window
-*   wd:  close the window
-*   wo:  close all other windows
-*   |:   vertical window
-*   \-:   horizental window
-
-## Mouse movement
-
-*   0: move to the head of a line
-*
-*
 
 # Installation
 
@@ -67,7 +91,103 @@ rm ~/.zshrc
 
 *   Put your manually config to ~/local\_config.sh
 
-# Vim Tutorials
+# Windows
+
+
+## Windows 家庭版 转 专业版
+
+```sh
+ irm massgrave.dev/get | iex
+```
+
+Extra
+
+## microKMS 
+
+- https://ilvruan.com
+- http://www.yishimei.cn/
+
+## 重置网络
+
+Windows+X选择以管理员方式运行后输入netsh winsock reset 命令，重启计算机后看下效果
+
+## Powershell
+
+```sh
+Install-Module [moudel name] -Scope CurrentUser # 只为当前用户安装
+
+Install-Module git-aliases -AllowColbber
+
+Install-Module posh-git
+Install-Module oh-my-posh
+
+```
+
+- 假设出现`在此系统上禁止运行脚本`的问题，那么需要在shell中执行一下：
+
+```sh
+Set-ExecutionPolicy remotesigned
+```
+
+
+
+## Tools
+
+- Snipaste
+- 
+
+# on-my-zsh
+
+```sh
+sudo apt install zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+rm ~/.zshrc
+```
+# oh-my-posh
+- [Oh My Posh](https://ohmyposh.dev/)
+
+- https://ohmyposh.dev/docs/themes
+
+- [教程 - 使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/custom-prompt-setup)
+
+```sh
+winget install JanDeDobbeleer.OhMyPosh
+oh-my-posh version
+winget upgrade oh-my-posh
+
+notepad $PROFILE
+```
+
+
+
+
+
+# VIM
+
+## Function keys
+
+*   F3: autoformat
+*   F5: file folder
+*   F8: undo tree
+*   F7: markdown preview
+*   F9: stop markdown preview
+
+## Basic
+
+*   ww: write changes
+*   w!: write without modification
+*   wq: write and quit
+*   q!: quit without write
+*   qall: quit all the windows
+
+
+
+## Mouse movement
+
+*   0: move to the head of a line
+
+
+## Vim Tutorials
 
 VIM 常用的有四个模式，：
 
@@ -81,7 +201,22 @@ VIM 常用的有四个模式，：
 *   [VimForCpp](https://gitee.com/HGtz2222/VimForCpp#%E6%94%AF%E6%8C%81%E7%8E%AF%E5%A2%83)
 *   [SpaceVim](https://spacevim.org/use-vim-as-a-c-cpp-ide/)
 
+*   [oh-my-vim](https://github.com/liangxianzhe/oh-my-vim)
+
+*   https://github.com/mzlogin/config-files
+
+- [Linux-Set-up](https://manyyack.github.io/Linux-Set-up/)
+- https://www.bookstack.cn/books/learn-vim
+
+
+
+
+
 \------------------------- OLD -----------------------------------
+
+---
+
+
 
 # Config
 
@@ -323,27 +458,27 @@ Issue
 重启 Vim 或执行 :source ~/.vimrc 让 Vim 加载插件
 ```
 
-##  Mode
+## Mode
 
 ```sh
 :help map-modes
 ```
 
-|   递归的映射  |   非递归映射  |  删除某个映射   |
-|  ---  |   ---    |   ---   |
-|:map   |:noremap  |:unmap    | Normal, Visual, Select, Operator-pending
-|:nmap  |:nnoremap |:nunmap   | Normal
-|:vmap  |:vnoremap |:vunmap   | Visual and Select
-|:smap  |:snoremap |:sunmap   | Select
-|:xmap  |:xnoremap |:xunmap   | Visual
-|:omap  |:onoremap |:ounmap   | Operator-pending
-|:map!  |:noremap! |:unmap!   | Insert and Command-line
-|:imap  |:inoremap |:iunmap   | Insert
-|:lmap  |:lnoremap |:lunmap   | Insert, Command-line, Lang-Arg
-|:cmap  |:cnoremap |:cunmap   | Command-line
-|:tmap  |:tnoremap |:tunmap  |  Terminal-Job
+| 递归的映射 | 非递归映射 | 删除某个映射 |
+| ---        | ---        | ---          |
+| :map       | :noremap   | :unmap       | Normal, Visual, Select, Operator-pending
+| :nmap      | :nnoremap  | :nunmap      | Normal
+| :vmap      | :vnoremap  | :vunmap      | Visual and Select
+| :smap      | :snoremap  | :sunmap      | Select
+| :xmap      | :xnoremap  | :xunmap      | Visual
+| :omap      | :onoremap  | :ounmap      | Operator-pending
+| :map!      | :noremap!  | :unmap!      | Insert and Command-line
+| :imap      | :inoremap  | :iunmap      | Insert
+| :lmap      | :lnoremap  | :lunmap      | Insert, Command-line, Lang-Arg
+| :cmap      | :cnoremap  | :cunmap      | Command-line
+| :tmap      | :tnoremap  | :tunmap      | Terminal-Job
 
-```sh
+````sh
 标记 模式
 <space>　常规模式，可视化模式，运算符模式
 n　　　　　常规模式
@@ -366,7 +501,11 @@ c　　　　　命令模式
 - l 插入、命令行和 Lang-Arg 模式的 ":lmap" 映射 
 ``
 
-#   Help docs
+##  Ctags
+
+
+
+##   Help docs
  [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
  Refresh config
 
@@ -382,7 +521,7 @@ c　　　　　命令模式
 \# plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+````
 
 Reload .vimrc and `:PlugInstall` to install plugins.
 
@@ -417,15 +556,6 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 ```
 
 使用:map!命令，则只列出插入和命令行模式的映射。而:imap，:vmap，:omap，:nmap命令则只是列出相应模式下的映射。
-
-*   umap
-
-```sh
-:unmap <F10>
-
-取消所有映射
-:mapclear
-```
 
 *   Leader key: `\`
 *   NERDCommenterToggle
@@ -553,11 +683,13 @@ Reload .vimrc and `:PlugInstall` to install plugins.
     ```
 
 ## caw.vim
+
 ```sh
 :help caw-keybindings
 ```
-- https://github.com/tyru/caw.vim
-- Refer from; https://yoheikoga.github.io/2017/04/12/caw-vim-comment-out-toggle-shortcut/
+
+*   https://github.com/tyru/caw.vim
+*   Refer from; https://yoheikoga.github.io/2017/04/12/caw-vim-comment-out-toggle-shortcut/
 
 ```sh
 .vimrc
@@ -578,19 +710,25 @@ vmap <Leader>, <Plug>(caw:zeropos:toggle)
 # Emacs
 
 *   mark: C-c C-SPC
-    Mehtod 1:
-    ```sh
-    sudo add-apt-repository ppa:kelleyk/emacs
-    sudo apt install emacs26
-    ```
-    Method 2:
-    ```sh
-        sudo add-apt-repository ppa:ubuntu-elisp/ppa
-        sudo apt-get update
-        sudo apt-get install emacs-snapshot
-    ```
+
+Mehtod 1:
+
+```sh
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt install emacs26
+```
+
+Method 2:
+
+```sh
+sudo add-apt-repository ppa:ubuntu-elisp/ppa
+sudo apt-get update
+sudo apt-get install emacs-snapshot
+```
 
 # Reference
 
 *   spacemacs
 *   [emacs派のためのvimrc](https://qiita.com/jimpei/items/c97e2bc06cabf1ffc07f)
+*   [Markdown Style Guide](https://cirosantilli.com/markdown-style-guide/#tables)
+*   [Windows PowerShell 美化记录](https://blog.tcs-y.com/2021/05/24/windows-powershell-beautify/#:~:text=%E6%B0%B4%E5%B9%B3%E5%88%86%E5%B1%8Falt%20%2B%20shift,shift%20%2B%20%2B%20(%E5%8A%A0%E5%8F%B7))

@@ -1,8 +1,17 @@
+" // n  普通模式
+" // v  可视模式
+" // i 插入模式
+" // c 命令行模式
+" // h 在帮助文件里，以上所有模式
+" // a 以上所有模式
+" // r 跳过|lit-enter|提示
+" // A 在可是模式下自动选择
+set mouse=ncv
+" set mouse=a
+
 " 开启实时搜索功能
 set incsearch
-" 搜索时大小写不敏感
-set ignorecase
-" 关闭兼容模式
+" 搜索时大小写不敏感 set ignorecase " 关闭兼容模式
 " set nocompatible
 " vim 自身命令行模式智能补全
 set wildmenu
@@ -89,39 +98,33 @@ set expandtab
 " " 行頭以外のTab文字の表示幅（スペースいくつ分）
 " 设置编辑时制表符占用空格数
 " tabstop 指定我们在插入模式下输入一个制表符占据的空格数量
- set tabstop=4    " 按下 Tab 键时，Vim 显示的空格数。
+set tabstop=4    " 按下 Tab 键时，Vim 显示的空格数。
 " " 行頭でのTab文字の表示幅
 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数
 " 设置格式化时制表符占用空格数 " 缩进格式
- set shiftwidth=4
- " 让 vim 把连续数量的空格视为一个制表符
- "  expandtab "  已经把制表符转换为空格，当你要删除制表符时你得连续删除多个空格，
- "  该设置就是告诉 vim 把连续数量的空格视为一个制表符，即，只删一个字符即可
- set softtabstop=4
+set shiftwidth=4
+" 让 vim 把连续数量的空格视为一个制表符
+"  expandtab "  已经把制表符转换为空格，当你要删除制表符时你得连续删除多个空格，
+"  该设置就是告诉 vim 把连续数量的空格视为一个制表符，即，只删一个字符即可
+set softtabstop=4
 " retab 命令，让 vim 按上述规则重新处理制表符与空格关系。
 
 " " 検索系 search
 " " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
- set ignorecase
+set ignorecase
 " " 検索文字列に大文字が含まれている場合は区別して検索する
- set smartcase    " 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；其他情况都是大小写不敏感。比如，搜索Test时，将不匹配test；搜索test时，将匹配Test
+set smartcase    " 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；其他情况都是大小写不敏感。比如，搜索Test时，将不匹配test；搜索test时，将匹配Test
 
 " " 検索文字列入力時に順次対象文字列にヒットさせる
- set incsearch    " 输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果
+set incsearch    " 输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果
 " " 検索時に最後まで行ったら最初に戻る
- set wrapscan
-" " 検索語をハイライト表示
-" https://stackoverflow.com/questions/7103173/vim-how-to-change-the-highlight-color-for-search-hits-and-quickfix-selection
- set hlsearch    " 搜索时，高亮显示匹配结果
- hi Search ctermbg=LightYellow
- hi Search ctermfg=Red
-" " ESC連打でハイライト解除
- nmap <Esc><Esc> :nohlsearch<CR><Esc>
-" " 括弧入力時の対応する括弧を表示
- set showmatch
+set wrapscan
 
- " ["+y]でクリップボードにコピー
- set clipboard=unnamed,autoselect
+" " 括弧入力時の対応する括弧を表示
+set showmatch
+
+" ["+y]でクリップボードにコピー
+set clipboard=unnamed,autoselect
 
 " Status line
 set ruler    " 在状态栏显示光标的当前位置（位于哪一行哪一列）

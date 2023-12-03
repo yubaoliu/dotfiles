@@ -6,6 +6,16 @@ hi PmenuSel ctermbg=blue ctermfg=white
 hi PmenuSbar ctermbg=0 ctermfg=9
 hi PmenuSbar ctermbg=255 ctermfg=0 guifg=#000000 guibg=#FFFFFF
 
+hi ErrorMsg ctermbg=blue ctermfg=white
+hi WarningMsg ctermbg=blue ctermfg=white
+
+" " 検索語をハイライト表示
+" https://stackoverflow.com/questions/7103173/vim-how-to-change-the-highlight-color-for-search-hits-and-quickfix-selection
+set hlsearch    " 搜索时，高亮显示匹配结果
+
+hi Search ctermbg=LightYellow
+hi Search ctermfg=Red
+
 ""=============== FONT ===============""
 "文字コード変更
 set encoding=utf-8
@@ -24,5 +34,4 @@ let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_start_level=2
 " 色块宽度
 let g:indent_guides_guide_size=1
-
 

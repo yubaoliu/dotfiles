@@ -1,3 +1,34 @@
+" Key map
+" <k0> - <k9> 小键盘 0 到 9
+" <S-...> Shift＋键
+" <C-...> Control＋键
+" <M-...> Alt＋键 或 meta＋键
+" <A-...> 同 <M-...>
+" <Esc> Escape 键
+" <Up> 光标上移键
+" <Space> 插入空格
+" <Tab> 插入Tab
+" <CR> 等于<Enter>
+
+" Function key
+" F1 -> help
+" F10 -> not work
+nnoremap <F2> :NERDTreeToggle<CR>
+" nnoremap <silent><F5> :NERDTreeToggle<CR>
+nnoremap <F5> :Autoformat<CR>
+nmap <F4> :TagbarToggle<CR>
+" nnoremap <F8> :UndotreeToggle<cr>
+
+" 括号补全, bracket
+" inoremap { {<ENTER>}<UP><RIGHT><ENTER>
+" inoremap ( ()<ESC>i
+" inoremap [ []<ESC>i
+" inoremap ' ''<ESC>i
+" inoremap " ""<ESC>i
+
+" " ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
 ""============= INDENT ================""
 noremap <tab> <Esc>V>
 noremap <s-tab> <Esc>V<
@@ -10,11 +41,12 @@ noremap <M-x> <Esc>
 ":help changelist
 ":help keyword - open help for keyword
 "K - open man page for word under the cursor
-noremap <Leader>K <Esc>K<CR>
+" noremap <Leader>K <Esc>K<CR>
+
 ":map-commands
 ":help colorcolumn
 " :help indent-guides
-noremap <Leader>help  <Esc>:help<CR>
+" noremap <Leader>help  <Esc>:help<CR>
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
@@ -75,14 +107,31 @@ noremap E <END>a
 " +N: Jump forward N lines
 " -N: Jump backward N lines
 
+"" Fold
+" Try :help fold-expr and :help fold-commands for details
 " 操作：za，打开或关闭当前折叠；zM，关闭所有折叠；zR，打开所有折叠
-noremap <Leader>fa <Esc>za<CR>
-noremap <Leader>fc <Esc>zM<CR>
-noremap <Leader>fo <Esc>zR<CR>
+" zf：创建折叠
+" zo：打开折叠
+" zc：关闭折叠
+" zR：打开所有
+" zM：关闭所有
+" zj：移动到下一个折叠
+" zk：移动到上一个折叠
+" noremap <Leader>za <Esc>za<CR>
+" noremap <Leader>zc <Esc>zM<CR>
+" noremap <Leader>zo <Esc>zR<CR>
+" zr: reduces fold level throughout the buffer
+" zR: opens all folds
+" zm: increases fold level throughout the buffer
+" zM: folds everything all the way
+" za: open a fold your cursor is on
+" zA: open a fold your cursor is on recursively
+" zc: close a fold your cursor is on
+" zC: close a fold your cursor is on recursively
 
 ""=========== MARKS ===============""
 " m{bookmark-name}
-" `{bookmark-name} - 移动到书签的确切位置 
+" `{bookmark-name} - 移动到书签的确切位置
 " ‘{bookmark-name} - 跳到书签行的开头
 " :marks
 " :delmarks {bookmark-name}
@@ -108,24 +157,24 @@ noremap <Leader>bp  <Esc>:bp<CR>
 " delete a buffer (close a file)
 noremap <Leader>bd  <Esc>:bd<CR>
 " list all open buffers
-noremap <Leader>ls  <Esc>:ls<CR>
+noremap <Leader>bl  <Esc>:ls<CR>
 
 
 ""============ TAB PAGE ==========""
-" Tabpage 
+" Tabpage
 " :tabnew or :tabnew {page.words.file} - open a file in a new tab
 " Ctrl + wT - move the current split window into its own tab
 noremap <Leader>wT <Esc><C-w>T<CR>
 " create
 noremap <Leader>tc <Esc>:tabnew<CR>
 " :tabclose or :tabc - close the current tab and all its windows
-noremap <Leader>td <Esc>:tabclose<CR> 
+noremap <Leader>td <Esc>:tabclose<CR>
 " gT or :tabprev or :tabp - move to the previous tab
-noremap <Leader>tp <Esc>:tabprevious<CR>    
+noremap <Leader>tp <Esc>:tabprevious<CR>
 " gt or :tabnext or :tabn - move to the next tab
-noremap <Leader>tn <Esc>:tabnext<CR>   
-noremap <Leader>tl <Esc>:tablast<CR>   
-noremap <Leader>tf <Esc>:tabfirst<CR>   
+noremap <Leader>tn <Esc>:tabnext<CR>
+noremap <Leader>tl <Esc>:tablast<CR>
+noremap <Leader>tf <Esc>:tabfirst<CR>
 " #gt - move to tab number #
 " :tabmove # - move current tab to the #th position (indexed from 0)
 " :tabonly or :tabo - close all tabs except for the current one
@@ -134,37 +183,38 @@ noremap <Leader>tf <Esc>:tabfirst<CR>
 
 "" ============= WINDOWS ==============""
 " :saveas file - save file as
-" :new <file> 在新窗口中打开文件 
+" :new <file> 在新窗口中打开文件
 " split window
 " Ctrl + wv - split window vertically
-noremap <Leader>\| <Esc>:vsplit<CR>   
+noremap <Leader>\| <Esc>:vsplit<CR>
+noremap <Leader>" <Esc>:vsplit<CR>
 " Ctrl + ws - split window
-noremap <Leader>- <Esc>:split<CR>   
+noremap <Leader>- <Esc>:split<CR>
 
 "" quit the windows
 " :close - close current pane!
-noremap <Leader>C <Esc>:close<CR>
+" noremap <Leader>pc <Esc>:close<CR>
 " Ctrl + wq - quit a window
-noremap <Leader>wd <Esc><C-w>c<CR>   
+noremap <Leader>wc <Esc><C-w>c<CR>
 " Ctrl + wo - quit all other windows
-noremap <Leader>wo <Esc><C-w>o<CR>   
+noremap <Leader>wo <Esc><C-w>o<CR>
 
 " Switch window
 " Ctrl + ww - switch windows
-noremap <Leader>ww <Esc><C-w>w<CR>   
+noremap <Leader>ws <Esc><C-w>w<CR>
 " Ctrl + wh - move cursor to the left window (vertical split)
-noremap <Leader>wh <Esc><C-w>h<CR>   
+noremap <Leader>wh <Esc><C-w>h<CR>
 " Ctrl + wl - move cursor to the right window (vertical split)
-noremap <Leader>wl <Esc><C-w>l<CR>   
+noremap <Leader>wl <Esc><C-w>l<CR>
 " Ctrl + wj - move cursor to the window below (horizontal split)
-noremap <Leader>wj <Esc><C-w>j<CR>   
+noremap <Leader>wj <Esc><C-w>j<CR>
 " Ctrl + wk - move cursor to the window above (horizontal split)
-noremap <Leader>wk <Esc><C-w>k<CR>   
+noremap <Leader>wk <Esc><C-w>k<CR>
 
-noremap <Leader>wL <Esc><C-w>L<CR>   
-noremap <Leader>wH <Esc><C-w>H<CR>   
-noremap <Leader>wJ <Esc><C-w>J<CR>   
-noremap <Leader>wK <Esc><C-w>K<CR>   
+" noremap <Leader>wL <Esc><C-w>L<CR>
+" noremap <Leader>wH <Esc><C-w>H<CR>
+" noremap <Leader>wJ <Esc><C-w>J<CR>
+" noremap <Leader>wK <Esc><C-w>K<CR>
 
 
 " :sp file - open a file in a new buffer and split window
@@ -203,11 +253,30 @@ noremap <Leader>wK <Esc><C-w>K<CR>
 
 "" ============== Plugin [vim-fswitch] ===============""
 " " *.cpp 和 *.h 间切换
-noremap <silent> <Leader>sw :FSHere<cr>
+" https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
+" Switch to the file and load it into the current window
+" noremap <silent> <Leader>sw :FSHere<cr>
+nmap <Leader>fh :FSHere<cr>
+"Switch to the file and load it into the window on the right >
+" nmap <silent> <Leader>fr :FSRight<cr>
+"Switch to the file and load it into a new window split on the right >
+nmap <Leader>fr :FSSplitRight<cr>
+"Switch to the file and load it into the window on the left >
+" nmap <silent> <Leader>fl :FSLeft<cr>
+" Switch to the file and load it into a new window split on the left >
+nmap <Leader>fl :FSSplitLeft<cr>
+" Switch to the file and load it into the window above >
+" nmap <silent> <Leader>fa :FSAbove<cr>
+" Switch to the file and load it into a new window split above >
+nmap <Leader>fa :FSSplitAbove<cr>
+" Switch to the file and load it into the window below >
+" nmap <silent> <Leader>fb :FSBelow<cr>
+" Switch to the file and load it into a new window split below >
+nmap <Leader>fb :FSSplitBelow<cr>
 
 
 " 快捷键 i 开/关缩进可视化
-noremap <silent> <Leader>it <Plug>IndentGuidesToggle
+noremap <Leader>it <Plug>IndentGuidesToggle
 
 " nnoremap j gj
 " nnoremap k gk
@@ -275,7 +344,8 @@ noremap <silent> <Leader>it <Plug>IndentGuidesToggle
 
 "Exiting
 ":w - write (save) the file, but don't exit
-noremap <Leader>ww <Esc>:w<CR>
+"wb: write buffer
+noremap <Leader>wb <Esc>:w<CR>
 ":w !sudo tee % - write out the current file using sudo
 noremap <Leader>w! <Esc>:w!<CR>
 ":wq or :x or ZZ - write (save) and quit
@@ -285,7 +355,7 @@ noremap <Leader>q <Esc>:q<CR>
 ":q! or ZQ - quit and throw away unsaved changes
 noremap <Leader>q! <Esc>:q!<CR>
 ":wqa - write (save) and quit on all tabs
-noremap <Leader>qall <Esc>:qall!<CR>
+noremap <Leader>qa <Esc>:qall!<CR>
 
 "" Search and replace
 "/pattern - search for pattern
@@ -312,23 +382,12 @@ noremap <Leader>qall <Esc>:qall!<CR>
 " @@ - rerun last run macro
 
 " Type <C-e> to launch
-nnoremap <silent><F5> :NERDTreeToggle<CR>
 
-" vim-autoformat
-nnoremap <F3> :Autoformat<CR>
 
-" undotree settings
-nnoremap <F8> :UndotreeToggle<cr>
-
-" Markdown preview
-nmap <silent> <F7> <Plug>MarkdownPreview
-imap <silent> <F7> <Plug>MarkdownPreview
-nmap <silent> <F9> <Plug>StopMarkdownPreview
-imap <silent> <F9> <Plug>StopMarkdownPreview
-
-nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR> 
-nnoremap <leader>hgd :split \| :YcmCompleter GoToDeclaration<CR> 
-nnoremap <leader>vgd :vsplit \| :YcmCompleter GoToDeclaration<CR> 
+" YCM
+" nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>hgd :split \| :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>vgd :vsplit \| :YcmCompleter GoToDeclaration<CR>
 
 nnoremap <leader>gi :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>hgi :split <bar> :YcmCompleter GoToDefinition<CR>
@@ -338,9 +397,22 @@ nnoremap <Leader>gh :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>hgh :split <bar> :YcmCompleter GoToInclude<CR>
 nnoremap <Leader>vgh :vsplit <bar>  :YcmCompleter GoToInclude<CR>
 
-nnoremap <Leader>gj  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <Leader>hj  :split <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <Leader>vj  :vplit <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>hgd  :split <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>vgd  :vplit <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" 禁用上方的preview窗口
+set completeopt=menu,menuone
+
+" Snippets
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<TAB>"
+" let g:UltiSnipsJumpForwardTrigger="<c-m-n>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-m-p>"
+
+" Ctags
+" C-]: jump to definition
+" C-T: jump back
 
 " " caw.vim settings
 " 行の最初の文字の前にコメント文字をトグル
@@ -358,3 +430,53 @@ vmap <C-\> <Plug>(caw:dollarpos:toggle)
 " nnoremap q <Nop>
 noremap <Leader>Q q
 noremap q <Nop>
+
+" debug, termdebug
+" " nnoremap <F6> :Continue<CR>
+" nnoremap <leader>mc :Continue<CR>
+" " nnoremap <F7> :Over<CR>
+" nnoremap <leader>mo :Over<CR>
+" " nnoremap <F8> :Step<CR>
+" nnoremap <leader>s :Step<CR>
+" " nnoremap <F11> :Finish<CR>
+" nnoremap <leader>f :Finish<CR>
+
+" debug, vimspector
+nmap <leader>dc <Plug>VimspectorContinue
+nmap <F6> <Plug>VimspectorContinue
+
+nmap <leader>ds <Plug>VimspectorStepOver
+nmap <F7> <Plug>VimspectorStepOver
+" nmap <A-n> <Plug>VimspectorStepOver
+
+nmap <leader>di <Plug>VimspectorStepInto
+nmap <F8> <Plug>VimspectorStepInto
+
+nmap <leader>do <Plug>VimspectorStepOut
+" nmap S<F8> <Plug>VimspectorStepOut
+" nmap <A-o> <Plug>VimspectorStepOut
+
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+nmap <F9> <Plug>VimspectorToggleBreakpoint
+" nmap <A-b> <Plug>VimspectorToggleBreakpoint
+
+nmap <leader>dp <Plug>VimspectorStop
+nmap <F11>  <Plug>VimspectorStop
+nmap <leader>dr <Plug>VimspectorRestart
+nmap <leader>drt :<C-u>VimspectorReset<CR>
+" nmap S<F11> <Plug>VimspectorRestart
+
+" nmap <leader>dn <Plug>VimspectorGoToCurrentLine
+" nmap <leader>dp <Plug>VimspectorPause
+
+" nmap <leader>df <Plug>VimspectorAddFunctionBreakpoint
+" nmap <leader>dc <Plug>VimspectorToggleConditionalBreakpoint
+nmap <leader>dlc <Plug>VimspectorShowOutput Console<CR>
+nmap <leader>dld <Plug>VimspectorShowOutput stderr<CR>
+nmap <leader>dlo <Plug>VimspectorShowOutput Vimspector-out<CR>
+nmap <leader>dle <Plug>VimspectorShowOutput Vimspector-err<CR>
+nmap <leader>dls <Plug>VimspectorShowOutput server<CR>
+nmap <leader>dlt <Plug>VimspectorShowOutput Telemetry<CR>
+nmap <leader>de :<C-u>VimspectorEval<space>
+nmap <leader>dw :<C-u>VimspectorWatch<space>
+" nmap <A-w> :<C-u>VimspectorWatch<space>

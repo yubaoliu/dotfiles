@@ -20,4 +20,4 @@ let g:gutentags_ctags_extra_args = ['--fields=+lniazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
-
+let Tlist_Auto_Open=1

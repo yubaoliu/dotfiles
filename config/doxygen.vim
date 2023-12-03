@@ -1,26 +1,42 @@
 ""=================== doxygentoolkit ============""
+" sudo apt install doxygen
+" sudo apt install graphviz（生成dot需要）
+" 注：可使用doxygen
+" -g命令生成默认的Doxyfile，cmake则是通过Doxyfile.in来生成Doxyfile
+" example: https://blog.csdn.net/u013187057/article/details/103475548
+" tutorial - modern cmake doxygen, https://code-examples.net/en/q/2143344
+"
 " let g:DoxygenToolKit_startCommentBlock = "// "
 " let g:DoxygenToolKit_interCommentBlock = "// "
 
-let g:DoxygenToolkit_briefTag_funcName = "yes"
+" let g:DoxygenToolkit_briefTag_funcName = "yes"
 
 " for C++ style, change the '@' to '\'
 " let g:DoxygenToolkit_commentType = "C++"
-" let g:DoxygenToolkit_briefTag_pre = "\\brief "
-" let g:DoxygenToolkit_templateParamTag_pre = "\\tparam "
-" let g:DoxygenToolkit_paramTag_pre = "\\param "
-" let g:DoxygenToolkit_returnTag = "\\return "
-" let g:DoxygenToolkit_throwTag_pre = "\\throw " " @exception is also valid
-" let g:DoxygenToolkit_fileTag = "\\file "
-" let g:DoxygenToolkit_dateTag = "\\date "
-" let g:DoxygenToolkit_authorTag = "\\author "
-" " let g:DoxygenToolkit_versionTag = "\\version "
-" let g:DoxygenToolkit_blockTag = "\\name "
-" let g:DoxygenToolkit_classTag = "@class "
+" let g:DoxygenToolkit_templateParamTag_pre = "@tparam\t"
+" let g:DoxygenToolkit_throwTag_pre = "@throw\t" " @exception is also valid
+" let g:DoxygenToolkit_fileTag = "@file\t"
+" let g:DoxygenToolkit_dateTag = "@date\t"
+" let g:DoxygenToolkit_authorTag = "@author\t"
+" let g:DoxygenToolkit_versionTag = "@version "
+" let g:DoxygenToolkit_blockTag = "@name\t"
+" let g:DoxygenToolkit_classTag = "@class\t"
 let g:DoxygenToolkit_authorName = "yubaoliu89@gmail.com"
 " let g:doxygen_enhanced_color = 1
-"let g:load_doxygen_syntax = 1
+" let g:load_doxygen_syntax = 1
+" 
+" let g:DoxygenToolkit_briefTag_pre="@Synopsis  "
+" let g:DoxygenToolkit_paramTag_pre="@Param "
+" let g:DoxygenToolkit_returnTag="@Returns   "
+" let g:DoxygenToolkit_blockHeader="------------------------------------------------------------------"
+" let g:DoxygenToolkit_blockFooter="------------------------------------------------------------------"
 
-let g:DoxygenToolkit_licenseTag="\<enter> This file is part of RDS-SLAM \<enter> Copyright (C) 2021, Yubao Liu, TOYOHASHI UNIVERSITY of TECHNOLOGY \<enter> ORB-SLAM3 is free software: you can redistribute it and/or modify it under the terms of the GNU General Public \<enter> License as published by the Free Software Foundation, either version 3 of the License, or \<enter> (at your option) any later version. \<enter> RDS-SLAM is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even \<enter> the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the \<enter> GNU General Public License for more details. \<enter> You should have received a copy of the GNU General Public License along with RDS-SLAM. \<enter> If not, see <http://www.gnu.org/licenses/>." 
+let s:licenseTag = "Copyright(C)\<enter>"
+let s:licenseTag = s:licenseTag . "see LICENSE.txt file \<enter>"
+" let s:licenseTag = s:licenseTag . "All right reserved <enter>"
+let g:DoxygenToolkit_licenseTag=s:licenseTag
 
-"
+" nmap ,hh :DoxAuthor<CR><ESC>k8==j$a
+" nmap ,ff :Dox<CR><ESC>k8==j$a<TAB>
+" nmap ,da :DoxAuthor<CR><ESC>k8==
+" nmap ,db :DoxBlock<CR><ESC>k8==

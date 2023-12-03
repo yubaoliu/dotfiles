@@ -142,9 +142,9 @@ xhost +local:root
 #ROS
 # source ~/ros.sh
 
-source $ROOT/cuda.sh
+# source $ROOT/cuda.sh
+# source $ROOT/alias.sh
 
-source $ROOT/alias.sh
 # Local host config
 source $HOME/local_config.sh
 
