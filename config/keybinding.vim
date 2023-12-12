@@ -15,7 +15,7 @@
 " F10 -> not work
 nnoremap <F2> :NERDTreeToggle<CR>
 " nnoremap <silent><F5> :NERDTreeToggle<CR>
-nnoremap <F5> :Autoformat<CR>
+nnoremap <F3> :Autoformat<CR>
 nmap <F4> :TagbarToggle<CR>
 " nnoremap <F8> :UndotreeToggle<cr>
 

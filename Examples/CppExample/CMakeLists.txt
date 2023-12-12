@@ -1,14 +1,16 @@
 cmake_minimum_required(VERSION 2.8)
-project( DisplayImage )
-find_package( OpenCV REQUIRED )
+project(CppExample)
+find_package(OpenCV REQUIRED )
 find_package(Doxygen)
 
 set( CMAKE_EXPORT_COMPILE_COMMANDS 1 )
 
-include_directories( ${OpenCV_INCLUDE_DIRS} .)
-add_executable( DisplayImage DisplayImage.cpp hello.cpp)
-target_link_libraries( DisplayImage ${OpenCV_LIBS} )
+#include_directories( ${OpenCV_INCLUDE_DIRS} .)
+#add_executable( DisplayImage DisplayImage.cpp hello.cpp)
+#target_link_libraries( DisplayImage ${OpenCV_LIBS} )
 
+add_executable( HelloWorld  hello.cpp)
+#target_link_libraries( HelloWorld  )
 
 # first we can indicate the documentation build as an option and set it to ON by default
 option(BUILD_DOC "Build documentation" ON)

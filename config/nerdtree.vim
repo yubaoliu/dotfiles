@@ -18,7 +18,7 @@
  let g:NERDTreeChDirMode = 2
 
 " -- 自动开启nerdtree
-" autocmd vimenter * NERDTree 
+"autocmd vimenter * NERDTree 
 
 " -- 设定nerdtree的窗口大小
  " let g:NERDTreeWinSize = 25

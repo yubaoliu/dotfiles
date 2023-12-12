@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+silent call plug#begin('~/.vim/plugged')
 " 对齐, The tabular plugin come before vim-markdown.
 Plug 'godlygeek/tabular'
 " Plug 'Valloric/YouCompleteMe'   " include: clang_complete, AutoComplPop, Supertab, neocomplcache
@@ -10,14 +10,17 @@ Plug 'godlygeek/tabular'
 " Plug 'Shougo/context_filetype.vim'
 "自动注释, caw.vim比nerdcommenter更加好
 Plug 'tyru/caw.vim'
+
 " Plug 'preservim/nerdcommenter'  " use caw.vim instead
-Plug 'scrooloose/nerdtree'
+" https://github.com/scrooloose/nerdtree
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " 显示nredtree中文件和目录的Git状态标志
 " Plug 'Xuyuanp/nerdtree-git-plugin'    " doesn't work (2019/4/14)
 " 支持nredtree中文件和目录的图标
-" Plug 'ryanoasis/vim-devicons'
 " 支持高亮显示nredtree中的图标
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Plug 'ryanoasis/vim-devicons'
 " git操作
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/tagbar' 
@@ -45,7 +48,7 @@ Plug 'Yggdroot/indentLine' " it is better than indent-guides
 " help ctags
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-Plug 'liuchengxu/vim-which-key'
+"Plug 'liuchengxu/vim-which-key'
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
 " 状态栏美化插件,  status/tabline configure
 Plug 'vim-airline/vim-airline' "状态标签
@@ -71,7 +74,7 @@ Plug 'honza/vim-snippets'
 " On-demand lazy load
 " Plug 'zxqfl/tabnine-vim'    " very heavy, much memory need
 " 不太会用，先去掉
-" Plug 'mbbill/undotree'
+"Plug 'mbbill/undotree'
 " 更改成对的符号
 " Plug 'tpope/vim-surround'
 "  shows a git diff in the sign column
@@ -93,11 +96,12 @@ source ~/dotfiles/config/doxygen.vim
 source ~/dotfiles/config/keybinding.vim
 source ~/dotfiles/config/markdown.vim
 source ~/dotfiles/config/indent-line.vim
-source ~/dotfiles/config/which-key.vim
+"source ~/dotfiles/config/which-key.vim
 source ~/dotfiles/config/cmake.vim
 source ~/dotfiles/config/ide.vim
 source ~/dotfiles/config/tagbar.vim
-" source ~/dotfiles/config/undotree.vim
+
+"source ~/dotfiles/config/undotree.vim
 " source ~/dotfiles/config/tmuxline.vim
 " source ~/dotfiles/config/vim-indent-guides.vim " use indent-line instead
 " source ~/dotfiles/config/nerdcommenter.vim :use caw.vim instead

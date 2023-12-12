@@ -1,4 +1,6 @@
 "" https://github.com/Kazark/plasticboy-vim-markdown
+""https://jpliu.github.io/vimplugin-vim-markdown.html
+
 " ]]: go to next header. <Plug>(Markdown_MoveToNextHeader)
 " [[: go to previous header. Contrast with ]c. <Plug>(Markdown_MoveToPreviousHeader)
 " ][: go to next sibling header if any. <Plug>(Markdown_MoveToNextSiblingHeader)
@@ -30,10 +32,12 @@
 " :Tocv 与:Toc相同,用于与:Toch和:Tocv对称。
 " :InsertToc: 在当前行插入目录。可选参数可用于指定要在目录中显示多少级的标题，例如，使用:InsertToc 3最多显示h3并包括h3。
 " :InsertNToc 同:InsertToc ,但显示目录为一个有序号列表。
+"
+nnoremap <leader>mt :Toc<CR><Esc>
 
 set conceallevel=2
 
-" nmap <leader>ge <Plug>Markdown_EditUrlUnderCursor
+nmap <leader>gx  <Plug>Markdown_EditUrlUnderCursor
 nnoremap <leader>mv :set conceallevel=2<CR><Esc>
 nnoremap <leader>me :set conceallevel=0<CR><Esc>
 
@@ -76,7 +80,7 @@ let g:vim_markdown_folding_disabled = 0                     "禁用折叠，取�
 let g:vim_markdown_override_foldtext = 0                    "为了防止设置折叠文本
 
 let g:vim_markdown_folding_level = 2                        "设置折叠级别-标题折叠级别是1到6之间的数字
-let g:vim_markdown_toc_autofit = 1                          "启用TOC窗口自动调整
+let g:vim_markdown_toc_autofit = 0                          "启用TOC窗口自动调整
 let g:vim_markdown_emphasis_multiline = 0                   "限制单行文本
 " let g:vim_markdown_fenced_languages = ['csharp=cs']         "代码块语言-默认值为['c++ = cpp','viml = vim','bash = sh','ini = dosini']
 let g:vim_markdown_strikethrough = 1                        "使用删除线
