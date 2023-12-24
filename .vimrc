@@ -1,10 +1,11 @@
 silent call plug#begin('~/.vim/plugged')
 " 对齐, The tabular plugin come before vim-markdown.
 Plug 'godlygeek/tabular'
-" Plug 'Valloric/YouCompleteMe'   " include: clang_complete, AutoComplPop, Supertab, neocomplcache
-" Plug 'Shougo/neocomplcache' "obsolete if enabled YouCompleteMe
 " Plug 'justmao945/vim-clang' " similar to clang_complete,  apt install clang  clang-format, obsolete, if
 " enabled YouCompleteMe
+Plug 'Valloric/YouCompleteMe'   " include: clang_complete, AutoComplPop, Supertab, neocomplcache
+" Plug 'Shougo/neocomplcache' "obsolete if enabled YouCompleteMe
+
 " Plug 'Shougo/neocomplete'
 " 根据内容自动获取文件类型
 " Plug 'Shougo/context_filetype.vim'
@@ -23,15 +24,18 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Plug 'ryanoasis/vim-devicons'
 " git操作
 Plug 'tpope/vim-fugitive'
-Plug 'preservim/tagbar' 
-Plug 'lvht/tagbar-markdown'
-Plug 'Scuilion/markdown-drawer'
+Plug 'preservim/tagbar'
+
 " https://vim.hizdm.cn/code-display/vim-autoformat.html
 " https://github.com/vim-autoformat/vim-autoformat
 Plug 'vim-autoformat/vim-autoformat'
+
+" Markdown
 "https://github.com/preservim/vim-markdown
 Plug 'preservim/vim-markdown'
 " use with markdown-preview.vim
+Plug 'lvht/tagbar-markdown'
+Plug 'Scuilion/markdown-drawer'
 Plug 'iamcco/mathjax-support-for-mkdp'
 " Preview Markdown
 Plug 'iamcco/markdown-preview.vim'
@@ -46,10 +50,12 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'Yggdroot/indentLine' " it is better than indent-guides
 " ctags, There are some similar Vim plugins out there (vim-tags, vim-autotag, vim-automatic-ctags)
 " help ctags
+" Plug 'vim-scripts/taglist.vim'
+Plug 'szw/vim-tags'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'vim-scripts/DoxygenToolkit.vim'
-"Plug 'liuchengxu/vim-which-key'
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }]}
+" Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 " 状态栏美化插件,  status/tabline configure
 Plug 'vim-airline/vim-airline' "状态标签
 Plug 'vim-airline/vim-airline-themes'
@@ -84,8 +90,10 @@ call plug#end()
 "" ============= GLOBAL ==============""
 let mapleader = "\<Space>"
 
-source ~/dotfiles/config/appearence.vim
 source ~/dotfiles/config/ctags.vim
+source ~/dotfiles/config/tagbar.vim
+
+source ~/dotfiles/config/appearence.vim
 source ~/dotfiles/config/ycm.vim
 source ~/dotfiles/config/default.vim
 source ~/dotfiles/config/nerdtree.vim
@@ -96,10 +104,9 @@ source ~/dotfiles/config/doxygen.vim
 source ~/dotfiles/config/keybinding.vim
 source ~/dotfiles/config/markdown.vim
 source ~/dotfiles/config/indent-line.vim
-"source ~/dotfiles/config/which-key.vim
+" source ~/dotfiles/config/which-key.vim
 source ~/dotfiles/config/cmake.vim
 source ~/dotfiles/config/ide.vim
-source ~/dotfiles/config/tagbar.vim
 
 "source ~/dotfiles/config/undotree.vim
 " source ~/dotfiles/config/tmuxline.vim

@@ -1,5 +1,5 @@
-"" https://github.com/Kazark/plasticboy-vim-markdown
-""https://jpliu.github.io/vimplugin-vim-markdown.html
+" " https://github.com/Kazark/plasticboy-vim-markdown
+" " https://jpliu.github.io/vimplugin-vim-markdown.html
 
 " ]]: go to next header. <Plug>(Markdown_MoveToNextHeader)
 " [[: go to previous header. Contrast with ]c. <Plug>(Markdown_MoveToPreviousHeader)
@@ -10,7 +10,7 @@
 
 " 查看所有配置建议
 " :help vim-markdwon
-" 
+"
 " :help fold-commands   #标题命令的帮助
 " [[ "跳转上一个标题
 " ]] "跳转下一个标题
@@ -20,7 +20,7 @@
 " zR "打开所有折叠
 " zm "折叠当前段落
 " zM "折叠所有段落
-" 
+"
 " map ]] <Plug>Markdown_MoveToNextHeader     #这里可以在.vimrc文件中手动更改
 
 " :HeaderDecrease 降低缓冲区中所有标头的级别：h2至h1，h3至h2等。如果给出了范围，则只能在该范围内运行。为了简化实施，将Setex标头转换为Atx。
@@ -93,7 +93,7 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_autowrite = 1
 
 " tab, vsplit, hsplit, current
-let g:vim_markdown_edit_url_in = 'vsplit' 
+let g:vim_markdown_edit_url_in = 'vsplit'
 
 "" markdown-drawer
 nnoremap <Leader>md :MarkDrawer<cr>
@@ -105,7 +105,7 @@ nnoremap <Leader>md :MarkDrawer<cr>
 " + increase header size (removes #).
 " - decrease header size (adds #).
 
-let g:markdrawer_prefix = " " 
+let g:markdrawer_prefix = " "
 let g:markdrawer_goto = "o"
 let g:markdrawerDelete = "D"
 let g:markdrawer_width = "25"

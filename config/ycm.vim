@@ -6,14 +6,33 @@
 " Install: ./install.py --all
 " YcmRestartServer
 "set runtimepath+=~/.vim/plugged/YouCompleteMe
+
+" YCM
+" nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>hgd :split \| :YcmCompleter GoToDeclaration<CR>
+" nnoremap <leader>vgd :vsplit \| :YcmCompleter GoToDeclaration<CR>
+
+nnoremap <leader>gi :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>hgi :split <bar> :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>vgi :vsplit <bar> :YcmCompleter GoToDefinition<CR>
+
+nnoremap <Leader>gh :YcmCompleter GoToInclude<CR>
+nnoremap <Leader>hgh :split <bar> :YcmCompleter GoToInclude<CR>
+nnoremap <Leader>vgh :vsplit <bar>  :YcmCompleter GoToInclude<CR>
+
+nnoremap <Leader>gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>hgd  :split <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <Leader>vgd  :vplit <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+
 " 设置.ycm_extra_conf.py的全局路径，避免每次都需要复制到当前目录.若为空则每次都需复制.ycm_extra_conf.py文件到当前目录
 let g:ycm_global_ycm_extra_conf='~/dotfiles/.ycm_extra_conf.py'
 
 let g:ycm_auto_trigger = 1
 
 " 如果不设为空，会在光标函数处显示函数说明
-let g:ycm_auto_hover = ''
-let g:ycm_enable_diagnostic_highlighting = 1
+" let g:ycm_auto_hover = ''
+let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_echo_current_diagnostic = 1
 
 " 设置标识符补全的最大候选项数量，0表示没有限制
@@ -23,7 +42,7 @@ let g:ycm_max_num_identifier_candidates = 50
 let g:ycm_always_populate_location_list = 0
 
 "注释与字符串中的内容也用于补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 1 
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 " 打开字符串自动补全功能
 let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
@@ -105,7 +124,7 @@ let g:ycm_extra_conf_globlist = []
 " let g:ycm_cache_omnifunc = 1
 
 " 启用ultisnips补全，1代表允许
-" let g:ycm_use_ultisnips_completer = 1
+let g:ycm_use_ultisnips_completer = 1
 
 " 设置YCM的作用的文件大小上限，单位为Kb，0表示无上限
 let g:ycm_disable_for_files_larger_than_kb = 1000
@@ -146,51 +165,51 @@ let g:ycm_warning_symbol = '!'
 
 " " 设置YCM的语义触发器的关键字
 let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
+            \   'c' : ['->', '.'],
+            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+            \             're!\[.*\]\s'],
+            \   'ocaml' : ['.', '#'],
+            \   'cpp,objcpp' : ['->', '.', '::'],
+            \   'perl' : ['->'],
+            \   'php' : ['->', '::'],
+            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+            \   'ruby' : ['.', '::'],
+            \   'lua' : ['.', ':'],
+            \   'erlang' : [':'],
+            \ }
 
 " 文件类型黑名单，vim打开这些类型文件时会关闭YCM
 let g:ycm_filetype_blacklist = {
-    \ 'tagbar' : 1,
-    \ 'qf' : 1,
-    \ 'notes' : 1,
-    \ 'unite' : 1,
-    \ 'text' : 1,
-    \ 'vimwiki' : 1,
-    \ 'pandoc' : 1,
-    \ 'infolog' : 1,
-    \ 'mail' : 1
-    \}
+            \ 'tagbar' : 1,
+            \ 'qf' : 1,
+            \ 'notes' : 1,
+            \ 'unite' : 1,
+            \ 'text' : 1,
+            \ 'vimwiki' : 1,
+            \ 'pandoc' : 1,
+            \ 'infolog' : 1,
+            \ 'mail' : 1
+            \}
 
 " 对特定文件类型禁用文件路径补全
 let g:ycm_filetype_specific_completion_to_disable = {
-     \ 'gitcommit': 1
-     \}
+            \ 'gitcommit': 1
+            \}
 
 " 文件类型白名单，vim打开这些类型文件时会开启YCM。*表示所有文件类型
 " let g:ycm_filetype_whitelist = { '*': 1 }
-let g:ycm_filetype_whitelist = { 
-  \ 'c' : 1,
-  \ 'cpp' : 1, 
-  \ 'py' : 1,
-  \ 'sh' : 1,
-  \ 'zsh': 1,
-  \ 'hpp' : 1,
-  \ 'h' : 1,
-  \ 'md' : 1,
-  \ 'markdown' : 1,
-  \ 'txt' : 1,
-\ }
+let g:ycm_filetype_whitelist = {
+            \ 'c' : 1,
+            \ 'cpp' : 1,
+            \ 'py' : 1,
+            \ 'sh' : 1,
+            \ 'zsh': 1,
+            \ 'hpp' : 1,
+            \ 'h' : 1,
+            \ 'md' : 1,
+            \ 'markdown' : 1,
+            \ 'txt' : 1,
+            \ }
 
 " Toggle YouCompleteMe on and off with F4
 function Toggle_ycm()
@@ -208,52 +227,52 @@ function Toggle_ycm()
         :echo "YCM off"
     endif
 endfunction
-map <F4> :call Toggle_ycm <CR>
+" map <F4> :call Toggle_ycm <CR>
 
 " 设置YCM的语义触发器的关键字
 let g:ycm_semantic_triggers =  {
-  \   'c' : ['->', '.'],
-  \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-  \             're!\[.*\]\s'],
-  \   'ocaml' : ['.', '#'],
-  \   'cpp,objcpp' : ['->', '.', '::'],
-  \   'perl' : ['->'],
-  \   'php' : ['->', '::'],
-  \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-  \   'ruby' : ['.', '::'],
-  \   'lua' : ['.', ':'],
-  \   'erlang' : [':'],
-  \ }
+            \   'c' : ['->', '.'],
+            \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+            \             're!\[.*\]\s'],
+            \   'ocaml' : ['.', '#'],
+            \   'cpp,objcpp' : ['->', '.', '::'],
+            \   'perl' : ['->'],
+            \   'php' : ['->', '::'],
+            \   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+            \   'ruby' : ['.', '::'],
+            \   'lua' : ['.', ':'],
+            \   'erlang' : [':'],
+            \ }
 
 " 文件类型黑名单，vim打开这些类型文件时会关闭YCM
 let g:ycm_filetype_blacklist = {
-    \ 'tagbar' : 1,
-    \ 'qf' : 1,
-    \ 'notes' : 1,
-    \ 'unite' : 1,
-    \ 'text' : 1,
-    \ 'vimwiki' : 1,
-    \ 'pandoc' : 1,
-    \ 'infolog' : 1,
-    \ 'mail' : 1
-    \}
+            \ 'tagbar' : 1,
+            \ 'qf' : 1,
+            \ 'notes' : 1,
+            \ 'unite' : 1,
+            \ 'text' : 1,
+            \ 'vimwiki' : 1,
+            \ 'pandoc' : 1,
+            \ 'infolog' : 1,
+            \ 'mail' : 1
+            \}
 
 " 对特定文件类型禁用文件路径补全
 let g:ycm_filetype_specific_completion_to_disable = {
-     \ 'gitcommit': 1
-     \}
+            \ 'gitcommit': 1
+            \}
 
 " 文件类型白名单，vim打开这些类型文件时会开启YCM。*表示所有文件类型
 " let g:ycm_filetype_whitelist = { '*': 1 }
-let g:ycm_filetype_whitelist = { 
-  \ 'c' : 1,
-  \ 'cpp' : 1, 
-  \ 'py' : 1,
-  \ 'sh' : 1,
-  \ 'zsh': 1,
-  \ 'hpp' : 1,
-  \ 'h' : 1,
-  \ 'txt' : 1,
-\ }
+let g:ycm_filetype_whitelist = {
+            \ 'c' : 1,
+            \ 'cpp' : 1,
+            \ 'py' : 1,
+            \ 'sh' : 1,
+            \ 'zsh': 1,
+            \ 'hpp' : 1,
+            \ 'h' : 1,
+            \ 'txt' : 1,
+            \ }
 
 

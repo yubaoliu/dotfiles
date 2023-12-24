@@ -1,114 +1,178 @@
-[TOC]
+\[TOC]
 
 # Synopsys
 
 This is my awesome configure file for Ubuntu, Windows and Mac.
 
-# Shortcut
+## Windows
 
-##  Windows
+|                   | Default Key      | Key             | Note                                                               |
+|-------------------|------------------|-----------------|--------------------------------------------------------------------|
+| **搜狗输入法**    |                  |                 | 前缀 Ctrl+ Shift                                                   |
+| 搜狗截屏          | Ctrl + Alt +  Q  | Ctrl + Alt +  s |                                                                    |
+| 输入法切换        |                  | Alt  + Shift    | Sogou五笔                                                          |
+|                   |                  |                 |                                                                    |
+| **Windows 系统**  |                  |                 |                                                                    |
+| 分屏              |                  | Win +  Arrows   | 鼠标拖拽分屏. 用鼠标左键按住一个窗口的顶端处，接着拖拽到桌面的边上 |
+| 多桌面            |                  | Win + Tab       |                                                                    |
+|                   |                  |                 |                                                                    |
+| 系统列表          |                  | Win + x         |                                                                    |
+| 关闭TAB           |                  | Alt + F4        |                                                                    |
+| Toggle Fullscreen |                  | F11             |                                                                    |
+| Find              | Ctrl + shitf + F | Alt + shift +F  |                                                                    |
+|                   |                  |                 |                                                                    |
+| Power Shell       |                  |                 | 配置文件:$PROFILE                                                 |
+| Pane              |                  |                 |                                                                    |
+| split down        |                  | Alt + Shift + - |                                                                    |
+| split right       |                  | Alt + Shift +   |                                                                    |  |
+| Move focus        |                  | Alt + Arrow     |                                                                    |
+| Close pane        |                  | Alt + Shit + c  |                                                                    |
+| Tab           |                  |                 |                                                                    |
+| New  tab          |                  | Alt + Shit + t  |                                                                    |
+| Next tab          |                  | Alt + Shift + n |                                                                    |
+| Previous tab      |                  | Alt + shift + p |                                                                    |
+|                   |                  |                 |                                                                    |
+|                   |                  |                 |                                                                    |
+|                   |                  |                 |                                                                    |
 
-|                   | Default Key      | Key              | Note                                                         |
-| ----------------- | ---------------- | ---------------- | ------------------------------------------------------------ |
-| **搜狗输入法**    |                  |                  | 前缀 Ctrl+ Shift                                             |
-| 搜狗截屏          | Ctrl + Alt +  Q  | Ctrl + Alt +  s  |                                                              |
-| 输入法切换        |                  | Alt  + Shift     | Sogou五笔                                                    |
-|                   |                  |                  |                                                              |
-| **Windows 系统**  |                  |                  |                                                              |
-| 分屏              |                  | Win +  Arrows    | 鼠标拖拽分屏. 用鼠标左键按住一个窗口的顶端处，接着拖拽到桌面的边上 |
-| 多桌面            |                  | Win + Tab        |                                                              |
-|                   |                  |                  |                                                              |
-| 系统列表          |                  | Win + x          |                                                              |
-| 关闭TAB           |                  | Alt + F4         |                                                              |
-| Toggle Fullscreen |                  | F11              |                                                              |
-| Find              | Ctrl + shitf + F | Alt + shift +F   |                                                              |
-|                   |                  |                  |                                                              |
-| **Power Shell**   |                  |                  | 配置文件: \$PROFILE                                          |
-| **Pane**          |                  |                  |                                                              |
-| split down        |                  | Alt + Shift + -  |                                                              |
-| split right       |                  | Alt + Shift + \| |                                                              |
-| Move focus        |                  | Alt + Arrow      |                                                              |
-| Close pane        |                  | Alt + Shit + c   |                                                              |
-| **Tab**           |                  |                  |                                                              |
-| New  tab          |                  | Alt + Shit + t   |                                                              |
-| Next tab          |                  | Alt + Shift + n  |                                                              |
-| Previous tab      |                  | Alt + shift + p  |                                                              |
-|                   |                  |                  |                                                              |
-|                   |                  |                  |                                                              |
-|                   |                  |                  |                                                              |
+* Windows输入法
 
-- Windows输入法
+  ![image-20231203172943765](assets/README/image-20231203172943765.png)
 
-    ![image-20231203172943765](assets/README/image-20231203172943765.png)
+* 搜狗输入法
 
-- 搜狗输入法
-
-    ![image-20231203172614325](assets/README/image-20231203172614325.png)
+  ![image-20231203172614325](assets/README/image-20231203172614325.png)
 
 ## VIM
 
-- Install Plug for Linux
+- help
+  - help key-notation
+- Check key bindings
+  `verbose map <key>`
 
-    ```sh
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    ```
-
-- Install plug for Windows
-
-    ```
-    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |` ni \$HOME/vimfiles/autoload/plug.vim -Force
-    ```
-
-
-|                            | Old Key          | Key                           |  |
-|----------------------------|------------------|-------------------------------|--|
-| 重新加载                   | :source ~/.vimrc |                               |  |
-|                            |                  |                               |  |
-| **Basics**                 |                  |                               |  |
-| write changes              | ww               |                               |  |
-| write without modification | w!               |                               |  |
-| write and quit             | wq               |                               |  |
-| quit without write         | q!               |                               |  |
-| quit all the windows       | qall             |                               |  |
-|                            |                  |                               |  |
-| **NERDTree**               |                  |                               |  |
-| 打开目录树                 | :NERDTree        | F2                            |  |
-| 关闭目录树                 | :NERDTreeClose   |                               |  |
-| 打开/关闭目录树            | :NERDTreeToggle  |                               |  |
-| 打开目录树并定位到当前文件 | :NERDTreeFind    |                               |  |
-|                            |                  |                               |  |
-| **Function keys**          |                  |                               |  |
-| undo tree                  |                  |                               |  |
-| autoformat                 |                  | F3                            |  |
-| markdown preview           |                  | mp                            |  |
-| stop markdown preview      |                  | ms                            |  |
-|                            |                  |                               |  |
-| **Window**                 |                  |                               |  |
-| new  window                | c                |                               |  |
-| close all other windows    | wo               |                               |  |
-| vertical window            | \|               |                               |  |
-| vertical window            | -                |                               |  |
-|                            |                  |                               |  |
-| **Jump**                   |                  |                               |  |
-| Jump to a subject          |                  | Ctrl - ]                      |  |
-| Jump back                  |                  | g<RightMouse>, <C-RightMouse> |  |
-| Repeat to go back          |                  | Ctrl-O                        |  |
-|                            |                  |                               |  |
-| **Markdown**               |                  |                               |  |
-| Mark Drawer                | :MarkDrawer      | md                            |  |
-|                            |                  |                               |  |
-
+|                                                | Old Key          | Key                                  |      |
+| ---------------------------------------------- | ---------------- | ------------------------------------ | ---- |
+| 重新加载                                       | :source ~/.vimrc |                                      |      |
+|                                                |                  |                                      |      |
+| **Basics**                                     |                  |                                      |      |
+| write changes                                  | ww               |                                      |      |
+| write without modification                     | w!               |                                      |      |
+| write and quit                                 | wq               |                                      |      |
+| quit without write                             | q!               |                                      |      |
+| quit all the windows                           | qall             |                                      |      |
+| save all                                       |                  | wall                                 |      |
+| 显示打开的文件列表                             |                  | args                                 |      |
+|                                                |                  |                                      |      |
+| **BUFFERS**                                    |                  |                                      |      |
+| 显示缓冲区的文件列表                           |                  | :buffers                             |      |
+| 关闭其中一个(当前)文件                         |                  | :bd，:bd 1                           |      |
+| 切换到某个文件                                 |                  | :b 1，:b 2s                          |      |
+| 切换到上一个文件                               |                  | :bp，:bprev                          |      |
+| 切换到下一个文件                               |                  | :bn，:bnext                          |      |
+|                                                |                  |                                      |      |
+| **MOTIONS**                                    |                  |                                      |      |
+| 下翻页                                         |                  | C-f                                  |      |
+| 上翻页                                         |                  | C-b                                  |      |
+| 下翻行                                         |                  | C-e                                  |      |
+| 上翻行                                         |                  | C-y                                  |      |
+| 到指定行                                       |                  | :行号，行号G                         |      |
+| 到文件头                                       |                  | 1G                                   |      |
+| 到文件尾                                       |                  | G                                    |      |
+| 下一个字                                       |                  | w                                    |      |
+| 上一个字                                       |                  | b                                    |      |
+| 到行首                                         |                  | ^                                    |      |
+| 到行尾                                         |                  | $                                   |      |
+| 行尾插入                                       |                  | A                                    |      |
+| 添加空行                                       |                  | o                                    |      |
+|                                                |                  |                                      |      |
+| **MOTIONS ctags**                              |                  |                                      |      |
+| 转到上一个位于第一列的“{”                      |                  | \[\[                                   |      |
+| 转到下一个位于第一列的“{”                      |                  | ]]                                   |      |
+| 转到上一个空行                                 |                  | {                                    |      |
+| 转到下一个空行                                 |                  | }                                    |      |
+| 多行注释                                       |                  | %s/^////g                          |      |
+| 在2~50行首添加//号注释                         |                  | 2,50s/^////g                       |      |
+| 命令跳转                                       |                  | :tags functionname。:ta functionname |      |
+| 打开时搜索并跳转                               |                  | vim -t functionname                  |      |
+| 多个匹配tags时跳转                             |                  | :tnext，:tprev，:tn,:tp              |      |
+| Jump to the tag underneath the cursor          |                  | M-. <RET>                            |      |
+| Search for a particular tag                    |                  | M-. <tag> <RET>                      |      |
+| Find the next definition for the last tag      |                  | C-u M-.                              |      |
+| Pop back to where you previously invoked "M-." |                  | M-\*                                  |      |
+| Search for a particular tag                    |                  | :ts <tag> <RET>                      |      |
+| Jump to the tag underneath the cursor          |                  | Ctrl - ]                             |      |
+| Go to the next definition for the last tag     |                  | :tn                                  |      |
+| Go to the previous definition for the last tag |                  | :tp                                  |      |
+| List all of the definitions of the last tag    |                  | :ts                                  |      |
+| jump back up in the tag stack                  |                  | Ctrl-t                               |      |
+| Jump back                                      |                  | g<RightMouse>, <C-RightMouse>        |      |
+| Repeat to go back                              |                  | Ctrl-O                               |      |
+| Open the definition in a horizontal split      |                  | Ctrl+W Ctrl+]                        |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+| **NERDTree**                                   |                  |                                      |      |
+| 打开目录树                                     | :NERDTree        | F2                                   |      |
+| 关闭目录树                                     | :NERDTreeClose   |                                      |      |
+| 打开/关闭目录树                                | :NERDTreeToggle  |                                      |      |
+| 打开目录树并定位到当前文件                     | :NERDTreeFind    |                                      |      |
+|                                                |                  |                                      |      |
+| **Function keys**                              |                  |                                      |      |
+| undo tree                                      |                  |                                      |      |
+| autoformat                                     |                  | F3                                   |      |
+| markdown preview                               |                  | mp                                   |      |
+| stop markdown preview                          |                  | ms                                   |      |
+|                                                |                  |                                      |      |
+| **Window** PLANE                               |                  |                                      |      |
+| new  window                                    | c                |                                      |      |
+| close all other windows                        | wo               |                                      |      |
+| vertical window                                |                  | |                                   |      |
+| vertical window                                |                  | -                                    |      |
+| 等分窗口                                       |                  | Ctrl-w =                             |      |
+| 调整窗口大小                                   |                  | Ctrl-w +/-                           |      |
+| 让当前文件占据整个窗口                         |                  | Ctrl-w o                             |      |
+| 关闭其中一个(当前)窗口                         |                  | Ctrl-w c                             |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+|                                                |                  |                                      |      |
+| **Markdown**                                   |                  |                                      |      |
+| Mark Drawer                                    | :MarkDrawer      | md                                   |      |
+|                                                |                  |                                      |      |
+| **Search**                                     |                  |                                      |      |
+| Search copyed world                            |                  | S-\*                                 |      |
+| serch selected world                           |                  | yw -> : -> C-R -> 0                  |      |
+| 跳到后一个位置                                 |                  | n                                    |      |
+| 跳到前一个位置                                 |                  | N                                    |      |
+| 当前光标所在的词key作为关键字，精确匹配查找    |                  | \* , #                               |      |
+| 当前光标所在的词key作为关键字，忽略大小写查找  |                  | g\*, g#                               |      |
+| 从当前光标位置开始向后查找key                  |                  | /key                                 |      |
+| 从当前光标位置开始向前查找key                  |                  | ?key                                 |      |
+| 精确匹配查找key                                |                  | /\<key>，?\<key>                   |      |
+|                                                |                  |                                      |      |
+| **Split**                                      |                  |                                      |      |
+| 水平打开多窗口                                 |                  | vim -o file1 file2                   |      |
+| 垂直打开多窗口                                 |                  | vim -O file1 file2                   |      |
+| 垂直打开多窗口,并且进行比较                    |                  | vim -d file1 file2                   |      |
+|                                                |                  |                                      |      |
+| **DISPLAY**                                    |                  |                                      |      |
+| 自动缩进                                       |                  | set autoindent                       |      |
+| c风格的缩进                                    |                  | set cindent                          |      |
+| 显示断行符等特殊符号                           |                  | set list                             |      |
+| 语法高亮                                       |                  | syntax on                            |      |
+|                                                |                  |                                      |      |
+| **Select**                                     |                  |                                      |      |
+| 列编辑模式                                     |                  | C-v                                  |      |
+|                                                |                  |                                      |      |
 
 ## Tmux
 
 |        | Original Key | Key   | Notes |
 | ------ | ------------ | ----- | ----- |
-| Prefix |              | <C-b> |       |
+| Prefix |  <C-b>            | <C-b> <C-space> |       |
 |        |              |       |       |
 |        |              |       |       |
-
-
 
 # Installation
 
@@ -120,20 +184,19 @@ ln -s dotfiles/.zshrc
 ln -s dotfiles/.vimrc
 ```
 
-*   Install the requirements
+* Install the requirements
 
-    ```sh
-    ./install.sh
-    ```
+  ```sh
+  ./install.sh
+  ```
 
-*   Deploy the configurations, this will delete the old configure in ~
+* Deploy the configurations, this will delete the old configure in ~
 
-    ```sh
-    ./deploy.sh
-    ```
+  ```sh
+  ./deploy.sh
+  ```
 
-*   Put your manually config to ~/local\_config.sh
-
+* Put your manually config to ~/local\_config.sh
 
 # on-my-zsh
 
@@ -144,53 +207,54 @@ rm ~/.zshrc
 ```
 
 # oh-my-posh
-- [Oh My Posh](https://ohmyposh.dev/)
 
-- https://ohmyposh.dev/docs/themes
+* [Oh My Posh](https://ohmyposh.dev/)
 
-- [教程 - 使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/custom-prompt-setup)
+* https://ohmyposh.dev/docs/themes
 
-- Powershell
+* [教程 - 使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/custom-prompt-setup)
 
-    ```sh
-    winget install JanDeDobbeleer.OhMyPosh
-    oh-my-posh version
-    winget upgrade oh-my-posh
+* Powershell
 
-    notepad $PROFILE
-    ```
+  ```sh
+  winget install JanDeDobbeleer.OhMyPosh
+  oh-my-posh version
+  winget upgrade oh-my-posh
 
-- Linux
+  notepad $PROFILE
+  ```
 
-    ```sh
-    ## Install Oh my Posh (Method 1)
-    curl -s https://ohmyposh.dev/install.sh | bash -s
+* Linux
 
-    ## Install Oh my Posh (Method 2)
-    sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
-
-    sudo chmod +x /usr/local/bin/oh-my-posh
-
-    ## Download the themes
-    mkdir ~/.poshthemes
-    wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
-    unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
-    chmod u+rw ~/.poshthemes/*.json
-    rm ~/.poshthemes/themes.zip
-
-    ## Change your prompt
-    eval "$(oh-my-posh --init --shell bash --config ~/.{theme}.omp.json)"
-    ```
+  ```sh
+  ## Install Oh my Posh (Method 1)
+  curl -s https://ohmyposh.dev/install.sh | bash -s
+  
+  ## Install Oh my Posh (Method 2)
+  sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+  
+  sudo chmod +x /usr/local/bin/oh-my-posh
+  
+  ## Download the themes
+  mkdir ~/.poshthemes
+  wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip
+  unzip ~/.poshthemes/themes.zip -d ~/.poshthemes
+  chmod u+rw ~/.poshthemes/*.json
+  rm ~/.poshthemes/themes.zip
+  
+  ## Change your prompt
+  eval "$(oh-my-posh --init --shell bash --config ~/.{theme}.omp.json)"
+  ```
 
 # Oh-my-tmux
 
-- https://github.com/gpakosz/.tmux
-- https://github.com/pangliang/oh-my-tmux
-- https://github.com/namtzigla/oh-my-tmux/tree/master
+* https://github.com/gpakosz/.tmux
+* https://github.com/pangliang/oh-my-tmux
+* https://github.com/namtzigla/oh-my-tmux/tree/master
 
 # oh my nvim
 
-- https://github.com/hardhackerlabs/oh-my-nvim
+* https://github.com/hardhackerlabs/oh-my-nvim
 
 # VIM
 
@@ -199,9 +263,6 @@ rm ~/.zshrc
 ```sh
 sudo add-apt-repository ppa:jonathonf/vim
 ```
-
-
-
 
 ## Vim Tutorials
 
@@ -255,176 +316,186 @@ c　　　　　命令模式
 - l 插入、命令行和 Lang-Arg 模式的 ":lmap" 映射
 ```
 
+## Plugin
 
-##   Help docs
+* Install Plug for Linux
 
-- [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
-Refresh config
+  ```sh
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  ```
 
-## vim commands
+- Install plug for Windows
 
-- set paste
+```sh
+  iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |` ni \$HOME/vimfiles/autoload/plug.vim -Force
+```
+- plugin commands
 
-Reload .vimrc and `:PlugInstall` to install plugins.
+  Reload .vimrc and `:PlugInstall` to install plugins.
 
-**vim plugin commands**
+  **vim plugin commands**
 
-| Command                             | Description                                                  |
-| ----------------------------------- | ------------------------------------------------------------ |
-| `PlugInstall [name ...] [#threads]` | Install plugins                                              |
-| `PlugUpdate [name ...] [#threads]`  | Install or update plugins                                    |
-| `PlugClean[!]`                      | Remove unlisted plugins (bang version will clean without prompt) |
-| `PlugUpgrade`                       | Upgrade vim-plug itself                                      |
-| `PlugStatus`                        | Check the status of plugins                                  |
-| `PlugDiff`                          | Examine changes from the previous update and the pending changes |
-| `PlugSnapshot[!] [output path]`     | Generate script for restoring the current snapshot of the plugins |
+  | Command                             | Description                                                  |
+  | ----------------------------------- | ------------------------------------------------------------ |
+  | `PlugInstall [name ...] [#threads]` | Install plugins                                              |
+  | `PlugUpdate [name ...] [#threads]`  | Install or update plugins                                    |
+  | `PlugClean[!]`                      | Remove unlisted plugins (bang version will clean without prompt) |
+  | `PlugUpgrade`                       | Upgrade vim-plug itself                                      |
+  | `PlugStatus`                        | Check the status of plugins                                  |
+  | `PlugDiff`                          | Examine changes from the previous update and the pending changes |
+  | `PlugSnapshot[!] [output path]`     | Generate script for restoring the current snapshot of the plugins |
+## Help docs
+
+* [Vim documentation: options](http://vimdoc.sourceforge.net/htmldoc/options.html)
+  Refresh config
+
 
 ## NERD Commenter
 
-*   [Official GitHub](https://github.com/preservim/nerdcommenter)
+* [Official GitHub](https://github.com/preservim/nerdcommenter)
 
-*   [NERD Commenterでコメントアウト、アンコメントを楽にする](https://qiita.com/pepo/items/09bacf98a36f6a7285ac)
+* [NERD Commenterでコメントアウト、アンコメントを楽にする](https://qiita.com/pepo/items/09bacf98a36f6a7285ac)
 
-*   help
+* help
 
-    ```sh
-    :help NERDCommenter命令查看帮助
-    ```
+  ```sh
+  :help NERDCommenter命令查看帮助
+  ```
 
-*   map
+* map
 
-    ```sh
-    :map
-    ```
+  ```sh
+  :map
+  ```
 
-    使用:map!命令，则只列出插入和命令行模式的映射。而:imap，:vmap，:omap，:nmap命令则只是列出相应模式下的映射。
+  使用:map!命令，则只列出插入和命令行模式的映射。而:imap，:vmap，:omap，:nmap命令则只是列出相应模式下的映射。
 
-*   Leader key: `\`
-*   NERDCommenterToggle
+* NERDCommenterToggle
 
-    ```sh
-    [count]<leader>c<space> |NERDCommenterToggle|
-    ```
+  ```sh
+  [count]<leader>c<space> |NERDCommenterToggle|
+  ```
 
-*   `[count]cc` **|NERDCommenterComment|**
+* `[count]cc` **|NERDCommenterComment|**
 
-    Comment out the current line or text selected in visual mode.
+  Comment out the current line or text selected in visual mode.
 
-*   `[count]cn` **|NERDCommenterNested|**
+* `[count]cn` **|NERDCommenterNested|**
 
-    Same as cc but forces nesting.
+  Same as cc but forces nesting.
 
-*   `[count]c` **|NERDCommenterToggle|**
+* `[count]c` **|NERDCommenterToggle|**
 
-    Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+  Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
 
-*   `[count]cm` **|NERDCommenterMinimal|**
+* `[count]cm` **|NERDCommenterMinimal|**
 
-    Comments the given lines using only one set of multipart delimiters.
+  Comments the given lines using only one set of multipart delimiters.
 
-*   `[count]ci` **|NERDCommenterInvert|**
+* `[count]ci` **|NERDCommenterInvert|**
 
-    Toggles the comment state of the selected line(s) individually.
+  Toggles the comment state of the selected line(s) individually.
 
-*   `[count]cs` **|NERDCommenterSexy|**
+* `[count]cs` **|NERDCommenterSexy|**
 
-    Comments out the selected lines with a pretty block formatted layout.
+  Comments out the selected lines with a pretty block formatted layout.
 
-*   `[count]cy` **|NERDCommenterYank|**
+* `[count]cy` **|NERDCommenterYank|**
 
-    Same as cc except that the commented line(s) are yanked first.
+  Same as cc except that the commented line(s) are yanked first.
 
-*   `c$` **|NERDCommenterToEOL|**
+* `c$` **|NERDCommenterToEOL|**
 
-    Comments the current line from the cursor to the end of line.
+  Comments the current line from the cursor to the end of line.
 
-*   `cA` **|NERDCommenterAppend|**
+* `cA` **|NERDCommenterAppend|**
 
-    Adds comment delimiters to the end of line and goes into insert mode between them.
+  Adds comment delimiters to the end of line and goes into insert mode between them.
 
-*   **|NERDCommenterInsert|**
+* **|NERDCommenterInsert|**
 
-    Adds comment delimiters at the current cursor position and inserts between. Disabled by default.
+  Adds comment delimiters at the current cursor position and inserts between. Disabled by default.
 
-*   `ca` **|NERDCommenterAltDelims|**
+* `ca` **|NERDCommenterAltDelims|**
 
-    Switches to the alternative set of delimiters.
+  Switches to the alternative set of delimiters.
 
-*   `[count]cl` **|NERDCommenterAlignLeft** `[count]cb` **|NERDCommenterAlignBoth**
+* `[count]cl` **|NERDCommenterAlignLeft** `[count]cb` **|NERDCommenterAlignBoth**
 
-    Same as **|NERDCommenterComment|** except that the delimiters are aligned down the left side (`cl`) or both sides (`cb`).
+  Same as **|NERDCommenterComment|** except that the delimiters are aligned down the left side (`cl`) or both sides (`cb`).
 
-*   `[count]cu` **|NERDCommenterUncomment|**
+* `[count]cu` **|NERDCommenterUncomment|**
 
-    Uncomments the selected line(s).
+  Uncomments the selected line(s).
 
 ## vim-which-key
 
-- [vim-which-key](https://github.com/liuchengxu/vim-which-key)
+* [vim-which-key](https://github.com/liuchengxu/vim-which-key)
 
 ## vim-autoformat
 
-*   [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
+* [vim-autoformat](https://github.com/Chiel92/vim-autoformat)
 
-*   <F3>: auto format
+* <F3>: auto format
 
-*   clang-format  for **C**, **C++**, **Objective-C**, **Protobuf** (
+* clang-format  for **C**, **C++**, **Objective-C**, **Protobuf** (
 
-    既然有了clang-format，为什么还需要vim-autoformat呢？其实这里vim-autoformat是相当于将原本独立的clang-format集成到了vim中，没有它，也就只能单独运行clang-format来格式化代码
+  既然有了clang-format，为什么还需要vim-autoformat呢？其实这里vim-autoformat是相当于将原本独立的clang-format集成到了vim中，没有它，也就只能单独运行clang-format来格式化代码
 
-    在ubuntu下安装clang-format也非常的方便，只需运
+  在ubuntu下安装clang-format也非常的方便，只需运
 
-    ```sh
-    sudo apt-get install clang-format
-    ```
+  ```sh
+  sudo apt-get install clang-format
+  ```
 
-*   astyle for **C#**, **C++**, **C** and **Java**.
+* astyle for **C#**, **C++**, **C** and **Java**.
 
-    ```sh
-    sudo apt-get install astyle
-    ```
+  ```sh
+  sudo apt-get install astyle
+  ```
 
-*   autopep8 for **Python** (supports formatting ranges)
+* autopep8 for **Python** (supports formatting ranges)
 
-    ```sh
-    pip install autopep8
-    yum -y install clang
-    ```
+  ```sh
+  pip install autopep8
+  yum -y install clang
+  ```
 
-*   autopep8 (**Python**)
+* autopep8 (**Python**)
 
-    ```sh
-    sudo apt-get install python-autopep8
-    ```
+  ```sh
+  sudo apt-get install python-autopep8
+  ```
 
-*   yapf (**Python**)
+* yapf (**Python**)
 
-    ```sh
-    sudo pip install yapf or pip install --user yapf
-    let g:formatter_yapf_style = 'pep8'
-    ```
+  ```sh
+  sudo pip install yapf or pip install --user yapf
+  let g:formatter_yapf_style = 'pep8'
+  ```
 
-    pep8 is the default value, or you can choose: google, facebook, chromium.
-    pep8 is the default value, or you can choose: google, facebook, chromium.
+  pep8 is the default value, or you can choose: google, facebook, chromium.
+  pep8 is the default value, or you can choose: google, facebook, chromium.
 
-*   `black` for **Python**
+* `black` for **Python**
 
-    ```sh
-    sudo pip install black
-    or
-    pip install --user
-    ```
+  ```sh
+  sudo pip install black
+  or
+  pip install --user
+  ```
 
-*   `remark` for **Markdown**
-    ```sh
-    sudo apt install remark
-    ```
+* `remark` for **Markdown**
+  ```sh
+  sudo apt install remark
+  ```
 
-*   `fixjson` for JSON
+* `fixjson` for JSON
 
-    ```sh
-    npm install -g remark-cli
-    ```
+  ```sh
+  npm install -g remark-cli
+  ```
 
 ## caw.vim
 
@@ -432,22 +503,20 @@ Reload .vimrc and `:PlugInstall` to install plugins.
 :help caw-keybindings
 ```
 
-*   https://github.com/tyru/caw.vim
-*   Refer from; https://yoheikoga.github.io/2017/04/12/caw-vim-comment-out-toggle-shortcut/
+* https://github.com/tyru/caw.vim
+* Refer from; https://yoheikoga.github.io/2017/04/12/caw-vim-comment-out-toggle-shortcut/
 
-    ```sh
-    .vimrc
-    " 行の最初の文字の前にコメント文字をトグル
-    nmap <Leader>c <Plug>(caw:hatpos:toggle)
-    vmap <Leader>c <Plug>(caw:hatpos:toggle)
-    " 行頭にコメントをトグル
-    nmap <Leader>, <Plug>(caw:zeropos:toggle)
-    vmap <Leader>, <Plug>(caw:zeropos:toggle)
-    ```
+  ```sh
+  .vimrc
+  " 行の最初の文字の前にコメント文字をトグル
+  nmap <Leader>c <Plug>(caw:hatpos:toggle)
+  vmap <Leader>c <Plug>(caw:hatpos:toggle)
+  " 行頭にコメントをトグル
+  nmap <Leader>, <Plug>(caw:zeropos:toggle)
+  vmap <Leader>, <Plug>(caw:zeropos:toggle)
+  ```
 
 ## ycm
-
-
 
 ## coc.vim
 
@@ -457,7 +526,15 @@ vim >= 8.2 or neovim >= 0.5
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
+## snippets
 
+```sh
+if : if without else
+ife: if $1 else $2
+eif : else if ($1) { .. }
+el  : else ..
+wh  : while (cond) ...
+```
 
 ## Keymap
 
@@ -473,34 +550,36 @@ sudo apt-get update
 sudo apt-get install neovim
 ```
 
-
-
 # How To
 
-- How to change shell
+* How to change shell
 
-    ```sh
-    sudo chsh -s $(which zsh)
-    ```
+  ```sh
+  sudo chsh -s $(which zsh)
+  ```
 
 # Commands
 
-*   Command history
+* Command history
 
-    *   C-r
+  * C-r
 
-    *   Un-share the history among terminals
-
-        ```sh
-        unsetopt share_history
-        setopt no_share_history
-        ```
-
-*   mkcd
+  * Un-share the history among terminals
 
     ```sh
-    echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
+    unsetopt share_history
+    setopt no_share_history
     ```
+
+* mkcd
+
+  ```sh
+  echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
+  ```
+
+## References
+
+- https://vimawesome.com/
 
 # Software
 
@@ -521,49 +600,49 @@ sh autogen.sh
 ./configure && make
 ```
 
-*   prefix: C-SPC
+* prefix: C-SPC
 
 ## tmuxinator
 
-*   Dependence
+* Dependence
 
-    ```sh
-    ruby --version
-    ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux-gnu]
+  ```sh
+  ruby --version
+  ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux-gnu]
 
-    tmux -V
-    tmux next-3.2
-    ```
+  tmux -V
+  tmux next-3.2
+  ```
 
-*   Install
+* Install
 
-    ```sh
-    gem install --user-install tmuxinator
+  ```sh
+  gem install --user-install tmuxinator
 
-    # completion
-    wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
+  # completion
+  wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.zsh -O /usr/local/share/zsh/site-functions/_tmuxinator
 
-    ```
+  ```
 
-    <https://github.com/tmuxinator/tmuxinator>
+  <https://github.com/tmuxinator/tmuxinator>
 
-*   How to use
+* How to use
 
-    ```sh
-    tmuxinator new demo
-    ```
+  ```sh
+  tmuxinator new demo
+  ```
 
-    ```sh
-    source 'https://rubygems.org'
-    group :development do
-    gem 'guard-livereload'
-    gem 'guard-bundler'
-    end
-    ```
+  ```sh
+  source 'https://rubygems.org'
+  group :development do
+  gem 'guard-livereload'
+  gem 'guard-bundler'
+  end
+  ```
 
-    Then run bundle install again.
+  Then run bundle install again.
 
-*   [Setting Up Terminator (Terminal ++)](https://coderwall.com/p/1pivpa/setting-up-terminator-terminal)
+* [Setting Up Terminator (Terminal ++)](https://coderwall.com/p/1pivpa/setting-up-terminator-terminal)
 
 ## Rupy
 
@@ -587,7 +666,7 @@ The best solution:
 
 https://stackoverflow.com/questions/37720892/you-dont-have-write-permissions-for-the-var-lib-gems-2-3-0-directory
 
-1.  First, update the packages index and install the packages required for the ruby-build tool to build Ruby from source:
+1. First, update the packages index and install the packages required for the ruby-build tool to build Ruby from source:
 
 ```sh
 sudo apt-get remove ruby
@@ -595,13 +674,13 @@ sudo apt update
 sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
 ```
 
-2.  Next, run the following curl command to install both rbenv and ruby-build:
+2. Next, run the following curl command to install both rbenv and ruby-build:
 
 ```sh
 curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -
 ```
 
-3.  Add $HOME/.rbenv/bin to the system PATH
+3. Add $HOME/.rbenv/bin to the system PATH
 
 ```sh
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
@@ -609,14 +688,15 @@ echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-4.  Install the latest stable version of Ruby and set it as a default version with:
+4. Install the latest stable version of Ruby and set it as a default version with:
 
 ```sh
 rbenv install 2.6.0
 rbenv global 2.6.0
 ```
 
-5.  Verify that Ruby was properly installed by printing out the version number:
+5. Verify that Ruby was properly installed by printing out the version number:
+
 ```sh
 ruby -v
 ```
@@ -641,7 +721,7 @@ sudo cp rmtrash/rmtrash /usr/local/bin
 sudo cp rmtrash/rmdirtrash /usr/local/bin
 ```
 
-*   https://github.com/PhrozenByte/rmtrash
+* https://github.com/PhrozenByte/rmtrash
 
 ## ROS
 
@@ -662,62 +742,61 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 
 ## Jekyll
 
-*   Dependences
-    *   ruby
+* Dependences
+  * ruby
 
-        ```sh
-        gem install bundler jekyll
+    ```sh
+    gem install bundler jekyll
+    
+    sudo apt-get install ruby-full build-essential zlib1g-dev
+    gem install jekyll bundler
+    
+    bundle install
+    bundle exec jekyll serve
+    
+    gem install jekyll-paginate
+    
+    # run
+    jekyll serve --incremental
+    ```
 
-        sudo apt-get install ruby-full build-essential zlib1g-dev
-        gem install jekyll bundler
+    Issue
 
-        bundle install
-        bundle exec jekyll serve
+    ```sh
+    /usr/lib/ruby/vendor_ruby/rubygems/defaults/operating_system.rb:10: warning: constant Gem::ConfigMap is deprecated
+    ```
 
-        gem install jekyll-paginate
+    **Themes**
 
-        # run
-        jekyll serve --incremental
-        ```
-
-        Issue
-
-        ```sh
-        /usr/lib/ruby/vendor_ruby/rubygems/defaults/operating_system.rb:10: warning: constant Gem::ConfigMap is deprecated
-        ```
-
-        **Themes**
-
-*   http://themes.jekyllrc.org/
-    *
+* http://themes.jekyllrc.org/
+  \*
 
 ## Atom
 
--   markdown-writer
--   markdown-img-paste
-    -   [sm.ms](https://sm.ms/login)
-    *   qiniu
-    *   assets folder
-
+* markdown-writer
+* markdown-img-paste
+  * [sm.ms](https://sm.ms/login)
+  - qiniu
+  - assets folder
 
 # Emacs
 
-*   mark: C-c C-SPC
+* mark: C-c C-SPC
 
-    Mehtod 1:
+  Mehtod 1:
 
-    ```sh
-    sudo add-apt-repository ppa:kelleyk/emacs
-    sudo apt install emacs26
-    ```
+  ```sh
+  sudo add-apt-repository ppa:kelleyk/emacs
+  sudo apt install emacs26
+  ```
 
-    Method 2:
+  Method 2:
 
-    ```sh
-    sudo add-apt-repository ppa:ubuntu-elisp/ppa
-    sudo apt-get update
-    sudo apt-get install emacs-snapshot
-    ```
+  ```sh
+  sudo add-apt-repository ppa:ubuntu-elisp/ppa
+  sudo apt-get update
+  sudo apt-get install emacs-snapshot
+  ```
 
 # Ubuntu
 
@@ -725,24 +804,22 @@ sudo apt install python-rosinstall python-rosinstall-generator python-wstool bui
 sudo apt intall htop
 ```
 
-
-
 # Windows
-
 
 ## Windows
 
-- 家庭版 转 专业版
+* 家庭版 转 专业版
 
-    ```sh
-    irm massgrave.dev/get | iex
-    ```
-    Extra
+  ```sh
+  irm massgrave.dev/get | iex
+  ```
+
+  Extra
 
 ## microKMS
 
-- https://ilvruan.com
-- http://www.yishimei.cn/
+* https://ilvruan.com
+* http://www.yishimei.cn/
 
 ## 重置网络
 
@@ -760,39 +837,44 @@ Install-Module oh-my-posh
 
 ```
 
-- 假设出现`在此系统上禁止运行脚本`的问题，那么需要在shell中执行一下：
+* 假设出现`在此系统上禁止运行脚本`的问题，那么需要在shell中执行一下：
 
-    ```sh
-    Set-ExecutionPolicy remotesigned
-    ```
-
-
+  ```sh
+  Set-ExecutionPolicy remotesigned
+  ```
 
 ## Tools
 
-- Snipaste
-    -
+* ## Snipaste
 
 # Reference
 
-*   spacemacs
-*   [emacs派のためのvimrc](https://qiita.com/jimpei/items/c97e2bc06cabf1ffc07f)
-*   [Markdown Style Guide](https://cirosantilli.com/markdown-style-guide/#tables)
-*   [Windows PowerShell 美化记录](https://blog.tcs-y.com/2021/05/24/windows-powershell-beautify/#:~:text=%E6%B0%B4%E5%B9%B3%E5%88%86%E5%B1%8Falt%20%2B%20shift,shift%20%2B%20%2B%20(%E5%8A%A0%E5%8F%B7))
+* spacemacs
 
-*   [VimForCpp](https://gitee.com/HGtz2222/VimForCpp#%E6%94%AF%E6%8C%81%E7%8E%AF%E5%A2%83)
-*   [SpaceVim](https://spacevim.org/use-vim-as-a-c-cpp-ide/)
+* [emacs派のためのvimrc](https://qiita.com/jimpei/items/c97e2bc06cabf1ffc07f)
 
-*   [oh-my-vim](https://github.com/liangxianzhe/oh-my-vim)
+* [Markdown Style Guide](https://cirosantilli.com/markdown-style-guide/#tables)
 
-*   https://github.com/mzlogin/config-files
+* [Windows PowerShell 美化记录](https://blog.tcs-y.com/2021/05/24/windows-powershell-beautify/#:~:text=%E6%B0%B4%E5%B9%B3%E5%88%86%E5%B1%8Falt%20%2B%20shift,shift%20%2B%20%2B%20\(%E5%8A%A0%E5%8F%B7\))
+
+* [VimForCpp](https://gitee.com/HGtz2222/VimForCpp#%E6%94%AF%E6%8C%81%E7%8E%AF%E5%A2%83)
+
+* [SpaceVim](https://spacevim.org/use-vim-as-a-c-cpp-ide/)
+
+* [oh-my-vim](https://github.com/liangxianzhe/oh-my-vim)
+
+* https://github.com/mzlogin/config-files
 
 - [Linux-Set-up](https://manyyack.github.io/Linux-Set-up/)
+
 - https://www.bookstack.cn/books/learn-vim
+
 - [How to Setup Oh my Posh On Ubuntu](https://calebschoepp.com/blog/2021/how-to-setup-oh-my-posh-on-ubuntu/)
 
 - [PowerVim](https://github.com/youngyangyang04/PowerVim)
-- https://github.com/junegunn/vim-plug
-- [终于把 vim 弄成了 vscode 的模样](https://itsuki.cn/blog/skcode-readme)
-- [VSCodeVim-zh_cn](https://github.com/ugvibib/VSCodeVim-zh_cn)
 
+- https://github.com/junegunn/vim-plug
+
+- [终于把 vim 弄成了 vscode 的模样](https://itsuki.cn/blog/skcode-readme)
+
+- [VSCodeVim-zh\_cn](https://github.com/ugvibib/VSCodeVim-zh_cn)

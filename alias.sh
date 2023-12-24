@@ -17,4 +17,6 @@ alias sudo='sudo '
 # conda
 alias source-conda='source $ROOT/anaconda.sh'
 
-
+alias t='tmux'
+alias v='vim'
+alias nv='nvim'

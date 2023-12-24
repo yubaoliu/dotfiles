@@ -16,7 +16,8 @@
 nnoremap <F2> :NERDTreeToggle<CR>
 " nnoremap <silent><F5> :NERDTreeToggle<CR>
 nnoremap <F3> :Autoformat<CR>
-nmap <F4> :TagbarToggle<CR>
+" nmap <F4> :TagbarToggle<CR>
+" map <F4> :call Toggle_ycm <CR>
 " nnoremap <F8> :UndotreeToggle<cr>
 
 " 括号补全, bracket
@@ -63,6 +64,10 @@ noremap <M-x> <Esc>
 " inoremap <expr><C-y>  neocomplcache#close_popup()
 " inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
+"" ===========MOTION================
+" +N: Jump forward N lines
+" -N: Jump backward N lines
+
 "" ======== Cursor movement =============""
 " h - move cursor left
 " j - move cursor down
@@ -102,10 +107,6 @@ noremap E <END>a
 " C-f: Ctrl + f - move forward one full screen 向下滚动整个页面
 " C-d: Ctrl + d - move forward 1/2 a screen
 " C-u: Ctrl + u - move back 1/2 a screen
-
-"" ---------JUMP------------
-" +N: Jump forward N lines
-" -N: Jump backward N lines
 
 "" Fold
 " Try :help fold-expr and :help fold-commands for details
@@ -155,7 +156,7 @@ noremap <Leader>bn  <Esc>:bn<CR>
 " go to the previous buffer
 noremap <Leader>bp  <Esc>:bp<CR>
 " delete a buffer (close a file)
-noremap <Leader>bd  <Esc>:bd<CR>
+noremap <Leader>bx  <Esc>:bd<CR>
 " list all open buffers
 noremap <Leader>bl  <Esc>:ls<CR>
 
@@ -168,7 +169,7 @@ noremap <Leader>wT <Esc><C-w>T<CR>
 " create
 noremap <Leader>tc <Esc>:tabnew<CR>
 " :tabclose or :tabc - close the current tab and all its windows
-noremap <Leader>td <Esc>:tabclose<CR>
+noremap <Leader>tx <Esc>:tabclose<CR>
 " gT or :tabprev or :tabp - move to the previous tab
 noremap <Leader>tp <Esc>:tabprevious<CR>
 " gt or :tabnext or :tabn - move to the next tab
@@ -384,23 +385,6 @@ noremap <Leader>qa <Esc>:qall!<CR>
 " Type <C-e> to launch
 
 
-" YCM
-" nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
-" nnoremap <leader>hgd :split \| :YcmCompleter GoToDeclaration<CR>
-" nnoremap <leader>vgd :vsplit \| :YcmCompleter GoToDeclaration<CR>
-
-nnoremap <leader>gi :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>hgi :split <bar> :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>vgi :vsplit <bar> :YcmCompleter GoToDefinition<CR>
-
-nnoremap <Leader>gh :YcmCompleter GoToInclude<CR>
-nnoremap <Leader>hgh :split <bar> :YcmCompleter GoToInclude<CR>
-nnoremap <Leader>vgh :vsplit <bar>  :YcmCompleter GoToInclude<CR>
-
-nnoremap <Leader>gd  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <Leader>hgd  :split <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <Leader>vgd  :vplit <bar> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
 " 禁用上方的preview窗口
 set completeopt=menu,menuone
 
@@ -409,21 +393,6 @@ set completeopt=menu,menuone
 let g:UltiSnipsExpandTrigger="<TAB>"
 " let g:UltiSnipsJumpForwardTrigger="<c-m-n>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-m-p>"
-
-" Ctags
-" C-]: jump to definition
-" C-T: jump back
-
-" " caw.vim settings
-" 行の最初の文字の前にコメント文字をトグル
-" 前面加注释
-" nmap <C-,> <Plug>(caw:hatpos:toggle)
-" vmap <C-,> <Plug>(caw:hatpos:toggle)
-nmap <Leader>c <Plug>(caw:hatpos:toggle)
-vmap <Leader>c <Plug>(caw:hatpos:toggle)
-" 后面加注释
-nmap <C-\> <Plug>(caw:dollarpos:toggle)
-vmap <C-\> <Plug>(caw:dollarpos:toggle)
 
 " disable record
 " nnoremap Q q

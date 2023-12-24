@@ -2,24 +2,26 @@ sudo apt update
 
 echo "Install dependencies"
 sudo apt install -y software-properties-common git curl \
-puthon3-dev \
-python3-pygments \
-zsh \
-trash-cli \
-libevent-dev \
-libncurses5-dev \
-libncursesw5-dev \
-bison \
-byacc \
-autotools-dev \
-automake \
-global \
-exuberant-ctags \
-universal-ctags \
-xsel \
-vim-doc \
-vim-gtk
-# vim-autopep8 
+    puthon3-dev \
+    python3-pygments \
+    zsh \
+    trash-cli \
+    libevent-dev \
+    libncurses5-dev \
+    libncursesw5-dev \
+    bison \
+    byacc \
+    autotools-dev \
+    automake \
+    global \
+    exuberant-ctags \
+    universal-ctags \
+    xsel \
+    xclip
+
+sudo apt-get install fonts-powerline
+
+# vim-autopep8
 # vim-youcompleteme \
 # vim-airline \
 # vim-airline-themes \
@@ -29,12 +31,15 @@ vim-gtk
 # vim-snippets
 
 echo "Install ruby"
-sudo apt-add-repository -y ppa:brightbox/ruby-ng 
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
 sudo apt-get -y update
 sudo apt install -y ruby ruby-dev
 
 # Langue support
-sudo apt-get install -y astyle clang  clang-format python3-autopep8  remark 
+sudo apt-get install -y astyle clang  clang-format python3-autopep8
+
+# YCM
+sudo apt install  -y build-essential cmake vim-nox python3-dev
 
 # markdown format
 npm install -g remark-cli
@@ -44,7 +49,7 @@ sudo apt install -y npm && npm install -g remark-cli
 
 sudo apt install -y python3-pip
 pip install autopep8
-pip install yapf 
+pip install yapf
 
 
 #  Un-share the history among terminals
@@ -70,10 +75,4 @@ curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https:
 
 # mkdir
 echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
-
-# tmux
-## get plugin manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-## install plugin:
-~/.tmux/plugins/tpm/bin/install_plugins
 
