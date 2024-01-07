@@ -1,3 +1,6 @@
+"===============Neotree=========
+noremap  <F2> <Esc>:Neotree toggle<CR><Esc>
+
 " Key map
 " <k0> - <k9> 小键盘 0 到 9
 " <S-...> Shift＋键
@@ -13,9 +16,9 @@
 " Function key
 " F1 -> help
 " F10 -> not work
-nnoremap <F2> :NERDTreeToggle<CR>
+" nnoremap <F2> :NERDTreeToggle<CR>
 " nnoremap <silent><F5> :NERDTreeToggle<CR>
-nnoremap <F3> :Autoformat<CR>
+" nnoremap <F3> :Autoformat<CR>
 " nmap <F4> :TagbarToggle<CR>
 " map <F4> :call Toggle_ycm <CR>
 " nnoremap <F8> :UndotreeToggle<cr>
@@ -205,16 +208,12 @@ noremap <Leader>wo <Esc><C-w>o<CR>
 noremap <Leader>ws <Esc><C-w>w<CR>
 " Ctrl + wh - move cursor to the left window (vertical split)
 noremap <Leader>wh <Esc><C-w>h<CR>
-noremap <C-h> <Esc><C-w>h<CR>
 " Ctrl + wl - move cursor to the right window (vertical split)
 noremap <Leader>wl <Esc><C-w>l<CR>
-noremap <C-l> <Esc><C-w>l<CR>
 " Ctrl + wj - move cursor to the window below (horizontal split)
 noremap <Leader>wj <Esc><C-w>j<CR>
-noremap <C-j> <Esc><C-w>j<CR>
 " Ctrl + wk - move cursor to the window above (horizontal split)
 noremap <Leader>wk <Esc><C-w>k<CR>
-noremap <C-k> <Esc><C-w>k<CR>
 
 " noremap <Leader>wL <Esc><C-w>L<CR>
 " noremap <Leader>wH <Esc><C-w>H<CR>
@@ -403,5 +402,4 @@ let g:UltiSnipsExpandTrigger="<TAB>"
 " nnoremap q <Nop>
 noremap <Leader>Q q
 noremap q <Nop>
-
 

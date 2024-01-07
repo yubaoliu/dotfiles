@@ -93,20 +93,22 @@ let mapleader = "\<Space>"
 source ~/dotfiles/config/ctags.vim
 source ~/dotfiles/config/tagbar.vim
 
-source ~/dotfiles/config/appearence.vim
-source ~/dotfiles/config/ycm.vim
 source ~/dotfiles/config/default.vim
-source ~/dotfiles/config/nerdtree.vim
-source ~/dotfiles/config/caw.vim
-source ~/dotfiles/config/airline.vim
-source ~/dotfiles/config/autoformat.vim
-source ~/dotfiles/config/doxygen.vim
 source ~/dotfiles/config/keybinding.vim
+source ~/dotfiles/config/caw.vim
+source ~/dotfiles/config/autoformat.vim
+source ~/dotfiles/config/appearence.vim
 source ~/dotfiles/config/markdown.vim
+
+source ~/dotfiles/config/ycm.vim
+source ~/dotfiles/config/nerdtree.vim
+source ~/dotfiles/config/airline.vim
+source ~/dotfiles/config/doxygen.vim
 source ~/dotfiles/config/indent-line.vim
 " source ~/dotfiles/config/which-key.vim
 source ~/dotfiles/config/cmake.vim
 source ~/dotfiles/config/ide.vim
+source ~/dotfiles/config/netrw.vim
 
 "source ~/dotfiles/config/undotree.vim
 " source ~/dotfiles/config/tmuxline.vim
@@ -123,6 +125,7 @@ source ~/dotfiles/config/ide.vim
 " https://www.yiibai.com/vim/vim_markers.html
 " use '\|' or <bar> to map chained commands
 " vim插件——YouCompleteMe: https://blog.csdn.net/liao20081228/article/details/80347889
+" - https://note.qidong.name/2017/07/01/vim-markdown-for-hugo/
 
 ""============== SYMBALS ===========""
 " ` - 后退引号

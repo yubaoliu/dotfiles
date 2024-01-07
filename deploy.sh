@@ -5,36 +5,35 @@ cd $HOME
 mv  ~/.vimrc  ~/.vimrc.bak
 ln -s $ROOT/.vimrc
 
+# Deploy nvim
+ln -s  ~/dotfiles/nvim/myconfig.lua ~/.config/nvim/lua/myconfig.lua
+ln -s  ~/dotfiles/nvim/custom.lua ~/.config/nvim/lua/custom.lua
+ln -s  ~/dotfiles/nvim/keybinding.vim ~/.config/nvim/keybinding.vim
+
 # Deploy TMUX
 mv  ~/.tmux.conf ~/.tmux.conf.bak
 ln -s $ROOT/.tmux.conf
-ln -s $ROOT/alias.sh
+# ln -s $ROOT/alias.sh
 ln -s tmux ~/.tmux
 cp oh-my-tmux/.tmux.conf.local ~/.tmux.conf.local
-
 
 ## get plugin manager
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ## install plugin:
-~/.tmux/plugins/tpm/bin/install_plugins
-
-
-
-
+# ~/.tmux/plugins/tpm/bin/install_plugins
 
 echo "clean old files"
-mv  ~/.Xresources ~/.Xresources.bak
+# mv  ~/.Xresources ~/.Xresources.bak
 mv  ~/.zshrc ~/.zshrc.bak
 
 # ln -s $ROOT/.vim
-ln -s $ROOT/.Xresources
+# ln -s $ROOT/.Xresources
 ln -s $ROOT/.zshrc
-ln -s $ROOT/.ctags
-
+# ln -s $ROOT/.ctags
 
 # enable zsh for all terminals
 # echo "zsh" > ~/.bashrc
 
 # put your mannulay configurations here
-echo "source alias.sh" > ~/local_config.sh
-touch ~/local_config.sh
+# echo "source alias.sh" > ~/local_config.sh
+# touch ~/local_config.sh

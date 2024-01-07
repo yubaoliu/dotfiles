@@ -1,4 +1,4 @@
-export ROOT="$HOME/dotfiles"
+#export ROOT="$HOME/dotfiles"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -10,7 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,8 +72,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-    bundler
+ git
+ bundler
+ tmux
+ autojump
+ python
+ zsh-autosuggestions
+ zsh-syntax-highlighting
+ extract
+ fzf
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -112,45 +120,5 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig:$HOME/data/soft
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+source ~/local_config.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# export XMODIFIERS=”@im=fcitx”
-
-# history
-unsetopt share_history
-setopt no_share_history
-
-# 重複を記録しない
-#setopt hist_ignore_dups
-
-# 開始と終了を記録
-setopt EXTENDED_HISTORY
-
-# 補完時にヒストリを自動的に展開         
-setopt hist_expand
-
-# tmuxinator
-source $ROOT/.tmuxinator/.tmuxinator.zsh
-
-# Disable bell alert
-# bind 'set bell-style none'
-
-# Docker GUI compatible
-echo "Run gui in docker"
-xhost +local:root
-
-#ROS
-# source ~/ros.sh
-
-# source $ROOT/cuda.sh
-# source $ROOT/alias.sh
-
-# Local host config
-source $HOME/local_config.sh
-
-function mkcd(){mkdir -p $1 && cd $1}
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
--e function mkcd(){mkdir -p $1 && cd $1}

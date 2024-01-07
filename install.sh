@@ -2,7 +2,7 @@ sudo apt update
 
 echo "Install dependencies"
 sudo apt install -y software-properties-common git curl \
-    puthon3-dev \
+    python3-dev \
     python3-pygments \
     zsh \
     trash-cli \
@@ -17,23 +17,33 @@ sudo apt install -y software-properties-common git curl \
     exuberant-ctags \
     universal-ctags \
     xsel \
-    xclip
+    xclip \
+    fzf
 
-sudo apt-get install fonts-powerline
 
-# vim-autopep8
-# vim-youcompleteme \
-# vim-airline \
-# vim-airline-themes \
-# vim-fugitive  \
-# vim-pathogen \
-# vim-tabular \
-# vim-snippets
+echo "==================Fonts====================="
+sudo apt-get install fonts-powerline fonts-3270 fonts-material-design-icons-iconfont
 
-echo "Install ruby"
-sudo apt-add-repository -y ppa:brightbox/ruby-ng
-sudo apt-get -y update
-sudo apt install -y ruby ruby-dev
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+
+echo "==================Oh my zsh====================="
+sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+
+sudo apt install -y autojump
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/le1me55i/zsh-extract.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-extract
+
+echo "================VIM======================"
+# vim plug
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# VIm plugin
+sudo apt install -y npm && npm install -g remark-cli
+
+sudo apt install -y python3-pip
+pip install autopep8
+pip install yapf
 
 # Langue support
 sudo apt-get install -y astyle clang  clang-format python3-autopep8
@@ -44,34 +54,21 @@ sudo apt install  -y build-essential cmake vim-nox python3-dev
 # markdown format
 npm install -g remark-cli
 
-# VIm plugin
-sudo apt install -y npm && npm install -g remark-cli
 
-sudo apt install -y python3-pip
-pip install autopep8
-pip install yapf
-
-
-#  Un-share the history among terminals
-#unsetopt share_history
-#setopt no_share_history
-
-echo "Install ohmyzsh"
-echo "https://ohmyz.sh/#install"
-
-sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-# use the downloaded version if failed downloading
-# ./library/ohmyzsh-install.sh
+echo "================Ruby======================"
+echo "Install ruby"
+sudo apt-add-repository -y ppa:brightbox/ruby-ng
+sudo apt-get -y update
+sudo apt install -y ruby ruby-dev
 
 # rben
 rm  -rf ~/.rbenv
 git clone https://ghproxy.com/https://github.com/sstephenson/rbenv.git ~/.rbenv
 
-# vim plug
-curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-# use the downloaded version if failed downloading
-# mkdir $HOME/.vim/autoload
-# cp tools/plug.vim $HOME/.vim/autoload
+
+#  Un-share the history among terminals
+#unsetopt share_history
+#setopt no_share_history
 
 # mkdir
 echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL

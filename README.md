@@ -198,31 +198,6 @@ ln -s dotfiles/.vimrc
 
 * Put your manually config to ~/local\_config.sh
 
-# on-my-zsh
-
-```sh
-sudo apt install zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm ~/.zshrc
-```
-
-# oh-my-posh
-
-* [Oh My Posh](https://ohmyposh.dev/)
-
-* https://ohmyposh.dev/docs/themes
-
-* [教程 - 使用 Oh My Posh 为 PowerShell 或 WSL 设置自定义提示符](https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/custom-prompt-setup)
-
-* Powershell
-
-  ```sh
-  winget install JanDeDobbeleer.OhMyPosh
-  oh-my-posh version
-  winget upgrade oh-my-posh
-
-  notepad $PROFILE
-  ```
 
 * Linux
 
@@ -245,16 +220,6 @@ rm ~/.zshrc
   ## Change your prompt
   eval "$(oh-my-posh --init --shell bash --config ~/.{theme}.omp.json)"
   ```
-
-# Oh-my-tmux
-
-* https://github.com/gpakosz/.tmux
-* https://github.com/pangliang/oh-my-tmux
-* https://github.com/namtzigla/oh-my-tmux/tree/master
-
-# oh my nvim
-
-* https://github.com/hardhackerlabs/oh-my-nvim
 
 # VIM
 
@@ -825,27 +790,10 @@ sudo apt intall htop
 
 Windows+X选择以管理员方式运行后输入netsh winsock reset 命令，重启计算机后看下效果
 
-## Powershell
-
-```sh
-Install-Module [moudel name] -Scope CurrentUser # 只为当前用户安装
-
-Install-Module git-aliases -AllowColbber
-
-Install-Module posh-git
-Install-Module oh-my-posh
-
-```
-
-* 假设出现`在此系统上禁止运行脚本`的问题，那么需要在shell中执行一下：
-
-  ```sh
-  Set-ExecutionPolicy remotesigned
-  ```
 
 ## Tools
 
-* ## Snipaste
+*  Snipaste
 
 # Reference
 

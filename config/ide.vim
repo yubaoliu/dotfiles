@@ -1,3 +1,5 @@
+
+" ==========================================
 " GDB
 " https://michaelthessel.com/go-vim-debugging-with-gdb/
 " [Vim 调试：termdebug 入门](https://www.codeleading.com/article/95143882155/)
@@ -38,3 +40,53 @@ let g:termdebug_wide = 163
 "
 " let g:vimspector_enable_mappings = 'HUMAN'
 " let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+
+" debug, termdebug
+" " nnoremap <F6> :Continue<CR>
+" nnoremap <leader>mc :Continue<CR>
+" " nnoremap <F7> :Over<CR>
+" nnoremap <leader>mo :Over<CR>
+" " nnoremap <F8> :Step<CR>
+" nnoremap <leader>s :Step<CR>
+" " nnoremap <F11> :Finish<CR>
+" nnoremap <leader>f :Finish<CR>
+
+" debug, vimspector
+nmap <leader>dc <Plug>VimspectorContinue
+nmap <F6> <Plug>VimspectorContinue
+
+nmap <leader>ds <Plug>VimspectorStepOver
+nmap <F7> <Plug>VimspectorStepOver
+" nmap <A-n> <Plug>VimspectorStepOver
+
+nmap <leader>di <Plug>VimspectorStepInto
+nmap <F8> <Plug>VimspectorStepInto
+
+nmap <leader>do <Plug>VimspectorStepOut
+" nmap S<F8> <Plug>VimspectorStepOut
+" nmap <A-o> <Plug>VimspectorStepOut
+
+nmap <leader>db <Plug>VimspectorToggleBreakpoint
+nmap <F9> <Plug>VimspectorToggleBreakpoint
+" nmap <A-b> <Plug>VimspectorToggleBreakpoint
+
+nmap <leader>dp <Plug>VimspectorStop
+nmap <F11>  <Plug>VimspectorStop
+nmap <leader>dr <Plug>VimspectorRestart
+nmap <leader>drt :<C-u>VimspectorReset<CR>
+" nmap S<F11> <Plug>VimspectorRestart
+
+" nmap <leader>dn <Plug>VimspectorGoToCurrentLine
+" nmap <leader>dp <Plug>VimspectorPause
+
+" nmap <leader>df <Plug>VimspectorAddFunctionBreakpoint
+" nmap <leader>dc <Plug>VimspectorToggleConditionalBreakpoint
+nmap <leader>dlc <Plug>VimspectorShowOutput Console<CR>
+nmap <leader>dld <Plug>VimspectorShowOutput stderr<CR>
+nmap <leader>dlo <Plug>VimspectorShowOutput Vimspector-out<CR>
+nmap <leader>dle <Plug>VimspectorShowOutput Vimspector-err<CR>
+nmap <leader>dls <Plug>VimspectorShowOutput server<CR>
+nmap <leader>dlt <Plug>VimspectorShowOutput Telemetry<CR>
+nmap <leader>de :<C-u>VimspectorEval<space>
+nmap <leader>dw :<C-u>VimspectorWatch<space>
+" nmap <A-w> :<C-u>VimspectorWatch<space>

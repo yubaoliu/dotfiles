@@ -80,7 +80,7 @@ let g:vim_markdown_folding_disabled = 0                     "禁用折叠，取�
 let g:vim_markdown_override_foldtext = 0                    "为了防止设置折叠文本
 
 let g:vim_markdown_folding_level = 2                        "设置折叠级别-标题折叠级别是1到6之间的数字
-let g:vim_markdown_toc_autofit = 0                          "启用TOC窗口自动调整
+let g:vim_markdown_toc_autofit = 1                          "启用TOC窗口自动调整
 let g:vim_markdown_emphasis_multiline = 0                   "限制单行文本
 " let g:vim_markdown_fenced_languages = ['csharp=cs']         "代码块语言-默认值为['c++ = cpp','viml = vim','bash = sh','ini = dosini']
 let g:vim_markdown_strikethrough = 1                        "使用删除线

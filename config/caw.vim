@@ -13,9 +13,10 @@
 " nmap <C-,> <Plug>(caw:hatpos:toggle)
 " vmap <C-,> <Plug>(caw:hatpos:toggle)
 nmap <Leader>/ <Plug>(caw:hatpos:toggle)
-" nmap <Leader>c <Plug>(caw:hatpos:toggle)
+vmap <Leader>/ <Plug>(caw:hatpos:toggle)
 " 后面加注释
 nnoremap <Leader>\ <Plug>(caw:dollarpos:toggle)
+vnoremap <Leader>\ <Plug>(caw:dollarpos:toggle)
 " nnoremap <C-/> <Plug>(caw:dollarpos:toggle)
 " vmap <C-/> <Plug>(caw:dollarpos:toggle)
 
