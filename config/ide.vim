@@ -1,4 +1,9 @@
 
+" ================Comple, CMkae==========================
+nmap <Leader>mb :!cmake . -B build<CR>
+" cw<CR> 显示 quickfix
+nmap <Leader>mm :wa<CR>:!cmake  --build  build<CR><CR>:cw<CR> 
+
 " ==========================================
 " GDB
 " https://michaelthessel.com/go-vim-debugging-with-gdb/

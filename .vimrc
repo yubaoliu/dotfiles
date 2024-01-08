@@ -66,8 +66,13 @@ Plug 'gcmt/taboo.vim'
 " Search, it is better than ctrlp
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 Plug 'vhdirk/vim-cmake'
+
+Plug 'MattesGroeger/vim-bookmarks'
+
 Plug 'puremourning/vimspector'
+
 " 代码模板, 加快写代码的速度
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -109,6 +114,8 @@ source ~/dotfiles/config/indent-line.vim
 source ~/dotfiles/config/cmake.vim
 source ~/dotfiles/config/ide.vim
 source ~/dotfiles/config/netrw.vim
+source ~/dotfiles/config/fswitch.vim
+source ~/dotfiles/config/bookmark.vim
 
 "source ~/dotfiles/config/undotree.vim
 " source ~/dotfiles/config/tmuxline.vim

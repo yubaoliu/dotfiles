@@ -34,6 +34,8 @@
 " :InsertNToc 同:InsertToc ,但显示目录为一个有序号列表。
 "
 nnoremap <leader>mt :Toc<CR><Esc>
+"" markdown-drawer
+nnoremap <Leader>md :MarkDrawer<cr>
 
 set conceallevel=2
 
@@ -95,8 +97,6 @@ let g:vim_markdown_autowrite = 1
 " tab, vsplit, hsplit, current
 let g:vim_markdown_edit_url_in = 'vsplit'
 
-"" markdown-drawer
-nnoremap <Leader>md :MarkDrawer<cr>
 
 " Keys Mappings
 " o navigate to header in file.
