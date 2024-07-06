@@ -28,7 +28,7 @@ mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
 
 echo "==================Oh my zsh====================="
-sh -c "$(curl -fsSL https://ghproxy.com/https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 sudo apt install -y autojump
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions 
@@ -37,7 +37,8 @@ git clone https://github.com/le1me55i/zsh-extract.git ${ZSH_CUSTOM:-~/.oh-my-zsh
 
 echo "================VIM======================"
 # vim plug
-curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://ghproxy.com/https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # VIm plugin
 sudo apt install -y npm && npm install -g remark-cli
 
@@ -55,21 +56,10 @@ sudo apt install  -y build-essential cmake vim-nox python3-dev
 npm install -g remark-cli
 
 
-echo "================Ruby======================"
-echo "Install ruby"
-sudo apt-add-repository -y ppa:brightbox/ruby-ng
-sudo apt-get -y update
-sudo apt install -y ruby ruby-dev
-
-# rben
-rm  -rf ~/.rbenv
-git clone https://ghproxy.com/https://github.com/sstephenson/rbenv.git ~/.rbenv
-
-
 #  Un-share the history among terminals
-#unsetopt share_history
-#setopt no_share_history
+unsetopt share_history
+setopt no_share_history
 
 # mkdir
-echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
+# echo -e "function mkcd(){mkdir -p \$1 && cd \$1}" >> ~/.zshrc && exec $SHELL
 
